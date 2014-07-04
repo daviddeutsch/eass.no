@@ -40,50 +40,116 @@
 		</ul>
 	</div>
 </div>
-<div id="main" ng-controller="HomeImgCtrl">
+<div id="main">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 img-wrap">
-				<img ng-repeat="slide in slides" class="placeholder am-fade" ng-src="{{ 'assets/img/'+slide.name+'.png' }}" alt="" ng-hide="!isCurrent($index)"/>
+				<img class="placeholder" src="assets/img/vaktmesterservice.png" alt=""/>
 			</div>
-			<div class="col-md-4" ng-mouseover="change(0)" ng-mouseleave="reset()">
-				<div class="panel panel-default" ng-class="{raised:isCurrent(0)}">
-					<div class="panel-body">
-						<h3>Renhold</h3>
-						<p>Vår renholdsavdeling er bygget opp av de mest erfarne fagfolk i vårt distrikt. Vår ren- holdsavdeling er bygget opp av de mest erfarne fagfolk i vårt distrikt. Vår ren- holdsavdeling er bygget opp av de mest erfarne fagfolk i vårt distrikt.</p>
-						<hr/>
-						<h4 class="pull-right">
-							<a href="#">Les mer <i class="fa fa-chevron-right"></i></a>
-						</h4>
-					</div>
-				</div>
+			<div class="col-md-3">
+				<ul class="nav sidenav">
+					<li>Hovedkontor</li>
+					<li>Salgsavdeling</li>
+					<li>Molde</li>
+					<li>Kristiansund</li>
+					<li>Ålesund</li>
+					<li>Åndalsnes</li>
+				</ul>
 			</div>
-			<div class="col-md-4" ng-mouseover="change(1)" ng-mouseleave="reset()">
-				<div class="panel panel-default" ng-class="{raised:isCurrent(1)}">
+			<div class="col-md-7">
+				<div class="panel panel-default panel-standalone">
 					<div class="panel-body">
-						<h3>Kantine</h3>
-						<p>Vår renholdsavdeling er bygget opp av de mest erfarne fagfolk i vårt distrikt. Vår ren- holdsavdeling er bygget opp av de mest erfarne fagfolk i vårt distrikt. Vår ren- holdsavdeling er bygget opp av de mest erfarne fagfolk i vårt distrikt.</p>
-						<hr/>
-						<h4 class="pull-right">
-							<a href="#">Les mer <i class="fa fa-chevron-right"></i></a>
-						</h4>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4" ng-mouseover="change(2)" ng-mouseleave="reset()">
-				<div class="panel panel-default" ng-class="{raised:isCurrent(2)}">
-					<div class="panel-body">
-						<h3>Vaktmesterservice</h3>
-						<p>Vår renholdsavdeling er bygget opp av de mest erfarne fagfolk i vårt distrikt. Vår ren- holdsavdeling er bygget opp av de mest erfarne fagfolk i vårt distrikt. Vår ren- holdsavdeling er bygget opp av de mest erfarne fagfolk i vårt distrikt.</p>
-						<hr/>
-						<h4 class="pull-right">
-							<a href="#">Les mer <i class="fa fa-chevron-right"></i></a>
-						</h4>
+						<h3>Kontakt oss</h3>
+
+						<div class="row">
+							<div class="col-md-6">
+								<h4>Molde</h4>
+
+								<p>EASS Eiendomsassistanse AS<br/>
+									Oscar Hanssensveg 7<br/>
+									6415 Molde</p>
+
+								<p>Telefon: 71 21 61 40<br/>
+									Fax: 71 21 61 41<br/>
+									Vakttelefon: 71 21 61 40</p>
+							</div>
+
+							<div class="col-md-6">
+
+								<h4>Kristiansund</h4>
+
+								<p>Omagata 108
+									6517 Kristiansund
+
+								<p>Telefon 479 35 616<br/>
+									Fax 71 21 61 41<br/>
+									Vakttelefon: 71 21 61 40</p>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-6">
+
+								<h4>ÅLESUND</h4>
+
+								<p>Lerstadveien 506<br/>
+									6018 Ålesund<br/>
+									Telefon: 98 83 21 36</p>
+							</div>
+
+							<div class="col-md-6">
+								<h4>ÅNDALSNES</h4>
+
+								<p>Storgata 2<br/>
+									6300 Åndalsnes<br/>
+									Telefon: 95 74 69 54</p>
+							</div>
+						</div>
+
+
+
+						<!--Kjell Elnes
+
+						Daglig leder
+						E-mail: ke@eass.no
+						Mobil: 92668303
+						Helene Rødsand
+
+						Avdelingsleder for avd. Kristiansund
+						E-mail: Helene.Rodsand@eass.no
+						Mobil: 47935616
+						Kjetil Sletta
+
+						Salgsleder
+						E-mail: ks@eass.no
+						Tlf: 48338715
+
+
+						Halldis Johnsen
+						Avdelingsleder renhold og kantine
+						E-mail: hj @eass.no
+						Mobil: 92649839
+
+
+						Marry Janne Kolberg
+						Avdelingsleder hovedrenhold og hjemmeservice.
+						E-mail: mj@eass.no
+						Mobil: 92624310
+						Inger-Lise Hovde Hatlen
+
+						Leder for avd. Åndalsnes
+						E-mail: ih@eass.no
+						Mobil: 95746954
+						Maria Therese Søvik
+
+						Leder for avdeling Ålesund.
+						E-mail: mts@eass.no
+						Mobil: 98832136-->
+
 					</div>
 				</div>
 			</div>
 		</div>
-
 	</div>
 </div>
 <footer>

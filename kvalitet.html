@@ -40,50 +40,33 @@
 		</ul>
 	</div>
 </div>
-<div id="main" ng-controller="HomeImgCtrl">
+<div id="main">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 img-wrap">
-				<img ng-repeat="slide in slides" class="placeholder am-fade" ng-src="{{ 'assets/img/'+slide.name+'.png' }}" alt="" ng-hide="!isCurrent($index)"/>
+				<img class="placeholder" src="assets/img/vaktmesterservice.png" alt=""/>
 			</div>
-			<div class="col-md-4" ng-mouseover="change(0)" ng-mouseleave="reset()">
-				<div class="panel panel-default" ng-class="{raised:isCurrent(0)}">
+			<div class="col-md-8 col-md-offset-2">
+				<div class="panel panel-default panel-standalone">
 					<div class="panel-body">
-						<h3>Renhold</h3>
-						<p>Vår renholdsavdeling er bygget opp av de mest erfarne fagfolk i vårt distrikt. Vår ren- holdsavdeling er bygget opp av de mest erfarne fagfolk i vårt distrikt. Vår ren- holdsavdeling er bygget opp av de mest erfarne fagfolk i vårt distrikt.</p>
-						<hr/>
-						<h4 class="pull-right">
-							<a href="#">Les mer <i class="fa fa-chevron-right"></i></a>
-						</h4>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4" ng-mouseover="change(1)" ng-mouseleave="reset()">
-				<div class="panel panel-default" ng-class="{raised:isCurrent(1)}">
-					<div class="panel-body">
-						<h3>Kantine</h3>
-						<p>Vår renholdsavdeling er bygget opp av de mest erfarne fagfolk i vårt distrikt. Vår ren- holdsavdeling er bygget opp av de mest erfarne fagfolk i vårt distrikt. Vår ren- holdsavdeling er bygget opp av de mest erfarne fagfolk i vårt distrikt.</p>
-						<hr/>
-						<h4 class="pull-right">
-							<a href="#">Les mer <i class="fa fa-chevron-right"></i></a>
-						</h4>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4" ng-mouseover="change(2)" ng-mouseleave="reset()">
-				<div class="panel panel-default" ng-class="{raised:isCurrent(2)}">
-					<div class="panel-body">
-						<h3>Vaktmesterservice</h3>
-						<p>Vår renholdsavdeling er bygget opp av de mest erfarne fagfolk i vårt distrikt. Vår ren- holdsavdeling er bygget opp av de mest erfarne fagfolk i vårt distrikt. Vår ren- holdsavdeling er bygget opp av de mest erfarne fagfolk i vårt distrikt.</p>
-						<hr/>
-						<h4 class="pull-right">
-							<a href="#">Les mer <i class="fa fa-chevron-right"></i></a>
-						</h4>
+						<h3>Kvalitet/HMS/Miljø</h3>
+
+						<p>Vårt hovedmål med HMS-arbeidet er at vi skal arbeide med å utvikle og sikre et fysisk og psykososialt arbeidsmiljø som gir de ansatte trygghet og trivsel i hverdagen. Det skal stimuleres til personlig utvikling, samarbeid og fellesskap.</p>
+
+						<ul>
+							<li>Alle aktiviteter i bedriften skal gjennomføres i overensstemmelse med krav fastsatt i gjeldende lover og forskrifter og ved at samtlige arbeidstakere etterlever interne sikkerhetsregler og instrukser.</li>
+							<li>Ledelsen forplikter seg til kontinuerlig å arbeide for å skape et godt arbeidsmiljø hvor den enkelte medarbeider trives og er motivert</li>
+							<li>Det er ledelsens mål å hindre enhver form for ulykker og helseskader i selskapet</li>
+							<li>Gjennom god og aktiv satsing på HMS skal vi redusere fravær og uønsket turnover</li>
+							<li>Selskapet er registrert og godkjent i Achilles og Start BANK.</li>
+							<li>Vi har avtale om bedriftshelsetjeneste hos AktiMed. Les mer om AktiMed: <a href="http://www.aktimed.no/">aktimed.no</a></li>
+							<li>Vi benytter digitalHMS som HMS verktøy. Les mer om digitalHMS: <a href="http://www.digitalhms.no/">digitalhms.no</a></li>
+						</ul>
+
 					</div>
 				</div>
 			</div>
 		</div>
-
 	</div>
 </div>
 <footer>

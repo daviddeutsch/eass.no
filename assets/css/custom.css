@@ -22,6 +22,24 @@ div.raised {
   margin-bottom: 25px !important;
   box-shadow: 0 4px 2px rgba(0, 0, 0, 0.2), 0 8px 12px rgba(0, 0, 0, 0.05);
 }
+div.panel-standalone {
+  margin-top: -96px;
+}
+div.panel-standalone .panel-body {
+  padding: 48px;
+}
+div.panel-standalone .panel-body h3 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  margin-top: 0px;
+  margin-bottom: 40px;
+}
+div.panel-standalone .panel-body ul {
+  margin-top: 48px;
+}
+div.panel-standalone .panel-body ul li {
+  margin-bottom: 12px;
+}
 #home {
   margin: 36px 12px 0;
 }
@@ -123,7 +141,27 @@ div#header {
 }
 div#main {
   position: relative;
-  z-index: 100;
+  z-index: 200;
+}
+div#main .sidenav {
+  display: box;
+  position: relative;
+  background: #000;
+  margin-left: -22px;
+  margin-top: -42px;
+  margin-right: -18px;
+  z-index: 1000;
+}
+div#main .sidenav li {
+  font-family: 'Oswald', sans-serif;
+  border-bottom: 6px solid #000;
+  padding: 12px 1px;
+  color: #fff;
+  text-indent: 48px;
+}
+div#main .sidenav li:hover {
+  background: #000;
+  border-bottom: 6px solid #e4131a;
 }
 div#logo {
   padding: 24px 0;

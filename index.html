@@ -11,6 +11,7 @@
 
 	<link href="https://netdna.bootstrapcdn.com/bootswatch/3.1.1/yeti/bootstrap.min.css" rel="stylesheet">
 	<link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="assets/css/angular-motion.min.css" rel="stylesheet">
 	<link href="assets/css/custom.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Oswald:400,300,700|Source+Sans+Pro:400,300" rel="stylesheet" type="text/css">
 
@@ -43,41 +44,44 @@
 <div id="main" ng-controller="HomeImgCtrl">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-4" ng-mouseover="change('renhold')" ng-mouseleave="reset()">
-				<img class="placeholder" src="assets/img/renhold-left.jpg" ng-src="{{ 'assets/img/'+left }}" loading-fx alt=""/>
+			<div class="col-md-12 img-wrap">
+				<img ng-repeat="slide in slides" class="placeholder am-fade" ng-src="{{ 'assets/img/'+slide.name+'.png' }}" alt="" ng-hide="!isCurrent($index)"/>
+			</div>
+			<div class="col-md-4" ng-mouseover="change(0)" ng-mouseleave="reset()">
 				<div class="panel panel-default">
 					<div class="panel-body">
 						<h3>Renhold</h3>
 						<p>Vår renholdsavdeling er bygget opp av de mest erfarne fagfolk i vårt distrikt. Vår ren- holdsavdeling er bygget opp av de mest erfarne fagfolk i vårt distrikt. Vår ren- holdsavdeling er bygget opp av de mest erfarne fagfolk i vårt distrikt.</p>
 						<hr/>
-						<h4 class="text-right">
+						<p class="signal pull-left"><i class="fa fa-circle am-fade" ng-hide="!isCurrent(0)"></i></p>
+						<h4 class="pull-right">
 							<a href="#">Les mer <i class="fa fa-chevron-right"></i></a>
 						</h4>
 					</div>
 				</div>
 			</div>
-			<div class="col-md-4" ng-mouseover="change('kantine')" ng-mouseleave="reset()">
-				<img class="placeholder" src="assets/img/kantine-middle.jpg" ng-src="{{ 'assets/img/'+middle }}" loading-fx alt=""/>
+			<div class="col-md-4" ng-mouseover="change(1)" ng-mouseleave="reset()">
 				<div class="panel panel-default">
 					<div class="panel-body">
 						<h3>Kantine</h3>
 						<p>Vår renholdsavdeling er bygget opp av de mest erfarne fagfolk i vårt distrikt. Vår ren- holdsavdeling er bygget opp av de mest erfarne fagfolk i vårt distrikt. Vår ren- holdsavdeling er bygget opp av de mest erfarne fagfolk i vårt distrikt.</p>
 						<hr/>
-						<h4 class="text-right">
-							<a href="#" ng-click="change('kantine')">Les mer <i class="fa fa-chevron-right"></i></a>
+						<p class="signal pull-left"><i class="fa fa-circle am-fade" ng-hide="!isCurrent(1)"></i></p>
+						<h4 class="pull-right">
+							<a href="#">Les mer <i class="fa fa-chevron-right"></i></a>
 						</h4>
 					</div>
 				</div>
 			</div>
-			<div class="col-md-4" ng-mouseover="change('vaktmesterservice')" ng-mouseleave="reset()">
-				<img class="placeholder" src="assets/img/vaktmesterservice-right.jpg" ng-src="{{ 'assets/img/'+right }}" loading-fx alt=""/>
+			<div class="col-md-4" ng-mouseover="change(2)" ng-mouseleave="reset()">
 				<div class="panel panel-default">
 					<div class="panel-body">
 						<h3>Vaktmesterservice</h3>
 						<p>Vår renholdsavdeling er bygget opp av de mest erfarne fagfolk i vårt distrikt. Vår ren- holdsavdeling er bygget opp av de mest erfarne fagfolk i vårt distrikt. Vår ren- holdsavdeling er bygget opp av de mest erfarne fagfolk i vårt distrikt.</p>
 						<hr/>
-						<h4 class="text-right">
-							<a href="#" ng-click="change('vaktmesterservice')">Les mer <i class="fa fa-chevron-right"></i></a>
+						<p class="signal pull-left"><i class="fa fa-circle am-fade" ng-hide="!isCurrent(2)"></i></p>
+						<h4 class="pull-right">
+							<a href="#">Les mer <i class="fa fa-chevron-right"></i></a>
 						</h4>
 					</div>
 				</div>

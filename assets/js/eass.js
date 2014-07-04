@@ -8,31 +8,43 @@ var eassApp = angular.module(
 eassApp
 .controller('HomeImgCtrl',
 [
-'$scope',
-function($scope) {
-	$scope.id = '';
+'$scope', '$timeout',
+function($scope, $timeout) {
+	$scope.slides = [
+		{name: 'renhold'},
+		{name: 'kantine'},
+		{name: 'vaktmesterservice'}
+	];
 
-	$scope.$watch('id', function(newVal, oldVal) {
-		if (newVal === oldVal) return;
+	$scope.id = 1;
 
-		$scope.left = newVal + '-left.jpg';
-		$scope.middle = newVal + '-middle.jpg';
-		$scope.right = newVal + '-right.jpg';
-	});
+	$scope.to = null;
 
 	$scope.change = function( id ) {
-		if (id === $scope.id) return;
-
 		$scope.id = id;
+
+		$timeout.cancel($scope.to);
+	};
+
+	$scope.isCurrent = function (index) {
+		return $scope.id === index;
 	};
 
 	$scope.reset = function() {
-		$scope.left = 'renhold-left.jpg';
-		$scope.middle = 'kantine-middle.jpg';
-		$scope.right = 'vaktmesterservice-right.jpg';
+		$scope.to = $timeout($scope.tick, 2000);
 	};
 
-	$scope.reset();
+	$scope.tick = function () {
+		if ( $scope.id == 2 ) {
+			$scope.id = 0;
+		} else {
+			$scope.id++;
+		}
+
+		$scope.to = $timeout($scope.tick, 2000);
+	};
+
+	$scope.tick();
 }
 ]
 );

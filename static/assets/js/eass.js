@@ -50,6 +50,32 @@ function($scope, $timeout) {
 );
 
 eassApp
+.controller('ContactCtrl',
+[
+'$scope',
+function($scope) {
+	$scope.id = '';
+
+	$scope.change = function( name ) {
+		if ( $scope.id === name ) {
+			$scope.id = '';
+		} else {
+			$scope.id = name;
+		}
+	};
+
+	$scope.isDeselected = function ( name ) {
+		return $scope.id !== name && $scope.id != '';
+	};
+
+	$scope.isSelected = function ( name ) {
+		return $scope.id === name;
+	};
+}
+]
+);
+
+eassApp
 .directive('loadingFx', function() {
 return {
 	restrict: 'A',

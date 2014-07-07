@@ -21,11 +21,18 @@ echo "\ngit --version\n",
 	shell_exec('git --version 2>&1');
 
 if ( !is_dir(__DIR__ . '/.git') && !empty($json->repo) ) {
-	echo "\ngit clone https://imedias-deploykraken@" . $json->repo . "\n",
-		shell_exec('git clone https://imedias-deploykraken@' . $json->repo);
-}
+	unlink(__DIR__ . '/config.json');
+	unlink(__DIR__ . '/deploy.php');
 
-echo "\ngit pull origin master\n",
+	echo "\ngit clone " . $json->repo . "\n",
+		shell_exec('git clone ' . $json->repo . ' . 2>&1');
+
+	echo "\nOk.</pre>";
+} elseif ( !is_dir(__DIR__ . '/.git') ) {
+	echo "\ngit pull origin master\n",
 	shell_exec('git pull origin master');
 
-echo "\nOk.</pre>";
+	echo "\nOk.</pre>";
+} else {
+	echo "\nError.</pre>";
+}

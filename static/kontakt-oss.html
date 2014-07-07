@@ -42,18 +42,18 @@
 </div>
 <div id="main">
 	<div class="container">
-		<div class="row">
+		<div class="row" ng-controller="ContactCtrl">
 			<div class="col-md-12 img-wrap">
 				<img class="placeholder" src="assets/img/vaktmesterservice.png" alt=""/>
 			</div>
 			<div class="col-md-3">
 				<ul class="nav sidenav">
-					<li>Hovedkontor</li>
-					<li>Salgsavdeling</li>
-					<li>Molde</li>
-					<li>Kristiansund</li>
-					<li>Ålesund</li>
-					<li>Åndalsnes</li>
+					<li ng-click="change('hovedkontor')" ng-class="{selected: isSelected('hovedkontor')}">Hovedkontor</li>
+					<li ng-click="change('salgsavdeling')" ng-class="{selected: isSelected('salgsavdeling')}">Salgsavdeling</li>
+					<li ng-click="change('molde')" ng-class="{selected: isSelected('molde')}">Molde</li>
+					<li ng-click="change('kristiansund')" ng-class="{selected: isSelected('kristiansund')}">Kristiansund</li>
+					<li ng-click="change('alesund')" ng-class="{selected: isSelected('alesund')}">Ålesund</li>
+					<li ng-click="change('andalsnes')" ng-class="{selected: isSelected('andalsnes')}">Åndalsnes</li>
 				</ul>
 			</div>
 			<div class="col-md-7">
@@ -62,7 +62,7 @@
 						<h3>Kontakt oss</h3>
 
 						<div class="row">
-							<div class="col-md-6">
+							<div class="col-md-6" ng-class="{'am-slide-top': isDeselected('molde')}" >
 								<h4>Molde</h4>
 
 								<p>EASS Eiendomsassistanse AS<br/>
@@ -74,12 +74,12 @@
 									Vakttelefon: 71 21 61 40</p>
 							</div>
 
-							<div class="col-md-6">
-
+							<div class="col-md-6" ng-class="{'am-slide-top': isDeselected('kristiansund')}">
 								<h4>Kristiansund</h4>
 
 								<p>Omagata 108<br/>
-									6517 Kristiansund
+									6517 Kristiansund<br/>
+									&nbsp;</p>
 
 								<p>Telefon 479 35 616<br/>
 									Fax 71 21 61 41<br/>
@@ -88,8 +88,7 @@
 						</div>
 
 						<div class="row">
-							<div class="col-md-6">
-
+							<div class="col-md-6" ng-class="{'am-slide-top': isDeselected('alesund')}">
 								<h4>ÅLESUND</h4>
 
 								<p>Lerstadveien 506<br/>
@@ -97,7 +96,7 @@
 									Telefon: 98 83 21 36</p>
 							</div>
 
-							<div class="col-md-6">
+							<div class="col-md-6" ng-class="{'am-slide-top': isDeselected('andalsnes')}">
 								<h4>ÅNDALSNES</h4>
 
 								<p>Storgata 2<br/>
@@ -106,44 +105,71 @@
 							</div>
 						</div>
 
-						<!--Kjell Elnes
+						<hr/>
 
-						Daglig leder
-						E-mail: ke@eass.no
-						Mobil: 92668303
-						Helene Rødsand
+						<div class="row">
+							<div class="col-md-6" ng-class="{'am-slide-top': isDeselected('molde')}">
+								<h4>Kjell Elnes</h4>
+								<p>Daglig leder</p>
 
-						Avdelingsleder for avd. Kristiansund
-						E-mail: Helene.Rodsand@eass.no
-						Mobil: 47935616
-						Kjetil Sletta
+								<p>E-mail: ke@eass.no<br/>
+									Mobil: 92668303</p>
+							</div>
 
-						Salgsleder
-						E-mail: ks@eass.no
-						Tlf: 48338715
+							<div class="col-md-6" ng-class="{'am-slide-top': isDeselected('kristiansund')}">
+								<h4>Helene Rødsand</h4>
+								<p>Avdelingsleder for avd. Kristiansund</p>
 
+								<p>E-mail: Helene.Rodsand@eass.no<br/>
+									Mobil: 47935616</p>
+							</div>
+						</div>
 
-						Halldis Johnsen
-						Avdelingsleder renhold og kantine
-						E-mail: hj @eass.no
-						Mobil: 92649839
+						<div class="row">
+							<div class="col-md-6" ng-class="{'am-slide-top': isDeselected('molde')}">
+								<h4>Kjetil Sletta</h4>
+								<p>Salgsleder</p>
 
+								<p>E-mail: ks@eass.no<br/>
+									Tlf: 48338715</p>
+							</div>
 
-						Marry Janne Kolberg
-						Avdelingsleder hovedrenhold og hjemmeservice.
-						E-mail: mj@eass.no
-						Mobil: 92624310
-						Inger-Lise Hovde Hatlen
+							<div class="col-md-6" ng-class="{'am-slide-top': isDeselected('kristiansund')}">
+								<h4>Halldis Johnsen</h4>
+								<p>Avdelingsleder renhold og kantine</p>
 
-						Leder for avd. Åndalsnes
-						E-mail: ih@eass.no
-						Mobil: 95746954
-						Maria Therese Søvik
+								<p>E-mail: hj@eass.no<br/>
+									Mobil: 92649839</p>
+							</div>
+						</div>
 
-						Leder for avdeling Ålesund.
-						E-mail: mts@eass.no
-						Mobil: 98832136-->
+						<div class="row">
+							<div class="col-md-6" ng-class="{'am-slide-top': isDeselected('molde')}">
+								<h4>Marry Janne Kolberg</h4>
+								<p>Avdelingsleder hovedrenhold og hjemmeservice</p>
 
+								<p>E-mail: mj@eass.no<br/>
+									Mobil: 92624310</p>
+							</div>
+
+							<div class="col-md-6" ng-class="{'am-slide-top': isDeselected('andalsnes')}">
+								<h4>Inger-Lise Hovde Hatlen</h4>
+								<p>Leder for avd. Åndalsnes</p>
+
+								<p>E-mail: ih@eass.no<br/>
+									Mobil: 95746954</p>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-6" ng-class="{'am-slide-top': isDeselected('alesund')}">
+								<h4>Maria Therese Søvik</h4>
+								<p>Leder for avdeling Ålesund</p>
+
+								<p>E-mail: mts@eass.no<br/>
+									Mobil: 98832136</p>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

@@ -21,8 +21,8 @@ echo "\ngit --version\n",
 	shell_exec('git --version 2>&1');
 
 if ( !is_dir(__DIR__ . '/.git') && !empty($json->repo) ) {
-	echo "\ngit clone https://deploybot@" . $json->repo . "\n",
-		shell_exec('git clone https://deploybot@' . $json->repo);
+	echo "\ngit clone https://imedias-deploykraken@" . $json->repo . "\n",
+		shell_exec('git clone https://imedias-deploykraken@' . $json->repo);
 }
 
 echo "\ngit pull origin master\n",

@@ -256,17 +256,32 @@ footer {
 	to { opacity: 0.5 }
 }
 
-.am-slide-top, am-slide-top.ng-hide-add-active {
+.am-slide-top {
 	opacity: 0;
 	max-height: 0;
 	overflow-y: hidden;
-	-webkit-transition: all .5s cubic-bezier(0.19, 1, 0.22, 1);
-	-moz-transition: all .5s cubic-bezier(0.19, 1, 0.22, 1);
-	-o-transition: all .5s cubic-bezier(0.19, 1, 0.22, 1);
-	transition: all .5s cubic-bezier(0.19, 1, 0.22, 1);
+	-webkit-transition: all 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+	-moz-transition: all 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+	-o-transition: all 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+	transition: all 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.am-slide-top.ng-animate {
+	transition: 0s none;
+}
+
+// class="col-md-6 ng-animate am-slide-top-add am-slide-top am-slide-top-add-active"
+am-slide-top.am-slide-top-add-active {
+	opacity: 0;
+	max-height: 0;
 }
 
 .am-slide-top-add {
+	opacity: 1;
+	max-height: 200px;
+}
+
+.am-slide-top-remove {
 	opacity: 1;
 	max-height: 200px;
 }

@@ -17,8 +17,15 @@ if ( $_GET['auth'] != $json->auth ) unauthorizedDeploy();
 
 echo '<pre>';
 
-echo "\ngit --version\n", shell_exec('git --version 2>&1');
+echo "\ngit --version\n",
+	shell_exec('git --version 2>&1');
 
-echo "\ngit pull origin master\n", shell_exec('git pull origin master');
+if ( !is_dir(__DIR__ . '/.git') && !empty($json->repo) ) {
+	echo "\ngit clone https://deploybot@" . $json->repo . "\n",
+		shell_exec('git clone https://deploybot@' . $json->repo);
+}
+
+echo "\ngit pull origin master\n",
+	shell_exec('git pull origin master');
 
 echo "\nOk.</pre>";

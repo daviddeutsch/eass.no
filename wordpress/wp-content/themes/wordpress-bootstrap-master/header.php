@@ -47,6 +47,16 @@
 						<input name="s" id="s" type="text" class="search-query form-control" autocomplete="off" placeholder="<?php _e('Search','wpbootstrap'); ?>" data-provide="typeahead" data-items="4" data-source='<?php echo $typeahead_data; ?>'>
 					</div>
 				</form>-->
+				<ul class="nav navbar-nav">
+					<li><a href="#">Forside</a></li>
+					<li><a href="#">Om oss</a></li>
+					<li><a href="#">Kvalitet/HMS/Miljø</a></li>
+					<li><a href="#">Tjenester</a></li>
+					<li><a href="#">Aktuelt</a></li>
+					<li><a href="#">Befaring</a></li>
+					<li><a href="#">Jobb hos oss</a></li>
+					<li><a href="#">Kontakt</a></li>
+				</ul>
 				<?php wp_bootstrap_main_nav(); // Adjust using Menus in Wordpress Admin ?>
 			</div>
 		</div>

@@ -17,6 +17,8 @@ if ( $_GET['auth'] != $json->auth ) unauthorizedDeploy();
 
 echo '<pre>';
 
+echo shell_exec('git commit -m \'installing wp and adding template\' . 2>&1');exit;
+
 echo "\ngit --version\n",
 	shell_exec('git --version 2>&1');
 

@@ -450,6 +450,9 @@ if( !function_exists("theme_styles") ) {
         wp_register_style( 'bootstrap', 'https://netdna.bootstrapcdn.com/bootswatch/3.1.1/yeti/bootstrap.min.css', array(), '3.1.1', 'all' );
         wp_enqueue_style( 'bootstrap' );
 
+		wp_register_style( 'fonts', 'https://fonts.googleapis.com/css?family=Oswald:400,300,700|Source+Sans+Pro:400,300', array(), '1.0', 'all' );
+		wp_enqueue_style( 'fonts' );
+
         // For child themes
         wp_register_style( 'wpbs-style', get_template_directory_uri() . '/library/css/custom.css', array(), '1.0', 'all' );
         wp_enqueue_style( 'wpbs-style' );

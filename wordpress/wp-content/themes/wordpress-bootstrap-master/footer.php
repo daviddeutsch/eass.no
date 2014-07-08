@@ -6,7 +6,7 @@
 							<div class="col-md-8">
 								<h4>EASS</h4>
 								<p>
-									<img class="pull-right" src="assets/img/toma-gruppen.png" alt="Toma Gruppen"/>
+									<img class="pull-right" src="<?php echo get_template_directory_uri(); ?>/library/img/toma-gruppen.png" alt="Toma Gruppen"/>
 									Eiendomsassistanse AS er en del av Toma Gruppen og er en totalleverandør av servicetjenester innenfor renhold, vaktmester, kantine, gartner, vakt og sikkerhet og eiendomsforvaltning.
 								</p>
 							</div>

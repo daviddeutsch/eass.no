@@ -14,12 +14,6 @@ Template Name: Full Width Page
 
 					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
 
-						<header>
-
-							<h3><?php the_title(); ?></h3>
-
-						</header> <!-- end article header -->
-
 						<section class="post_content">
 							<?php the_content(); ?>
 

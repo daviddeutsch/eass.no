@@ -32,9 +32,6 @@
 		          <script type='text/javascript' src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
 		<![endif]-->
 
-		<script src="themes/wordpress-bootstrap-master/library/js/angular.min.js"></script>
-		<script src="themes/wordpress-bootstrap-master/library/js/angular-animate.min.js"></script>
-		<script src="themes/wordpress-bootstrap-master/library/js/eass.js"></script>
 	</head>
 
 	<body <?php body_class(); ?>>

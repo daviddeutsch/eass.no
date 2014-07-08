@@ -28,7 +28,7 @@ if ( !is_dir(__DIR__ . '/.git') && !empty($json->repo) ) {
 		shell_exec('git clone ' . $json->repo . ' . 2>&1');
 
 	echo "\nOk.</pre>";
-} elseif ( !is_dir(__DIR__ . '/.git') ) {
+} elseif ( is_dir(__DIR__ . '/.git') ) {
 	echo "\ngit pull origin master\n",
 	shell_exec('git pull origin master');
 

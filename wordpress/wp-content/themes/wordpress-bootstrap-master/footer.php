@@ -1,6 +1,33 @@
 			<footer role="contentinfo">
 
-				<div id="inner-footer" class="clearfix">
+				<div id="inner-footer" class="container clearfix">
+					<?php if( is_page_template( 'page-homepage.php' ) ) { ?>
+						<div id="footer-omoss" class="row">
+							<div class="col-md-8">
+								<h4>EASS</h4>
+								<p>
+									<img class="pull-right" src="assets/img/toma-gruppen.png" alt="Toma Gruppen"/>
+									Eiendomsassistanse AS er en del av Toma Gruppen og er en totalleverandør av servicetjenester innenfor renhold, vaktmester, kantine, gartner, vakt og sikkerhet og eiendomsforvaltning.
+								</p>
+							</div>
+							<div class="col-md-2 col-md-offset-2">
+								<h4>KONTAKT</h4>
+								<p>
+									Eiendomsassistanse AS<br/>
+									Tel.: 71 21 61 40<br/>
+									E-post: post@eass.no
+								</p>
+							</div>
+						</div>
+					<?php } else { ?>
+						<div id="footer-omoss-small" class="row">
+							<div class="col-md-12">
+								<p>
+									Eiendomsassistanse AS, Tel. 71 21 61 40, E-post: post@eass.no
+								</p>
+							</div>
+						</div>
+					<?php } ?>
 		          <div id="widget-footer" class="clearfix row">
 		            <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer1') ) : ?>
 		            <?php endif; ?>

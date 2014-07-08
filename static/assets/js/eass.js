@@ -76,6 +76,28 @@ function($scope) {
 );
 
 eassApp
+	.controller('TjenesterCtrl',
+		[
+			'$scope',
+			function($scope) {
+				$scope.id = 'renhold';
+
+				$scope.change = function( name ) {
+					$scope.id = name;
+				};
+
+				$scope.isDeselected = function ( name ) {
+					return $scope.id !== name && $scope.id != '';
+				};
+
+				$scope.isSelected = function ( name ) {
+					return $scope.id === name;
+				};
+			}
+		]
+	);
+
+eassApp
 .directive('loadingFx', function() {
 return {
 	restrict: 'A',

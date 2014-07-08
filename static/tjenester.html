@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>EASS</title>
+
+	<link href="https://netdna.bootstrapcdn.com/bootswatch/3.1.1/yeti/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="assets/css/custom.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Oswald:400,300,700|Source+Sans+Pro:400,300" rel="stylesheet" type="text/css">
+
+	<script type="text/javascript" src="assets/js/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="assets/js/angular.min.js"></script>
+	<script type="text/javascript" src="assets/js/angular-animate.min.js"></script>
+	<script type="text/javascript" src="assets/js/eass.js"></script>
+
+</head>
+
+<body ng-app="eassApp">
+<div id="header">
+	<div class="container">
+		<p id="home" class="pull-right">
+			<a href="#"><i class="fa fa-2x fa-home"></i></a>
+		</p>
+		<div id="logo"><img src="assets/img/eass-logo.png" alt=""/></div>
+		<ul class="nav navbar-nav">
+			<li><a href="index.html">Forside</a></li>
+			<li><a href="om-oss.html">Om oss</a></li>
+			<li><a href="kvalitet.html">Kvalitet/HMS/Miljø</a></li>
+			<li><a href="tjenester.html">Tjenester</a></li>
+			<li><a href="#">Aktuelt</a></li>
+			<li><a href="#">Befaring</a></li>
+			<li><a href="#">Jobb hos oss</a></li>
+			<li><a href="kontakt-oss.html">Kontakt</a></li>
+		</ul>
+	</div>
+</div>
+<div id="main">
+	<div class="container">
+		<div class="row" ng-controller="TjenesterCtrl">
+			<div class="col-md-12 img-wrap">
+				<img class="placeholder" src="assets/img/vaktmesterservice.png" alt=""/>
+			</div>
+			<div class="col-md-3">
+				<ul class="nav sidenav">
+					<li ng-click="change('renhold')" ng-class="{selected: isSelected('renhold')}">Renhold</li>
+					<li ng-click="change('kantine')" ng-class="{selected: isSelected('kantine')}">Kantine</li>
+					<li ng-click="change('bedriftslunsj')" ng-class="{selected: isSelected('bedriftslunsj')}">Bedriftslunsj</li>
+					<li ng-click="change('eiendomsdrift')" ng-class="{selected: isSelected('eiendomsdrift')}">Eiendomsdrift</li>
+					<li ng-click="change('vaktmester')" ng-class="{selected: isSelected('vaktmester')}">Vaktmester</li>
+					<li ng-click="change('gartner')" ng-class="{selected: isSelected('gartner')}">Gartner</li>
+					<li ng-click="change('hjemmeservice')" ng-class="{selected: isSelected('hjemmeservice')}">Hjemmeservice</li>
+					<li ng-click="change('grandcafe')" ng-class="{selected: isSelected('grandcafe')}">Grand Cafè</li>
+					<li ng-click="change('catering')" ng-class="{selected: isSelected('catering')}">Catering</li>
+					<li ng-click="change('kaffe')" ng-class="{selected: isSelected('kaffe')}">Kaffe, vann og serveringsautomater</li>
+				</ul>
+			</div>
+
+			<div class="col-md-7">
+				<div class="panel panel-default panel-standalone">
+					<div class="panel-body">
+						<section id="renhold" ng-class="{'am-slide-top-fast': isDeselected('renhold')}">
+							<p>Vår renholdsavdeling er bygget opp av de mest erfarne fagfolk i vårt distrikt.</p>
+
+							<p>Vi utfører et bredt spekter av renholdstjenester som:</p>
+
+							<ul>
+								<li>Daglig renhold</li>
+								<li>Hovedrengjøring</li>
+								<li>Skuring og boning av gulv</li>
+								<li>Tepperens</li>
+								<li>Vindusvask</li>
+								<li>Fasaderenhold</li>
+								<li>Byggvask</li>
+								<li>Industrirenhold</li>
+								<li>Utleie av matter</li>
+								<li>Hjemmeservice</li>
+							</ul>
+
+							<p>Ta kontakt:</p>
+
+							<p>Marry Janne Kolberg<br/>
+							Avdelingsleder hovedrenhold og hjemmeservice<br/>
+							E-mail: mj@eass.no<br/>
+							Mobil: 92624310</p>
+
+							<p>Halldis Johnsen<br/>
+							Avdelingsleder renhold og kantine<br/>
+							E-mail: hj@eass.no<br/>
+							Mobil: 92649839</p>
+
+							<p>Helene Rødsand
+							Avdelingsleder renhold og kantine Kristiansund<br/>
+							E-mail: se@eass.no<br/>
+							Mobil: 47935616</p>
+						</section>
+
+						<section id="kantine" ng-class="{'am-slide-top-fast': isDeselected('kantine')}">
+							<p>Moderne kantinedrift er et spesialisert fag som skjøttes best og mest økonomisk av fagfolk. Mange velger derfor å overlate kantinedriften til spesialister på området. Vi legger vekt på å tilpasse løsninger som er i harmoni med bedriftskultur, økonomi og praktiske behov for den enkelte oppdragsgiver. God mat, rene lokaler og høy servicegrad er grunnleggende elementer i vår kantinedrift.</p>
+
+							<ul>
+								<li>Tilpassede løsninger
+								<li>God mat</li>
+								<li>Rene lokaler</li>
+								<li>Høy servicegrad</li>
+							</ul>
+
+							<p>Ta kontakt:</p>
+
+							<p>May Elin Johansen<br/>
+							Driftsassistent renhold og kantine<br/>
+							E-mail: me@eass.no<br/>
+							Mobil: 92649839</p>
+						</section>
+
+						<section id="bedriftslunsj" ng-class="{'am-slide-top-fast': isDeselected('bedriftslunsj')}">
+							<p>EASS kan tilby bedriftslunch for firma som ikke har egen kantine.</p>
+
+							<p>For nærmere informasjon om hva vi kan tilby,</p>
+
+							<p>Ta kontakt med:</p>
+
+							<p>Kjell Elnes<br/>
+							Daglig eder<br/>
+							E-mail: ft@eass.no<br/>
+							Mobil: 92668303</p>
+						</section>
+
+						<section id="eiendomsdrift" ng-class="{'am-slide-top-fast': isDeselected('eiendomsdrift')}">
+							<p>Eiendomsdrift er mer enn husleieinnkrevning.</p>
+
+							<p>Å forvalte eiendom krever god styring til enhver tid, og omfatter vedlikehold, økonomi og regnskap. Ikke alle eiere har kapasitet til å ivareta disse funksjonene selv, og slik kan verdier gå tapt. Mange eiere av næringseiendommer velger derfor å sette bort driften til forvaltere for selv å kunne konsentrere seg om sitt kjerneområde. Som forvaltere trer vi inn i eiers rolle, og overtar de mange oppgaver som følger med god forvaltning av eiendommen.</p>
+
+							<p>Vår oppgave blir å:</p>
+
+							<ul>
+								<li>Effektivt medvirke til full utnyttelse av eiendommen</li>
+								<li>Drive eiendommen på en effektiv måte</li>
+								<li>Legge forholdene til rette slik at leietakerne trives</li>
+								<li>Følge opp alle offentlige krav og pålegg</li>
+								<li>Ivareta rutiner sikkert og effektivt gjennom våre forvaltningssystemer</li>
+							</ul>
+
+							<p>Ta kontakt:</p>
+
+							<p>Frank Thomassen<br/>
+							Salgsleder<br/>
+							E-mail: ft@eass.no<br/>
+							Mobil: 92618530</p>
+						</section>
+
+						<section id="vaktmester" ng-class="{'am-slide-top-fast': isDeselected('vaktmester')}">
+							<p>Vår vaktmestertjeneste tilpasses de behov som våre kunder etterspør.</p>
+
+							<p>Her er noen av de oppgavene vi utfører:</p>
+
+							<ul>
+								<li>Vedlikehold og ettersyn av alle typer tekniske anlegg</li>
+								<li>Vedlikehold av bygningsmessig art</li>
+								<li>Oppfølging av servicekontrakter</li>
+								<li>Renhold av utendørsområder</li>
+								<li>Tilsyn av parkeringsplasser</li>
+								<li>Avfallshåndtering</li>
+								<li>Snømåking/grusing</li>
+								<li>Internkontroll brann.</li>
+							</ul>
+
+							<p>Ta kontakt:</p>
+
+							<p>Frank Thomassen<br/>
+							Salgsleder<br/>
+							E-mail: ft@eass.no<br/>
+							Mobil: 92618530</p>
+						</section>
+
+						<section id="gartner" ng-class="{'am-slide-top-fast': isDeselected('gartner')}">
+							<p>Våre gartnere utfører vedlikehold av grøntanlegg som hager, parker og andre grønne områder.</p>
+
+							<p>Noen av våre gartnertjenester:</p>
+
+							<ul>
+								<li>Gressklipping</li>
+								<li>Kalking/gjødsling</li>
+								<li>Luking</li>
+								<li>Hekklipping</li>
+								<li>Beskjæring av busker og trær</li>
+								<li>Vanning</li>
+								<li>Stell av roser</li>
+							</ul>
+
+							<p>Ta kontakt:
+
+							<p>Frank Thomassen<br/>
+							Salgsleder<br/>
+							E-mail: ft@eass.no<br/>
+							Mobil: 92618530</p>
+						</section>
+
+						<section id="hjemmeservice" ng-class="{'am-slide-top-fast': isDeselected('hjemmeservice')}">
+							<p>Marry Janne Kolberg<br/>
+							Avdelingsleder hovedrenhold og hjemmeservice<br/>
+							E-mail: mj@eass.no<br/>
+							Mobil: 92624310</p>
+						</section>
+
+						<section id="grandcafe" ng-class="{'am-slide-top-fast': isDeselected('grandcafe')}">
+							<p>Grand Cafè på gangbroen i Molde Storsenter drives av Kenneth Stranden for EASS Eiendomsassistanse AS.</p>
+
+							<p>grandcafe@eass.no
+							www.grandcafe.no</p>
+						</section>
+
+						<section id="catering" ng-class="{'am-slide-top-fast': isDeselected('catering')}">
+							<p>EASS kan levere mat til alle anledninger fra Grand Cafè.</p>
+
+							<p>www.grandcafe.no</p>
+
+							<p>Kontakt oss på følgende e-postadresse: grandcafe@eass.no</p>
+						</section>
+
+						<section id="kaffe" ng-class="{'am-slide-top-fast': isDeselected('kaffe')}">
+							<p>Ønsker du tilgjengelighet til kaffe, mat og drikke døgnet rundt? Vi tilbyr nå et bredt utvalg av markedets beste løsninger innen kaffe, vann og serveringsautomater. Du kan få en skreddersydd løsning som vil gi deg mange gode studer med rykende nybrygget kaffe eller friskt kaldt vann. EASS kan ta ansvar for all service og påfylling, men dere kan også velge å bestille og etterfylle selv. Ta kontakt for et uforpliktende tilbud.</p>
+
+							<p>Ta kontakt:</p>
+
+							<p>Frank Thomassen<br/>
+							Salgsleder<br/>
+							E-mail: ft@eass.no<br/>
+							Mobil: 92618530</p>
+						</section>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<footer>
+	<div class="container">
+		<div id="footer-omoss" class="row">
+			<div class="col-md-8">
+				<h4>EASS</h4>
+				<p>
+					<img class="pull-right" src="assets/img/toma-gruppen.png" alt="Toma Gruppen"/>
+					Eiendomsassistanse AS er en del av Toma Gruppen og er en totalleverandør av servicetjenester innenfor renhold, vaktmester, kantine, gartner, vakt og sikkerhet og eiendomsforvaltning.
+				</p>
+			</div>
+			<div class="col-md-2 col-md-offset-2">
+				<h4>KONTAKT</h4>
+				<p>
+					Eiendomsassistanse AS<br/>
+					Tel.: 71 21 61 40<br/>
+					E-post: post@eass.no
+				</p>
+			</div>
+		</div>
+	</div>
+</footer>
+</body>
+
+</html>

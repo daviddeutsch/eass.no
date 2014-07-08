@@ -290,3 +290,38 @@ am-slide-top.am-slide-top-add-active {
 	opacity: 1;
 	max-height: 200px;
 }
+
+.am-slide-top-fast {
+	opacity: 0;
+	max-height: 0;
+	overflow-y: hidden;
+	-webkit-transition: all .5s cubic-bezier(0.19, 1, 0.22, 1);
+	-moz-transition: all .5s cubic-bezier(0.19, 1, 0.22, 1);
+	-o-transition: all .5s cubic-bezier(0.19, 1, 0.22, 1);
+	transition: all .5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.am-slide-top-fast.ng-animate {
+	transition: 0s none;
+}
+
+// class="col-md-6 ng-animate am-slide-top-add am-slide-top am-slide-top-add-active"
+am-slide-top-fast.am-slide-top-fast-add-active {
+	opacity: 0;
+	max-height: 0;
+}
+
+.am-slide-top-fast-add {
+	opacity: 1;
+	max-height: 200px;
+}
+
+.am-slide-top-fast-remove {
+	opacity: 0;
+	max-height: 0;
+}
+
+.am-slide-top-fast-remove-active {
+	opacity: 1;
+	max-height: 200px;
+}

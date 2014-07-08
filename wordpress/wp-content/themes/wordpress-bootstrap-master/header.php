@@ -51,9 +51,9 @@
 					</div>
 				</form>-->
 				<ul class="nav navbar-nav">
-					<li><a href="/">Forside</a></li>
-					<li><a href="/?page_id=8">Om oss</a></li>
-					<li><a href="/?page_id=14">Kvalitet/HMS/Miljø</a></li>
+					<li><a href="/wordpress/">Forside</a></li>
+					<li><a href="/wordpress/?page_id=8">Om oss</a></li>
+					<li><a href="/wordpress/?page_id=14">Kvalitet/HMS/Miljø</a></li>
 					<li><a href="#">Tjenester</a></li>
 					<li><a href="#">Aktuelt</a></li>
 					<li><a href="#">Befaring</a></li>

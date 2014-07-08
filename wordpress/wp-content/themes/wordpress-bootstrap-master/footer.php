@@ -19,7 +19,9 @@
 
 			</footer> <!-- end footer -->
 
-		</div> <!-- end #container -->
+			</div>
+		</div>
+	</div> <!-- end #container -->
 
 		<!--[if lt IE 7 ]>
   			<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>

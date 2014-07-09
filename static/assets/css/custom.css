@@ -159,6 +159,7 @@ div#main .sidenav {
   margin-right: -18px;
   z-index: 1000;
   border-bottom: 6px solid #e4131a;
+  padding-top: 12px;
 }
 div#main .sidenav li {
   font-family: 'Oswald', sans-serif;

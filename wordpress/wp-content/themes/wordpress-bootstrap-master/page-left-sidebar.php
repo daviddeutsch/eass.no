@@ -5,7 +5,7 @@ Template Name: Left Sidebar Page
 ?>
 
 <?php get_header(); ?>
-
+<div id="main">
 			<div class="col-md-12 img-wrap">
 				<img class="placeholder" src="<?php echo get_template_directory_uri(); ?>/library/img/vaktmesterservice.png" alt=""/>
 			</div>
@@ -27,5 +27,5 @@ Template Name: Left Sidebar Page
 				</article>
 
 			<?php endif; ?>
-
+</div>
 <?php get_footer(); ?>

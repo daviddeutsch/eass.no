@@ -74,11 +74,9 @@ eassApp
 				};
 
 				angular.forEach(headers, function(value, key){
-					var heading = value.innerHtml;
-
 					var element = {
-						id: encodeURIComponent(heading),
-						title: heading
+						id: encodeURIComponent(value.html()),
+						title: value.html()
 					};
 
 					if ( !checkExisting(element.id) ) {

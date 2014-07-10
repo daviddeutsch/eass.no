@@ -89,17 +89,17 @@ eassApp
 
 					var content = angular.element(value).nextUntil("h3").andSelf();
 
-					$compile(
-						angular.element(content).wrapAll(
+					content.replaceWith(
+						$compile(
 							'<div id="container-'+i+'" ng-class="{\''
-								+ ( $scope.multi ? 'am-slide-top' : 'am-slide-top-fast' )
-								+ '\': isDeselected(\''
-								+ element.id
-								+ '\')}"></div>'
-						)
-					)($scope);
-
-					//angular.element('#container-'+i).scope();
+							+ ( $scope.multi ? 'am-slide-top' : 'am-slide-top-fast' )
+							+ '\': isDeselected(\''
+							+ element.id
+							+ '\')}">'
+							+ content.html()
+							+ '</div>'
+						)($scope)
+					);
 				});
 
 				$scope.id = $location.hash();

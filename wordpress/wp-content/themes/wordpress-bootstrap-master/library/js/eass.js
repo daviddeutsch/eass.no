@@ -74,7 +74,7 @@ eassApp
 				};
 
 				angular.forEach(headers, function(value, key){
-					var heading = value.html();
+					var heading = jQuery(this).html();
 
 					var element = {
 						id: encodeURIComponent(heading),
@@ -85,7 +85,7 @@ eassApp
 						$scope.choices.push(element);
 					}
 
-					var content = value.nextUntil("h1").andSelf();
+					var content = jQuery(this).nextUntil("h1").andSelf();
 
 					content.wrapAll(
 						'<div ng-class="{\''

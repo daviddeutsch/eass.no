@@ -105,7 +105,7 @@ eassApp
 						}
 					}
 
-					replace.replaceWith(
+					angular.element(replace).replaceWith(
 						$compile(
 							'<div id="container-'+i+'" ng-class="{\''
 							+ ( $scope.multi ? 'am-slide-top' : 'am-slide-top-fast' )

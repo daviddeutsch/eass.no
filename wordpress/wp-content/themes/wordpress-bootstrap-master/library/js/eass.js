@@ -6,17 +6,6 @@ var eassApp = angular.module(
 );
 
 eassApp
-.config(
-[
-'$locationProvider',
-function($locationProvider)
-{
-	$locationProvider.html5Mode(true);
-}
-]
-);
-
-eassApp
 .controller('HomeImgCtrl',
 [
 '$scope', '$timeout',

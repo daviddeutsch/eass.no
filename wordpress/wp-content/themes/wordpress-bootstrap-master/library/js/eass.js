@@ -91,6 +91,8 @@ eassApp
 
 					var newhtml = '';
 
+					var replace;
+
 					for ( var j=0; j<content.length; j++ ) {
 						newhtml += angular.element(content[j]).clone().wrap('<p>').parent().html();
 
@@ -98,10 +100,12 @@ eassApp
 							angular.element(content[j]).remove();
 
 							delete content[j];
+						} else {
+							replace = content[j];
 						}
 					}
 
-					content.replaceWith(
+					replace.replaceWith(
 						$compile(
 							'<div id="container-'+i+'" ng-class="{\''
 							+ ( $scope.multi ? 'am-slide-top' : 'am-slide-top-fast' )

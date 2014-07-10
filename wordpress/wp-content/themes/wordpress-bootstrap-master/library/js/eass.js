@@ -90,7 +90,7 @@ eassApp
 					var content = jQuery(value).nextUntil("h3").andSelf();
 
 					content.wrapAll(
-						'<div id="container-’+i+’" ng-class="{\''
+						'<div id="container-'+i+'" ng-class="{\''
 							+ ( $scope.multi ? 'am-slide-top' : 'am-slide-top-fast' )
 							+ '\': isDeselected(\''
 							+ element.id

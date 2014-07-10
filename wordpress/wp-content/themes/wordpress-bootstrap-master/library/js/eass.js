@@ -73,11 +73,7 @@ eassApp
 					return false;
 				};
 
-				var i = 0;
-
 				angular.forEach(headers, function(value, key){
-					i++;
-
 					var element = {
 						id: encodeURIComponent(jQuery(value).html()),
 						title: jQuery(value).html()
@@ -87,19 +83,14 @@ eassApp
 						$scope.choices.push(element);
 					}
 
-					var content = jQuery(value).nextUntil("h1").andSelf();
+					var content = jQuery(value).nextUntil("h3").andSelf();
 
 					content.wrapAll(
-						'<div id="section-'+i+'"></div>'
-					);
-
-					jQuery('#section-'+i ).data(
-						"ng-class",
-						'"{\''
-						+ ( $scope.multi ? 'am-slide-top' : 'am-slide-top-fast' )
-						+ '\': isDeselected(\''
-						+ element.id
-						+ '\')}" />'
+						'<div ng-class="{\''
+							+ ( $scope.multi ? 'am-slide-top' : 'am-slide-top-fast' )
+							+ '\': isDeselected(\''
+							+ element.id
+							+ '\')}"></div>'
 					);
 				});
 

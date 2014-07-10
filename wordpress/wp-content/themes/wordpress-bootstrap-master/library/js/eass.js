@@ -93,6 +93,8 @@ eassApp
 
 					for ( var j=0; j<content.length; j++ ) {
 						newhtml += angular.element(content[j]).clone().wrap('<p>').parent().html();
+
+						if ( j > 0 ) angular.element(content[j] ).remove();
 					}
 
 					content.replaceWith(
@@ -106,6 +108,10 @@ eassApp
 							+ '</div>'
 						)($scope)
 					);
+
+					var clonedElement = $compile(templateElement)($scope, function(clonedElement, $scope) {
+						//attach the clone to DOM document at the right place
+					});
 				});
 
 				$scope.id = $location.hash();

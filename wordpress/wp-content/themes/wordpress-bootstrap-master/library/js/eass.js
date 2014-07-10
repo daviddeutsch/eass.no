@@ -96,7 +96,11 @@ eassApp
 					for ( var j=0; j<content.length; j++ ) {
 						newhtml += angular.element(content[j]).clone().wrap('<p>').parent().html();
 
-						if ( j != last ) angular.element(content[j]).remove();
+						if ( j != last-1 ) {
+							delete content[j];
+
+							angular.element(content[j]).remove();
+						}
 					}
 
 					content.replaceWith(

@@ -93,7 +93,7 @@ eassApp
 						'<div id="'+i+'" />'
 					);
 
-					jquery('#section-'+i ).data(
+					jQuery('#section-'+i ).data(
 						"ng-class",
 						'"{\''
 						+ ( $scope.multi ? 'am-slide-top' : 'am-slide-top-fast' )

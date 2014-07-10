@@ -108,10 +108,6 @@ eassApp
 							+ '</div>'
 						)($scope)
 					);
-
-					var clonedElement = $compile(templateElement)($scope, function(clonedElement, $scope) {
-						//attach the clone to DOM document at the right place
-					});
 				});
 
 				$scope.id = $location.hash();

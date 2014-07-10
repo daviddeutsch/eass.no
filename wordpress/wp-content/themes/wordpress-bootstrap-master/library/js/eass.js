@@ -52,8 +52,8 @@ function($scope, $timeout) {
 eassApp
 	.controller('SidebarPageCtrl',
 		[
-			'$scope', '$location',
-			function($scope, $location) {
+			'$scope', '$location', '$compile',
+			function($scope, $location, $compile) {
 				var headers = angular.element(".panel-body h3" );
 
 				if ( headers.length <= 1 ) {
@@ -89,13 +89,15 @@ eassApp
 
 					var content = angular.element(value).nextUntil("h3").andSelf();
 
-					angular.element(content).wrapAll(
-						'<div id="container-'+i+'" ng-class="{\''
-							+ ( $scope.multi ? 'am-slide-top' : 'am-slide-top-fast' )
-							+ '\': isDeselected(\''
-							+ element.id
-							+ '\')}"></div>'
-					);
+					$compile(
+						angular.element(content).wrapAll(
+							'<div id="container-'+i+'" ng-class="{\''
+								+ ( $scope.multi ? 'am-slide-top' : 'am-slide-top-fast' )
+								+ '\': isDeselected(\''
+								+ element.id
+								+ '\')}"></div>'
+						)
+					)($scope);
 
 					//angular.element('#container-'+i).scope();
 				});

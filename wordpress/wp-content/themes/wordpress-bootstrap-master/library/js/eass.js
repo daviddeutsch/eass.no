@@ -75,7 +75,7 @@ eassApp
 
 				angular.forEach(headers, function(value, key){
 					var element = {
-						id: encodeURIComponent(jQuery(value).html()),
+						id: jQuery(value).html().toLowerCase().replace(/[^a-z0-9]/gi,''),
 						title: jQuery(value).html()
 					};
 

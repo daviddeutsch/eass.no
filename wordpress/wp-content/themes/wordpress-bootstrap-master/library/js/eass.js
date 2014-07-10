@@ -89,6 +89,12 @@ eassApp
 
 					var content = angular.element(value).nextUntil("h3").andSelf();
 
+					var newhtml = '';
+
+					for ( var i=0; i<content.length; i++ ) {
+						newhtml += content[i].clone().wrap('<p>').parent().html();
+					}
+
 					content.replaceWith(
 						$compile(
 							'<div id="container-'+i+'" ng-class="{\''
@@ -96,7 +102,7 @@ eassApp
 							+ '\': isDeselected(\''
 							+ element.id
 							+ '\')}">'
-							+ content.html()
+							+ newhtml
 							+ '</div>'
 						)($scope)
 					);

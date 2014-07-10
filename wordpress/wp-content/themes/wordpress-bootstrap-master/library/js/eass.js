@@ -131,8 +131,6 @@ function($scope, $location, $compile)
 		);
 	});
 
-	$scope.id = $location.hash();
-
 	$scope.multi = false;
 
 	$scope.change = function( name ) {
@@ -154,6 +152,12 @@ function($scope, $location, $compile)
 	$scope.isSelected = function ( name ) {
 		return $scope.id === name;
 	};
+
+	$scope.id = $location.hash();
+
+	if ( $scope.id == '' ) {
+		$scope.change( $scope.choices[0].id );
+	}
 }
 ]
 );

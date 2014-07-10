@@ -20,7 +20,7 @@ Template Name: Homepage
 									<p>Vår renholdsavdeling er bygget opp av de mest erfarne fagfolk i vårt distrikt. Vår ren- holdsavdeling er bygget opp av de mest erfarne fagfolk i vårt distrikt. Vår ren- holdsavdeling er bygget opp av de mest erfarne fagfolk i vårt distrikt.</p>
 									<hr/>
 									<h4 class="pull-right">
-										<a href="#">Les mer <i class="fa fa-chevron-right"></i></a>
+										<a href="/wordpress/?page_id=18#renhold">Les mer <i class="fa fa-chevron-right"></i></a>
 									</h4>
 								</div>
 							</div>
@@ -32,7 +32,7 @@ Template Name: Homepage
 									<p>Vår renholdsavdeling er bygget opp av de mest erfarne fagfolk i vårt distrikt. Vår ren- holdsavdeling er bygget opp av de mest erfarne fagfolk i vårt distrikt. Vår ren- holdsavdeling er bygget opp av de mest erfarne fagfolk i vårt distrikt.</p>
 									<hr/>
 									<h4 class="pull-right">
-										<a href="#">Les mer <i class="fa fa-chevron-right"></i></a>
+										<a href="/wordpress/?page_id=18#kantine">Les mer <i class="fa fa-chevron-right"></i></a>
 									</h4>
 								</div>
 							</div>
@@ -44,7 +44,7 @@ Template Name: Homepage
 									<p>Vår renholdsavdeling er bygget opp av de mest erfarne fagfolk i vårt distrikt. Vår ren- holdsavdeling er bygget opp av de mest erfarne fagfolk i vårt distrikt. Vår ren- holdsavdeling er bygget opp av de mest erfarne fagfolk i vårt distrikt.</p>
 									<hr/>
 									<h4 class="pull-right">
-										<a href="#">Les mer <i class="fa fa-chevron-right"></i></a>
+										<a href="/wordpress/?page_id=18#vaktmester">Les mer <i class="fa fa-chevron-right"></i></a>
 									</h4>
 								</div>
 							</div>

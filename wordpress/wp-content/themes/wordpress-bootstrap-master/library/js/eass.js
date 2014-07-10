@@ -73,7 +73,11 @@ eassApp
 					return false;
 				};
 
+				var i = 0;
+
 				angular.forEach(headers, function(value, key){
+					i++;
+
 					var element = {
 						id: jQuery(value).html().toLowerCase().replace(/[^a-z0-9]/gi,''),
 						title: jQuery(value).html()
@@ -86,12 +90,14 @@ eassApp
 					var content = jQuery(value).nextUntil("h3").andSelf();
 
 					content.wrapAll(
-						'<div ng-class="{\''
+						'<div id="container-’+i+’" ng-class="{\''
 							+ ( $scope.multi ? 'am-slide-top' : 'am-slide-top-fast' )
 							+ '\': isDeselected(\''
 							+ element.id
 							+ '\')}"></div>'
 					);
+
+					angular.element('#container-'+i).scope();
 				});
 
 				$scope.id = $location.hash();

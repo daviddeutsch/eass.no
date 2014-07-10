@@ -55,9 +55,9 @@
 					<li><a href="/wordpress/?page_id=8">Om oss</a></li>
 					<li><a href="/wordpress/?page_id=14">Kvalitet/HMS/Miljø</a></li>
 					<li><a href="/wordpress/?page_id=18">Tjenester</a></li>
-					<li><a href="#">Aktuelt</a></li>
-					<li><a href="#">Befaring</a></li>
-					<li><a href="#">Jobb hos oss</a></li>
+					<li><a href="/wordpress/?page_id=30">Aktuelt</a></li>
+					<li><a href="/wordpress/?page_id=32">Befaring</a></li>
+					<li><a href="/wordpress/?page_id=34">Jobb hos oss</a></li>
 					<li><a href="/wordpress/?page_id=20">Kontakt</a></li>
 				</ul>
 				<?php wp_bootstrap_main_nav(); // Adjust using Menus in Wordpress Admin ?>

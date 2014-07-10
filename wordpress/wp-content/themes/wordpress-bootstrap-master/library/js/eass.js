@@ -6,10 +6,22 @@ var eassApp = angular.module(
 );
 
 eassApp
+.config(
+[
+'$locationProvider',
+function($locationProvider)
+{
+	$locationProvider.html5Mode(true);
+}
+]
+);
+
+eassApp
 .controller('HomeImgCtrl',
 [
 '$scope', '$timeout',
-function($scope, $timeout) {
+function($scope, $timeout)
+{
 	$scope.slides = [
 		{name: 'renhold'},
 		{name: 'kantine'},
@@ -50,100 +62,101 @@ function($scope, $timeout) {
 );
 
 eassApp
-	.controller('SidebarPageCtrl',
-		[
-			'$scope', '$location', '$compile',
-			function($scope, $location, $compile) {
-				var headers = angular.element(".panel-body h3" );
+.controller('SidebarPageCtrl',
+[
+'$scope', '$location', '$compile',
+function($scope, $location, $compile)
+{
+	var headers = angular.element(".panel-body h3" );
 
-				if ( headers.length <= 1 ) {
-					// Nothing to partition
-					return;
-				}
+	if ( headers.length <= 1 ) {
+		// Nothing to partition
+		return;
+	}
 
-				$scope.choices = [];
+	$scope.choices = [];
 
-				var checkExisting = function( name ) {
-					if ( $scope.choices.length == 0 ) return false;
+	var checkExisting = function( name ) {
+		if ( $scope.choices.length == 0 ) return false;
 
-					for ( var i=0; i<$scope.choices.length; i++ ) {
-						if ( $scope.choices[i].id == name ) return true;
-					}
+		for ( var i=0; i<$scope.choices.length; i++ ) {
+			if ( $scope.choices[i].id == name ) return true;
+		}
 
-					return false;
-				};
+		return false;
+	};
 
-				var i = 0;
+	var i = 0;
 
-				angular.forEach(headers, function(value, key){
-					i++;
+	angular.forEach(headers, function(value, key){
+		i++;
 
-					var element = {
-						id: angular.element(value).html().toLowerCase().replace(/[^a-z0-9]/gi,''),
-						title: angular.element(value).html()
-					};
+		var element = {
+			id: angular.element(value).html().toLowerCase().replace(/[^a-z0-9]/gi,''),
+			title: angular.element(value).html()
+		};
 
-					if ( !checkExisting(element.id) ) {
-						$scope.choices.push(element);
-					}
+		if ( !checkExisting(element.id) ) {
+			$scope.choices.push(element);
+		}
 
-					var content = angular.element(value).nextUntil("h3").andSelf();
+		var content = angular.element(value).nextUntil("h3").andSelf();
 
-					var newhtml = '';
+		var newhtml = '';
 
-					var replace;
+		var replace;
 
-					for ( var j=0; j<content.length; j++ ) {
-						newhtml += angular.element(content[j]).clone().wrap('<p>').parent().html();
+		for ( var j=0; j<content.length; j++ ) {
+			newhtml += angular.element(content[j]).clone().wrap('<p>').parent().html();
 
-						if ( j < content.length-1 ) {
-							angular.element(content[j]).remove();
+			if ( j < content.length-1 ) {
+				angular.element(content[j]).remove();
 
-							delete content[j];
-						} else {
-							replace = content[j];
-						}
-					}
-
-					angular.element(replace).replaceWith(
-						$compile(
-							'<div id="container-'+i+'" ng-class="{\''
-							+ ( $scope.multi ? 'am-slide-top' : 'am-slide-top-fast' )
-							+ '\': isDeselected(\''
-							+ element.id
-							+ '\')}">'
-							+ newhtml
-							+ '</div>'
-						)($scope)
-					);
-				});
-
-				$scope.id = $location.hash();
-
-				$scope.multi = false;
-
-				$scope.change = function( name ) {
-					if ( $scope.id === name && $scope.multi ) {
-						$scope.id = '';
-					} else if ( $scope.id === name ) {
-						return;
-					} else {
-						$scope.id = name;
-					}
-
-					$location.hash($scope.id);
-				};
-
-				$scope.isDeselected = function ( name ) {
-					return $scope.id !== name && $scope.id != '';
-				};
-
-				$scope.isSelected = function ( name ) {
-					return $scope.id === name;
-				};
+				delete content[j];
+			} else {
+				replace = content[j];
 			}
-		]
-	);
+		}
+
+		angular.element(replace).replaceWith(
+			$compile(
+				'<div id="container-'+i+'" ng-class="{\''
+				+ ( $scope.multi ? 'am-slide-top' : 'am-slide-top-fast' )
+				+ '\': isDeselected(\''
+				+ element.id
+				+ '\')}">'
+				+ newhtml
+				+ '</div>'
+			)($scope)
+		);
+	});
+
+	$scope.id = $location.hash();
+
+	$scope.multi = false;
+
+	$scope.change = function( name ) {
+		if ( $scope.id === name && $scope.multi ) {
+			$scope.id = '';
+		} else if ( $scope.id === name ) {
+			return;
+		} else {
+			$scope.id = name;
+		}
+
+		$location.hash($scope.id);
+	};
+
+	$scope.isDeselected = function ( name ) {
+		return $scope.id !== name && $scope.id != '';
+	};
+
+	$scope.isSelected = function ( name ) {
+		return $scope.id === name;
+	};
+}
+]
+);
 
 eassApp
 .controller('ContactCtrl',
@@ -170,44 +183,3 @@ function($scope) {
 }
 ]
 );
-
-eassApp
-	.controller('TjenesterCtrl',
-		[
-			'$scope',
-			function($scope) {
-				$scope.id = 'renhold';
-
-				$scope.change = function( name ) {
-					$scope.id = name;
-				};
-
-				$scope.isDeselected = function ( name ) {
-					return $scope.id !== name && $scope.id != '';
-				};
-
-				$scope.isSelected = function ( name ) {
-					return $scope.id === name;
-				};
-			}
-		]
-	);
-
-eassApp
-.directive('loadingFx', function() {
-return {
-	restrict: 'A',
-	scope: {
-		ngSrc: '@'
-	},
-
-	link: function(scope, element) {
-		element.on('load', function() {
-			element.addClass('in');
-		});
-		scope.$watch('ngSrc', function(newVal) {
-			element.removeClass('in');
-		});
-	}
-};
-});

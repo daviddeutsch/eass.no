@@ -54,7 +54,7 @@ eassApp
 		[
 			'$scope', '$location',
 			function($scope, $location) {
-				var headers = jQuery(".panel-body h3" );
+				var headers = angular.element(".panel-body h3" );
 
 				if ( headers.length <= 1 ) {
 					// Nothing to partition
@@ -79,17 +79,17 @@ eassApp
 					i++;
 
 					var element = {
-						id: jQuery(value).html().toLowerCase().replace(/[^a-z0-9]/gi,''),
-						title: jQuery(value).html()
+						id: angular.element(value).html().toLowerCase().replace(/[^a-z0-9]/gi,''),
+						title: angular.element(value).html()
 					};
 
 					if ( !checkExisting(element.id) ) {
 						$scope.choices.push(element);
 					}
 
-					var content = jQuery(value).nextUntil("h3").andSelf();
+					var content = angular.element(value).nextUntil("h3").andSelf();
 
-					content.wrapAll(
+					angular.element.wrapAll(
 						'<div id="container-'+i+'" ng-class="{\''
 							+ ( $scope.multi ? 'am-slide-top' : 'am-slide-top-fast' )
 							+ '\': isDeselected(\''
@@ -97,7 +97,7 @@ eassApp
 							+ '\')}"></div>'
 					);
 
-					angular.element('#container-'+i).scope();
+					//angular.element('#container-'+i).scope();
 				});
 
 				$scope.id = $location.hash();

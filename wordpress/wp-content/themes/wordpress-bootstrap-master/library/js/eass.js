@@ -95,9 +95,9 @@ eassApp
 						newhtml += angular.element(content[j]).clone().wrap('<p>').parent().html();
 
 						if ( j > 0 ) {
-							delete content[j];
-
 							angular.element(content[j]).remove();
+
+							delete content[j];
 						}
 					}
 

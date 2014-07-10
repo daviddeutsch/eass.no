@@ -90,7 +90,7 @@ eassApp
 					var content = jQuery(value).nextUntil("h1").andSelf();
 
 					content.wrapAll(
-						'<div id="section-'+i+'" />'
+						'<div id="section-'+i+'"></div>'
 					);
 
 					jQuery('#section-'+i ).data(

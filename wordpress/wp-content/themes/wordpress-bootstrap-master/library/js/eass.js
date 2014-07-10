@@ -91,12 +91,10 @@ eassApp
 
 					var newhtml = '';
 
-					var last = content.length;
-
 					for ( var j=0; j<content.length; j++ ) {
 						newhtml += angular.element(content[j]).clone().wrap('<p>').parent().html();
 
-						if ( j != last-1 ) {
+						if ( j > 0 ) {
 							delete content[j];
 
 							angular.element(content[j]).remove();

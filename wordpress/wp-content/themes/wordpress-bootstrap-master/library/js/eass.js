@@ -89,7 +89,7 @@ eassApp
 
 					var content = angular.element(value).nextUntil("h3").andSelf();
 
-					angular.element.wrapAll(
+					angular.element(content).wrapAll(
 						'<div id="container-'+i+'" ng-class="{\''
 							+ ( $scope.multi ? 'am-slide-top' : 'am-slide-top-fast' )
 							+ '\': isDeselected(\''

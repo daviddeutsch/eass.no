@@ -91,8 +91,8 @@ eassApp
 
 					var newhtml = '';
 
-					for ( var i=0; i<content.length; i++ ) {
-						newhtml += content[i].clone().wrap('<p>').parent().html();
+					for ( var j=0; j<content.length; j++ ) {
+						newhtml += angular.element(content[j]).clone().wrap('<p>').parent().html();
 					}
 
 					content.replaceWith(

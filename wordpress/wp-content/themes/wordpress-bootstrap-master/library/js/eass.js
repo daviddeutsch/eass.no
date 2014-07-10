@@ -54,7 +54,7 @@ eassApp
 		[
 			'$scope', '$location',
 			function($scope, $location) {
-				var headers = $(".panel-body h3" );
+				var headers = jQuery(".panel-body h3" );
 
 				if ( headers.length <= 1 ) {
 					// Nothing to partition

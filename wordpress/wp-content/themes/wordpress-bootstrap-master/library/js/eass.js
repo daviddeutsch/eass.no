@@ -177,7 +177,7 @@ function($scope, $location, $compile)
 		);
 	});
 
-	angular.element(".panel-body ul" ).delete();
+	angular.element(".panel-body ul" ).remove();
 
 	var i = 0;
 	angular.forEach(headers, function(value, key) {

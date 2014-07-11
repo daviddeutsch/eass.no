@@ -201,7 +201,7 @@ function($scope, $location, $compile)
 		for ( var j=0; j<content.length; j++ ) {
 			var el = angular.element(content[j]);
 
-			content = el.clone().wrap('<p>').parent().html();
+			inner = el.clone().wrap('<p>').parent().html();
 
 			if ( name == '' ) {
 				elname = el.html().toLowerCase().replace(/[^a-z0-9]/gi,'');
@@ -211,13 +211,13 @@ function($scope, $location, $compile)
 						name = value.id;
 
 						if ( el.context.localName != 'h4' ) {
-							content = '';
+							inner = '';
 						}
 					}
 				});
 			}
 
-			newhtml += content;
+			newhtml += inner;
 
 			if ( j < content.length-1 ) {
 				angular.element(content[j]).remove();

@@ -210,7 +210,7 @@ function($scope, $location, $compile)
 					if ( elname == value.id ) {
 						name = value.id;
 
-						if ( el[0].localName != 'h4' ) {
+						if ( el.context.localName != 'h4' ) {
 							content = '';
 						}
 					}

@@ -52,6 +52,10 @@
 				</form>-->
 				<div class="collapse navbar-collapse">
 					<ul class="nav navbar-nav">
+						<li class="navbar-toggle">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+								<span class="sr-only">Toggle navigation</span>
+						</li>
 						<li><a href="/wordpress/">Forside</a></li>
 						<li><a href="/wordpress/?page_id=8">Om oss</a></li>
 						<li><a href="/wordpress/?page_id=14">Kvalitet/HMS/Miljø</a></li>

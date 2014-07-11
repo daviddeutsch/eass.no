@@ -107,7 +107,7 @@ function($scope, $location, $compile)
 			}
 		}
 
-		newhtml.replace('<br/><br/>', '<br/>').replace('<br><br>', '<br/>');
+		newhtml = newhtml.replace('<br><br>', '<br>');
 
 		angular.element(replace).replaceWith(
 			$compile(
@@ -232,7 +232,7 @@ function($scope, $location, $compile)
 			}
 		}
 
-		newhtml.replace('<br/><br/>', '<br/>').replace('<br><br>', '<br/>');
+		newhtml = newhtml.replace('<br><br>', '<br>');
 
 		angular.element(replace).replaceWith(
 			$compile(

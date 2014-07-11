@@ -183,7 +183,7 @@ div#main .sidenav li:hover {
 div#logo {
   padding: 24px 0;
 }
-ul.navbar-nav {
+nav.navbar {
   display: box;
   background: #000;
   margin-left: -22px;

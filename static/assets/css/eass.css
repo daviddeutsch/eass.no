@@ -6604,7 +6604,6 @@ div.img-wrap {
 img.placeholder {
   position: relative;
   width: 100%;
-  height: 460px;
   z-index: 100;
 }
 div#header {

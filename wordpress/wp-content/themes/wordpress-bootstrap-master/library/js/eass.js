@@ -107,6 +107,8 @@ function($scope, $location, $compile)
 			}
 		}
 
+		newhtml.replace('<br/><br />', '<br/>');
+
 		angular.element(replace).replaceWith(
 			$compile(
 				'<div id="container-' + i + '"'
@@ -229,6 +231,8 @@ function($scope, $location, $compile)
 				replace = content[j];
 			}
 		}
+
+		newhtml.replace('<br/><br />', '<br/>');
 
 		angular.element(replace).replaceWith(
 			$compile(

@@ -232,7 +232,7 @@ function($scope, $location, $compile)
 			}
 		}
 
-		newhtml = newhtml.replace('<br><br>', '<br>');
+		newhtml = newhtml.split('<br><br>').join('<br>');
 
 		angular.element(replace).replaceWith(
 			$compile(

@@ -1388,12 +1388,12 @@ pre code {
 }
 @media (min-width: 992px) {
   .container {
-    width: 970px;
+    width: 940px;
   }
 }
 @media (min-width: 1200px) {
   .container {
-    width: 1170px;
+    width: 970px;
   }
 }
 .container-fluid {
@@ -6545,9 +6545,6 @@ p.signal {
 h4 {
   font-family: 'Oswald', sans-serif;
   font-weight: 400;
-}
-.container {
-  width: 970px;
 }
 .col-xs-1,
 .col-sm-1,

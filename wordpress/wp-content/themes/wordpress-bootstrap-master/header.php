@@ -40,7 +40,7 @@
 	<body <?php body_class(); ?> ng-app="eassApp">
 
 		<div id="header">
-			<div class="container">
+			<div class="container-fluid">
 				<p id="home" class="pull-right">
 					<a href="#"><i class="fa fa-2x fa-home"></i></a>
 				</p>
@@ -50,16 +50,18 @@
 						<input name="s" id="s" type="text" class="search-query form-control" autocomplete="off" placeholder="<?php _e('Search','wpbootstrap'); ?>" data-provide="typeahead" data-items="4" data-source='<?php echo $typeahead_data; ?>'>
 					</div>
 				</form>-->
-				<ul class="nav navbar-nav">
-					<li><a href="/wordpress/">Forside</a></li>
-					<li><a href="/wordpress/?page_id=8">Om oss</a></li>
-					<li><a href="/wordpress/?page_id=14">Kvalitet/HMS/Miljø</a></li>
-					<li><a href="/wordpress/?page_id=18">Tjenester</a></li>
-					<li><a href="/wordpress/?page_id=30">Aktuelt</a></li>
-					<li><a href="/wordpress/?page_id=32">Befaring</a></li>
-					<li><a href="/wordpress/?page_id=34">Jobb hos oss</a></li>
-					<li><a href="/wordpress/?page_id=20">Kontakt</a></li>
-				</ul>
+				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="/wordpress/">Forside</a></li>
+						<li><a href="/wordpress/?page_id=8">Om oss</a></li>
+						<li><a href="/wordpress/?page_id=14">Kvalitet/HMS/Miljø</a></li>
+						<li><a href="/wordpress/?page_id=18">Tjenester</a></li>
+						<li><a href="/wordpress/?page_id=30">Aktuelt</a></li>
+						<li><a href="/wordpress/?page_id=32">Befaring</a></li>
+						<li><a href="/wordpress/?page_id=34">Jobb hos oss</a></li>
+						<li><a href="/wordpress/?page_id=20">Kontakt</a></li>
+					</ul>
+				</div>
 				<?php wp_bootstrap_main_nav(); // Adjust using Menus in Wordpress Admin ?>
 			</div>
 		</div>

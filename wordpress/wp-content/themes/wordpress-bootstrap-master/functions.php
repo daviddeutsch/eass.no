@@ -446,8 +446,11 @@ function add_active_class($classes, $item) {
 // enqueue styles
 if( !function_exists("theme_styles") ) {
     function theme_styles() {
-        wp_register_style( 'eass', get_template_directory_uri() . '/library/css/eass.css', array(), '1.0', 'all' );
-        wp_enqueue_style( 'eass' );
+		wp_register_style( 'eass', get_template_directory_uri() . '/library/css/eass.css', array(), '1.0', 'all' );
+		wp_enqueue_style( 'eass' );
+
+		wp_register_style( 'fontawesome', get_template_directory_uri() . '/library/font-awesome/css/font-awesome.min.css', array(), '4.0.3', 'all' );
+		wp_enqueue_style( 'fontawesome' );
     }
 }
 add_action( 'wp_enqueue_scripts', 'theme_styles' );

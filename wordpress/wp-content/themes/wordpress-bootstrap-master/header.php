@@ -54,6 +54,7 @@
 					<ul class="nav navbar-nav">
 						<li class="navbar-toggle">
 							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+								<i class="fa fa-bars"></i>
 								<span class="sr-only">Toggle navigation</span>
 						</li>
 						<li><a href="/wordpress/">Forside</a></li>

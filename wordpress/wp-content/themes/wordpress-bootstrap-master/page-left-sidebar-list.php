@@ -5,7 +5,7 @@ Template Name: Left Sidebar List Page
 ?>
 
 <?php get_header(); ?>
-		<div id="main" ng-controller="SidebarListPageCtrl">
+		<div id="main" ng-controller="SidebarPageListCtrl">
 			<div class="col-md-12 img-wrap">
 				<img class="placeholder" src="<?php echo get_template_directory_uri(); ?>/library/img/vaktmesterservice.png" alt=""/>
 			</div>

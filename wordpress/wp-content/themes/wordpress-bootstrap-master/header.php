@@ -50,7 +50,7 @@
 						<input name="s" id="s" type="text" class="search-query form-control" autocomplete="off" placeholder="<?php _e('Search','wpbootstrap'); ?>" data-provide="typeahead" data-items="4" data-source='<?php echo $typeahead_data; ?>'>
 					</div>
 				</form>-->
-				<nav class="navbar navbar-default" role="navigation">
+				<nav class="navbar navbar-inverse" role="navigation">
 					<div class="navbar-header">
 						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 							<i class="fa fa-2x fa-bars"></i>

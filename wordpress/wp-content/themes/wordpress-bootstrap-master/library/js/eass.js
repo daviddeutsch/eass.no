@@ -198,6 +198,8 @@ function($scope, $location, $compile)
 
 		var name = '';
 
+		var inner = '';
+
 		for ( var j=0; j<content.length; j++ ) {
 			var el = angular.element(content[j]);
 
@@ -263,7 +265,7 @@ function($scope, $location, $compile)
 	$scope.id = $location.hash();
 
 	if ( $scope.id == '' ) {
-		$scope.change( $scope.choices[0].id );
+		$scope.change( $scope.choices[2].id );
 	}
 }
 ]

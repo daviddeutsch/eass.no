@@ -49,8 +49,8 @@ div.panel-standalone .panel-body ul li {
   margin-bottom: 12px;
 }
 .kontakt-container {
-  height: 240px;
-  margin: -1px;
+  height: 200px;
+  margin: -1px !important;
 }
 #home {
   margin: 36px 12px 0;

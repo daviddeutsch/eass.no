@@ -456,6 +456,11 @@ add_action( 'wp_enqueue_scripts', 'theme_styles' );
 if( !function_exists( "theme_js" ) ) {
   function theme_js(){
 
+    wp_register_script(  'bootstrap',
+	  get_template_directory_uri() . '/library/js/bootstrap.min.js',
+	  array('bootstrap'),
+	  '3.0' );
+
     wp_register_script( 'angular',
       get_template_directory_uri() . '/library/js/angular.min.js',
       array('jquery'),

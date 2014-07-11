@@ -169,7 +169,7 @@ function($scope, $location, $compile)
 	$scope.choices = [];
 
 	angular.forEach(list, function(value, key) {
-		locations.push(
+		$scope.choices.push(
 			{
 				id: angular.element(value).html().toLowerCase().replace(/[^a-z0-9]/gi,''),
 				title: angular.element(value).html()

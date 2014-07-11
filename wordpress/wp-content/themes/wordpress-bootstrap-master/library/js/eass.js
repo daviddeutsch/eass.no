@@ -199,11 +199,9 @@ function($scope, $location, $compile)
 		var name = '';
 
 		for ( var j=0; j<content.length; j++ ) {
-			var el = angular.element(content[j]);
+			var el = angular.element(content[j])[0];
 
-			if ( el.localName != 'em' ) {
-				newhtml += el.clone().wrap('<p>').parent().html();
-			}
+			content = el.clone().wrap('<p>').parent().html();
 
 			if ( name == '' ) {
 				elname = el.html().toLowerCase().replace(/[^a-z0-9]/gi,'');
@@ -211,9 +209,15 @@ function($scope, $location, $compile)
 				angular.forEach($scope.choices, function(value, key) {
 					if ( elname == value.id ) {
 						name = value.id;
+
+						if ( el.localName != 'h4' ) {
+							content = '';
+						}
 					}
 				});
 			}
+
+			newhtml += content;
 
 			if ( j < content.length-1 ) {
 				angular.element(content[j]).remove();

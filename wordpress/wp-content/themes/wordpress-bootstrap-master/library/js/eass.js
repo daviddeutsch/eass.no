@@ -199,7 +199,7 @@ function($scope, $location, $compile)
 		var name = '';
 
 		for ( var j=0; j<content.length; j++ ) {
-			var el = angular.element(content[j])[0];
+			var el = angular.element(content[j]);
 
 			content = el.clone().wrap('<p>').parent().html();
 
@@ -210,7 +210,7 @@ function($scope, $location, $compile)
 					if ( elname == value.id ) {
 						name = value.id;
 
-						if ( el.localName != 'h4' ) {
+						if ( el[0].localName != 'h4' ) {
 							content = '';
 						}
 					}

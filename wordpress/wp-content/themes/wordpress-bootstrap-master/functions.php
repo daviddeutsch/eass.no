@@ -479,6 +479,7 @@ if( !function_exists( "theme_js" ) ) {
       array('jquery'),
       '1.2' );
 
+    wp_enqueue_script('bootstrap');
     wp_enqueue_script('angular');
     wp_enqueue_script('angular-animate');
     wp_enqueue_script('eass');

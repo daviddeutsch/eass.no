@@ -40,7 +40,7 @@
 	<body <?php body_class(); ?> ng-app="eassApp">
 
 		<div id="header">
-			<div class="container-fluid">
+			<div class="container">
 				<p id="home" class="pull-right">
 					<a href="#"><i class="fa fa-2x fa-home"></i></a>
 				</p>

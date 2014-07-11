@@ -109,9 +109,8 @@ function($scope, $location, $compile)
 
 		angular.element(replace).replaceWith(
 			$compile(
-				'<div id="container-'+i+'" ng-class="{\''
-				+ ( $scope.multi ? 'am-slide-top' : 'am-slide-top-fast' )
-				+ '\': isDeselected(\''
+				'<div id="container-' + i + '"'
+				+ ' ng-class="{\'am-slide-top-fast\': isDeselected(\''
 				+ element.id
 				+ '\')}">'
 				+ newhtml
@@ -120,13 +119,128 @@ function($scope, $location, $compile)
 		);
 	});
 
-	$scope.multi = false;
+	$scope.change = function( name ) {
+		if ( $scope.id === name ) {
+			return;
+		} else {
+			$scope.id = name;
+		}
+
+		$location.hash($scope.id);
+	};
+
+	$scope.isDeselected = function ( name ) {
+		return $scope.id !== name && $scope.id != '';
+	};
+
+	$scope.isSelected = function ( name ) {
+		return $scope.id === name;
+	};
+
+	$scope.id = $location.hash();
+
+	if ( $scope.id == '' ) {
+		$scope.change( $scope.choices[0].id );
+	}
+}
+]
+);
+
+eassApp
+.controller('SidebarPageListCtrl',
+[
+'$scope', '$location', '$compile',
+function($scope, $location, $compile)
+{
+	var list = angular.element(".panel-body ul li");
+
+	if ( list.length <= 1 ) {
+		// Nothing to partition
+		return;
+	}
+
+	var headers = angular.element(".panel-body h4" );
+
+	if ( headers.length <= 1 ) {
+		// Nothing to partition
+		return;
+	}
+
+	$scope.choices = [];
+
+	angular.forEach(list, function(value, key) {
+		locations.push(
+			{
+				id: angular.element(value).html().toLowerCase().replace(/[^a-z0-9]/gi,''),
+				title: angular.element(value).html()
+			}
+		);
+	});
+
+	angular.element(".panel-body ul" ).delete();
+
+	var i = 0;
+	angular.forEach(headers, function(value, key) {
+		i++;
+
+		var element = {
+			id: angular.element(value).html().toLowerCase().replace(/[^a-z0-9]/gi,''),
+			title: angular.element(value).html()
+		};
+
+		var content = angular.element(value).nextUntil("h4").andSelf();
+
+		var newhtml = '';
+
+		var id;
+
+		var replace;
+
+		var name = '';
+
+		for ( var j=0; j<content.length; j++ ) {
+			var el = angular.element(content[j]);
+
+			if ( el.localName != 'em' ) {
+				newhtml += el.clone().wrap('<p>').parent().html();
+			}
+
+			if ( name == '' ) {
+				elname = el.html().toLowerCase().replace(/[^a-z0-9]/gi,'');
+
+				angular.forEach($scope.choices, function(value, key) {
+					if ( elname == value.id ) {
+						name = value.id;
+					}
+				});
+			}
+
+			if ( j < content.length-1 ) {
+				angular.element(content[j]).remove();
+
+				delete content[j];
+			} else {
+				replace = content[j];
+			}
+		}
+
+		angular.element(replace).replaceWith(
+			$compile(
+				'<div id="container-' + i + '"'
+					+ ' ng-class="{\'am-slide-top\': isDeselected(\''
+					+ name
+					+ '\')}"'
+					+ ' class="col-md-6 kontakt-container"'
+					+ '>'
+					+ newhtml
+					+ '</div>'
+			)($scope)
+		);
+	});
 
 	$scope.change = function( name ) {
-		if ( $scope.id === name && $scope.multi ) {
+		if ( $scope.id === name ) {
 			$scope.id = '';
-		} else if ( $scope.id === name ) {
-			return;
 		} else {
 			$scope.id = name;
 		}

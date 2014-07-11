@@ -48,6 +48,9 @@ div.panel-standalone .panel-body ul {
 div.panel-standalone .panel-body ul li {
   margin-bottom: 12px;
 }
+.kontakt-container {
+  height: 300px;
+}
 #home {
   margin: 36px 12px 0;
 }

@@ -263,10 +263,6 @@ function($scope, $location, $compile)
 	};
 
 	$scope.id = $location.hash();
-
-	if ( $scope.id == '' ) {
-		$scope.change( $scope.choices[2].id );
-	}
 }
 ]
 );

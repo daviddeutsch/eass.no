@@ -30,7 +30,7 @@ echo stripslashes( strip_tags($single_form -> form_style));
 
 echo '<form id="webcontact-'.$nmcontact -> form_id .'"';
 echo 'onsubmit = "return send_data(this)"';
-echo 'data-form="'.esc_attr( $single_form -> the_meta ).'">';
+echo 'data-form="'.esc_attr( $single_form -> the_meta ).'" class="form-horizontal">';
 echo '<div id="nm-webcontact-box-'. $nmcontact->form_id .'" class="nm-webcontact-box">';
 
 
@@ -86,216 +86,218 @@ echo '<div id="nm-webcontact-box-'. $nmcontact->form_id .'" class="nm-webcontact
 			switch($type)
 			{
 				case 'hidden':
-
 					echo '<input type="hidden" name="'.$name.'" id="'.$name.'"';
 					echo 'value="'.$meta['field_value'].'" data-type="'.$type.'" />';
-		break;
 
-		case 'text':
+					break;
 
-
-			echo '<label for="'.$name.'">'. $field_label.' </label> <br />';
-			echo '<input type="text" name="'.$name.'" id="'.$name.'"';
-			echo 'value="'.$value.'" data-type="'.$type.'"';
-			echo 'data-req="'.$meta['required'].'"';
-			echo 'data-message="'.stripslashes( $meta['error_message'] ).'" />';
-
-			//for validtion message
-			echo '<span class="errors"></span>';
-
-
-
-		break;
-		case 'date':
-
-
-			echo '<label for="'.$name.'">'. $field_label.' </label> <br />';
-			echo '<input type="text" name="'.$name.'" id="'.$name.'"';
-			echo 'value="'.$value.'" data-type="'.$type.'"';
-			echo 'data-req="'.$meta['required'].'"';
-			echo 'data-message="'.stripslashes( $meta['error_message'] ).'"';
-			echo 'data-format="'.stripcslashes($meta['date_formats']).'" />';
-
-			//for validtion message
-			echo '<span class="errors"></span>';
-
-
-		break;
-		case 'email':
-
-
-			echo '<label for="'.$name.'">'. $field_label.' </label> <br />';
-			echo '<input type="email" id="'.$name.'" name="'.$name.'"';
-			echo 'value="'.$value.'" data-type="'.$type.'"';
-			echo 'data-req="'.$meta['required'].'"';
-			echo 'data-sendemail="'.$meta['send_email'].'"';
-			echo 'data-message="'.stripslashes( $meta['error_message'] ).'" />';
-
-			//for validtion message
-			echo '<span class="errors"></span>';
-
-
-
-		break;
-		case 'checkbox':
-
-
-			$opts = explode("\n", $meta['options']);
-			$defaul_checked = explode("\n", $meta['checked']);
-
-
-			echo '<label for="'.$name.'">'. $field_label.' </label> <br />';
-			foreach($opts as $opt)
-			{
-				if($defaul_checked){
-					if(in_array($opt, $defaul_checked))
-						$checked = 'checked="checked"';
-					else
-						$checked = '';
-				}
-
-				$output = stripslashes(trim($opt));
-			echo '<label for="f-meta-'. $opt.'"> <input type="checkbox"';
-			echo 'value="'.$opt.'" id="f-meta-'. $opt.'"';
-			echo 'name="'.$name.'[]" '. $checked.'';
-			echo 'data-req="'.$meta['required'].'"';
-			echo 'data-message="'.stripslashes( $meta['error_message'] ).'">';
-
-			echo $output;
-			echo '</label>';
-
-			}
-			//for validtion message
-			echo '<span class="errors"></span>';
-
-
-		break;
-		case 'select':
-
-			$opts = explode("\n", $meta['options']);
-			$default_selected = $meta['selected'];
-
-
-			echo '<label for="'.$name.'">'. $field_label.' </label> <br />';
-			echo '<select id="'.$name.'" name="'.$name.'"';
-			echo 'data-req="'.$meta['required'].'"';
-			echo 'data-message="'.stripslashes( $meta['error_message'] ).'">';
-				echo '<option value="">'.__('Select option', $nmcontact -> plugin_meta['shortname']).'</option>';
-
-				foreach($opts as $opt)
-				{
-
-					$selected = ($opt == $default_selected) ? 'selected="selected"' : '';
-
-					$output = stripslashes(trim($opt));
-
-					echo '<option value="'.$opt.'" '. $selected.'>';
-					echo $output;
-					echo '</option>';
-				}
-				echo '</select>';
-
-				//for validtion message
-				echo '<span class="errors"></span>';
-
-		break;
-		case 'radio':
-
-			$opts = explode("\n", $meta['options']);
-			$default_selected = $meta['selected'];
-
-
-		echo '<label for="'.$name.'">'. $field_label.' </label> <br />';
-			foreach($opts as $opt)
-			{
-				$checked = ($opt == $default_selected) ? 'checked="checked"' : '';
-
-				$output = stripslashes(trim($opt));
-				echo '<label for="f-meta-'. $opt.'"> <input type="radio"';
-
-				echo 'value="'.$opt.'" id="f-meta-'. $opt.'"';
-				echo 'name="'.$name.'" '. $checked.'';
-				echo 'data-req="'.$meta['required'].'"';
-				echo 'data-message="'.stripslashes( $meta['error_message'] ).'">';
-				echo $output;
-
-				echo '</label>';
-			}
-
-			//for validtion message
-				echo '<span class="errors"></span>';
-
-		break;
-		case 'textarea':
-
-
-			echo '<label for="'.$name.'">'. $field_label.' </label> <br />';
-			echo '<textarea id="'.$name.'" style="width: 90%; height: 70px"';
-			echo 'name="'.$name.'" data-req="'.$meta['required'].'"';
-			echo 'data-message="'.stripslashes( $meta['error_message'] ).'" wrap="physical"></textarea>';
-
-			//for validtion message
-				echo '<span class="errors"></span>';
-
-
-		break;
-	case 'section':
-
-	if($started_section)		//if section already started then close it first
-		echo '</section>';
-
-	$started_section = 'webcontact-section-'.$name;
-
-		echo '<section id="'.$started_section.'">';
-		echo '<div style="clear: both"></div>';
-
-		echo '<header class="webcontact-section-header">';
-				echo '<h2>'. stripslashes( $meta['title'] ).'</h2>';
-				echo '<p>'. stripslashes( $meta['description']).'</p>';
-		echo '</header>';
-
-		echo '<div style="clear: both"></div>';
-
-
-		break;
-		case 'file':
-
-		echo '<div>';
-		echo '<label for="'.$name.'">'. $field_label.'</label> <br />';
-
-				echo '<div id="nm-uploader-area-'. $name.'" class="nm-uploader-area">';
-					echo '<div id="wrapper-uploadifive-button">';
-						echo '<input id="'.$name.'"';
-						echo 'name="'.$name.'" data-req="'.$meta['required'].'"';
-						echo 'data-message="'.stripslashes( $meta['error_message'] ).'" type="file" />';
+				case 'text':
+					echo '<div class="form-group">';
+					echo '<div class="col-sm-10">';
+					echo '<input type="text" name="'.$name.'" id="'.$name.'" class="form-control"';
+					echo 'value="'.$value.'" data-type="'.$type.'"';
+					echo 'data-req="'.$meta['required'].'"';
+					echo 'data-message="'.stripslashes( $meta['error_message'] ).'" />';
+					echo '</div>';
+					echo '<label for="'.$name.'" class="col-sm-2 control-label">'. $field_label.' </label>';
 					echo '</div>';
 
-					echo '<input type="hidden" id="files_'. $name.'"';
-					echo 'name="files_'. $name.'">';
-					echo '<span id="upload-response-'. $name.'"></span>';
-
-					echo '<p id="uploaded_files-'. $name.'"';
-					echo 'style="margin-bottom: 2px;"></p>';
-
+					//for validation message
 					echo '<span class="errors"></span>';
 
-	echo '<script type="text/javascript">';
+					break;
 
-	echo 'setup_uploader(\''.$name.'\',
-			\''. stripslashes($meta['button_label']).'\',
-			\''. stripslashes($meta['files_allowed']).'\',
-			\''. stripslashes($meta['file_types']).'\',
-			\''. stripslashes($meta['file_size']).'\',
-			\''. stripslashes($meta['button_width']).'\',
-			\''. stripslashes($meta['photo_editing']).'\',
-			\''. get_editing_tools($meta['editing_tools']).'\')';
-	echo '</script>';
+				case 'date':
+					echo '<input type="text" name="'.$name.'" id="'.$name.'"';
+					echo 'value="'.$value.'" data-type="'.$type.'"';
+					echo 'data-req="'.$meta['required'].'"';
+					echo 'data-message="'.stripslashes( $meta['error_message'] ).'"';
+					echo 'data-format="'.stripcslashes($meta['date_formats']).'" />';
+					echo '<label for="'.$name.'" class="col-sm-2 control-label">'. $field_label.' </label>';
+					echo '</div>';
+
+					//for validation message
+					echo '<span class="errors"></span>';
+
+					break;
+
+				case 'email':
+					echo '<div class="form-group">';
+					echo '<div class="col-sm-10">';
+					echo '<input type="email" id="'.$name.'" name="'.$name.'" class="form-control"';
+					echo 'value="'.$value.'" data-type="'.$type.'"';
+					echo 'data-req="'.$meta['required'].'"';
+					echo 'data-sendemail="'.$meta['send_email'].'"';
+					echo 'data-message="'.stripslashes( $meta['error_message'] ).'" />';
+					echo '</div>';
+					echo '<label for="'.$name.'" class="col-sm-2 control-label">'. $field_label.' </label>';
+
+					//for validation message
+					echo '<span class="errors"></span>';
+
+					break;
+
+				case 'checkbox':
+					$opts = explode("\n", $meta['options']);
+					$defaul_checked = explode("\n", $meta['checked']);
 
 
-				echo '</div>';
-			echo '</div>';
+					echo '<label for="'.$name.'" class="col-sm-2 control-label">'. $field_label.' </label>';
+					foreach($opts as $opt)
+					{
+						if($defaul_checked){
+							if(in_array($opt, $defaul_checked))
+								$checked = 'checked="checked"';
+							else
+								$checked = '';
+						}
 
-		break;
+						$output = stripslashes(trim($opt));
+					echo '<label for="f-meta-'. $opt.'"> <input type="checkbox"';
+					echo 'value="'.$opt.'" id="f-meta-'. $opt.'"';
+					echo 'name="'.$name.'[]" '. $checked.'';
+					echo 'data-req="'.$meta['required'].'"';
+					echo 'data-message="'.stripslashes( $meta['error_message'] ).'">';
+
+					echo $output;
+					echo '</label>';
+
+					}
+					//for validation message
+					echo '<span class="errors"></span>';
+
+					break;
+
+				case 'select':
+					$opts = explode("\n", $meta['options']);
+					$default_selected = $meta['selected'];
+
+
+					echo '<label for="'.$name.'" class="col-sm-2 control-label">'. $field_label.' </label>';
+					echo '<select id="'.$name.'" name="'.$name.'"';
+					echo 'data-req="'.$meta['required'].'"';
+					echo 'data-message="'.stripslashes( $meta['error_message'] ).'">';
+						echo '<option value="">'.__('Select option', $nmcontact -> plugin_meta['shortname']).'</option>';
+
+						foreach($opts as $opt)
+						{
+
+							$selected = ($opt == $default_selected) ? 'selected="selected"' : '';
+
+							$output = stripslashes(trim($opt));
+
+							echo '<option value="'.$opt.'" '. $selected.'>';
+							echo $output;
+							echo '</option>';
+						}
+						echo '</select>';
+
+						//for validation message
+						echo '<span class="errors"></span>';
+
+					break;
+
+				case 'radio':
+					$opts = explode("\n", $meta['options']);
+					$default_selected = $meta['selected'];
+
+
+					echo '<label for="'.$name.'" class="col-sm-2 control-label">'. $field_label.' </label>';
+
+					foreach($opts as $opt)
+					{
+						$checked = ($opt == $default_selected) ? 'checked="checked"' : '';
+
+						$output = stripslashes(trim($opt));
+						echo '<label for="f-meta-'. $opt.'"> <input type="radio"';
+
+						echo 'value="'.$opt.'" id="f-meta-'. $opt.'"';
+						echo 'name="'.$name.'" '. $checked.'';
+						echo 'data-req="'.$meta['required'].'"';
+						echo 'data-message="'.stripslashes( $meta['error_message'] ).'">';
+						echo $output;
+
+						echo '</label>';
+					}
+
+					//for validation message
+					echo '<span class="errors"></span>';
+
+					break;
+
+				case 'textarea':
+
+					echo '<div class="form-group">';
+					echo '<div class="col-sm-10">';
+					echo '<textarea id="'.$name.'" style="width: 90%; height: 70px" class="form-control"';
+					echo 'name="'.$name.'" data-req="'.$meta['required'].'"';
+					echo 'data-message="'.stripslashes( $meta['error_message'] ).'" wrap="physical"></textarea>';
+					echo '</div>';
+					echo '<label for="'.$name.'" class="col-sm-2 control-label">'. $field_label.' </label>';
+					echo '</div>';
+
+					//for validation message
+					echo '<span class="errors"></span>';
+
+					break;
+
+				case 'section':
+
+					if($started_section)		//if section already started then close it first
+						echo '</section>';
+
+					$started_section = 'webcontact-section-'.$name;
+
+					echo '<section id="'.$started_section.'">';
+					echo '<div style="clear: both"></div>';
+
+					echo '<header class="webcontact-section-header">';
+							echo '<h2>'. stripslashes( $meta['title'] ).'</h2>';
+							echo '<p>'. stripslashes( $meta['description']).'</p>';
+					echo '</header>';
+
+					echo '<div style="clear: both"></div>';
+
+					break;
+
+				case 'file':
+
+					echo '<div>';
+
+							echo '<div id="nm-uploader-area-'. $name.'" class="nm-uploader-area">';
+								echo '<div id="wrapper-uploadifive-button">';
+									echo '<input id="'.$name.'"';
+									echo 'name="'.$name.'" data-req="'.$meta['required'].'"';
+									echo 'data-message="'.stripslashes( $meta['error_message'] ).'" type="file" />';
+								echo '</div>';
+
+								echo '<input type="hidden" id="files_'. $name.'"';
+								echo 'name="files_'. $name.'">';
+								echo '<span id="upload-response-'. $name.'"></span>';
+
+								echo '<p id="uploaded_files-'. $name.'"';
+								echo 'style="margin-bottom: 2px;"></p>';
+
+								echo '<span class="errors"></span>';
+
+						echo '<script type="text/javascript">';
+
+						echo 'setup_uploader(\''.$name.'\',
+							\''. stripslashes($meta['button_label']).'\',
+							\''. stripslashes($meta['files_allowed']).'\',
+							\''. stripslashes($meta['file_types']).'\',
+							\''. stripslashes($meta['file_size']).'\',
+							\''. stripslashes($meta['button_width']).'\',
+							\''. stripslashes($meta['photo_editing']).'\',
+							\''. get_editing_tools($meta['editing_tools']).'\')';
+						echo '</script>';
+
+					echo '<label for="'.$name.'" class="col-sm-2 control-label">'. $field_label.'</label>';
+
+						echo '</div>';
+					echo '</div>';
+
+				break;
 
 			}
 		}

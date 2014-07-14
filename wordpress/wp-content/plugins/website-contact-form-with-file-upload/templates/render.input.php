@@ -252,10 +252,8 @@ echo '<div id="nm-webcontact-box-'. $nmcontact->form_id .'" class="nm-webcontact
 					echo '<section id="'.$started_section.'">';
 					echo '<div style="clear: both"></div>';
 
-					echo '<header class="webcontact-section-header">';
-							echo '<h2>'. stripslashes( $meta['title'] ).'</h2>';
-							echo '<p>'. stripslashes( $meta['description']).'</p>';
-					echo '</header>';
+					echo '<h4>'. stripslashes( $meta['title'] ).'</h4>';
+					echo '<p>'. stripslashes( $meta['description']).'</p>';
 
 					echo '<div style="clear: both"></div>';
 

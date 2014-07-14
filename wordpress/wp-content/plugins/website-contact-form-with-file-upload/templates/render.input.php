@@ -131,6 +131,7 @@ echo '<div id="nm-webcontact-box-'. $nmcontact->form_id .'" class="nm-webcontact
 					echo 'data-message="'.stripslashes( $meta['error_message'] ).'" />';
 					echo '</div>';
 					echo '<label for="'.$name.'" class="col-sm-6 control-label">'. $field_label.' </label>';
+					echo '</div>';
 
 					//for validation message
 					echo '<span class="errors"></span>';

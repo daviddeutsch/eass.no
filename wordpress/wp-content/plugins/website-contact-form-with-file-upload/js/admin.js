@@ -2,11 +2,11 @@ jQuery(function($) {
 
 	$('.etabs li:last, li.pro').css({background: '#D44937'});
 	$('.nm_pro').css({'background':'#D44937','color':'#fff','padding':'0.2rem','text-decoration':'none'});
-	
+
 	// ================== new meta form creator ===================
 
 	var meta_removed;
-	
+
 	//attaching hide and delete events for existing meta data
 	$("#form-meta-setting ul li").each(function(i, item){
 		$(item).find(".ui-icon-carat-2-n-s").click(function(e) {
@@ -16,31 +16,24 @@ jQuery(function($) {
 		$(item).find(".ui-icon-trash").click(function(e) {
 			$("#remove-meta-confirm").dialog("open");
 			meta_removed = $(item);
-		});	
+		});
 	});
-	
+
 	$('.ui-icon-circle-triangle-n').click(function(e){
 		$("#form-meta-setting ul li").find('table').slideUp();
 	});
 	$('.ui-icon-circle-triangle-s').click(function(e){
 		$("#form-meta-setting ul li").find('table').slideDown();
 	});
-	
-	
+
+
 	$("#nmcontact-form-generator").tabs();
 	$("#tab-container").tabs()
 
 	$("#form-meta-setting ul").sortable({
 		revert : true,
 		stop : function(event, ui) {
-			
-			//console.log($(ui.item).attr('data-for'));
-			if($(ui.item).attr('data-for') === 'pro'){
-				alert('It is Pro Feature');
-				$(ui.item).remove();
-			}
-				
-			
+
 			// only attach click event when dropped from right panel
 			if (ui.originalPosition.left > 20) {
 				$(ui.item).find(".ui-icon-carat-2-n-s").click(function(e) {
@@ -170,19 +163,19 @@ jQuery(function($) {
 function save_form_meta(form_id) {
 
 	jQuery("#nm-saving-form").show();
-	
-	
+
+
 	//usetting the photo_editing option is api key is not set
 	if(jQuery('input[name="aviary_api_key"]').val() === "")
 		jQuery('input[name="photo_editing"]').attr('checked',false);
-	
+
 	var form_meta_values = new Array();		//{};		//Array();
 	jQuery("#meta-input-holder li").each(
 			function(i, item) {
 
 				var inner_array = {};
 				inner_array['type']	= jQuery(item).attr('data-inputtype');
-				
+
 				jQuery(this).find('td.table-column-input').each(
 						function(i, col) {
 
@@ -200,16 +193,16 @@ function save_form_meta(form_id) {
 							}else if(meta_input_type == 'select'){
 								inner_array[meta_input_name] = jQuery(this).find('select[name="' + meta_input_name + '"]').val();
 							}else{
-								inner_array[meta_input_name] = jQuery(this).find('input[name="' + meta_input_name + '"]').val() 
-								//inner_array.push(temp);	
+								inner_array[meta_input_name] = jQuery(this).find('input[name="' + meta_input_name + '"]').val()
+								//inner_array.push(temp);
 							}
-							
+
 						});
 
 				form_meta_values.push( inner_array );
 
 			});
-	
+
 
 	//console.log(form_meta_values); return false;
 	// ok data is collected, so send it to server now Huh?
@@ -221,8 +214,8 @@ function save_form_meta(form_id) {
 	} else {
 		do_action = 'nm_webcontact_save_form_meta';
 	}
-	
-	
+
+
 	var server_data = {
 		action 			: do_action,
 		form_id 		: jQuery('input[name="form_id"]').val(),
@@ -239,23 +232,23 @@ function save_form_meta(form_id) {
 		section_slides 	: '',
 		aviary_api_key 	: '',
 		form_style		: '',
-		
+
 		form_meta : form_meta_values
 	}
 		jQuery.post(ajaxurl, server_data, function(resp) {
-	
+
 			console.log(resp);
 			jQuery("#nm-saving-form").hide();
 			if(resp.status == 'success'){
-				
+
 				alert(resp.message);
 				if(resp.form_id != ''){
 					window.location = nm_webcontact_vars.plugin_admin_page + '&form_id=' + resp.form_id;
 				}else{
-					window.location.reload(true);	
+					window.location.reload(true);
 				}
 			}
-			
+
 		}, 'json');
 }
 

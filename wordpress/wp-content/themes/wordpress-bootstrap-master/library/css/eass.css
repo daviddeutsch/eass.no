@@ -6718,6 +6718,9 @@ ul.navbar-nav li a:hover {
   background: #000 !important;
   border-bottom: 6px solid #e4131a;
 }
+.form-horizontal .control-label {
+  text-align: left;
+}
 footer {
   color: #333;
 }

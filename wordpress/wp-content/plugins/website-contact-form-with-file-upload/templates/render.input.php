@@ -93,13 +93,13 @@ echo '<div id="nm-webcontact-box-'. $nmcontact->form_id .'" class="nm-webcontact
 
 				case 'text':
 					echo '<div class="form-group">';
-					echo '<div class="col-sm-10">';
+					echo '<div class="col-sm-6">';
 					echo '<input type="text" name="'.$name.'" id="'.$name.'" class="form-control"';
 					echo 'value="'.$value.'" data-type="'.$type.'"';
 					echo 'data-req="'.$meta['required'].'"';
 					echo 'data-message="'.stripslashes( $meta['error_message'] ).'" />';
 					echo '</div>';
-					echo '<label for="'.$name.'" class="col-sm-2 control-label">'. $field_label.' </label>';
+					echo '<label for="'.$name.'" class="col-sm-6 control-label">'. $field_label.' </label>';
 					echo '</div>';
 
 					//for validation message
@@ -113,7 +113,7 @@ echo '<div id="nm-webcontact-box-'. $nmcontact->form_id .'" class="nm-webcontact
 					echo 'data-req="'.$meta['required'].'"';
 					echo 'data-message="'.stripslashes( $meta['error_message'] ).'"';
 					echo 'data-format="'.stripcslashes($meta['date_formats']).'" />';
-					echo '<label for="'.$name.'" class="col-sm-2 control-label">'. $field_label.' </label>';
+					echo '<label for="'.$name.'" class="col-sm-6 control-label">'. $field_label.' </label>';
 					echo '</div>';
 
 					//for validation message
@@ -123,14 +123,14 @@ echo '<div id="nm-webcontact-box-'. $nmcontact->form_id .'" class="nm-webcontact
 
 				case 'email':
 					echo '<div class="form-group">';
-					echo '<div class="col-sm-10">';
+					echo '<div class="col-sm-6">';
 					echo '<input type="email" id="'.$name.'" name="'.$name.'" class="form-control"';
 					echo 'value="'.$value.'" data-type="'.$type.'"';
 					echo 'data-req="'.$meta['required'].'"';
 					echo 'data-sendemail="'.$meta['send_email'].'"';
 					echo 'data-message="'.stripslashes( $meta['error_message'] ).'" />';
 					echo '</div>';
-					echo '<label for="'.$name.'" class="col-sm-2 control-label">'. $field_label.' </label>';
+					echo '<label for="'.$name.'" class="col-sm-6 control-label">'. $field_label.' </label>';
 
 					//for validation message
 					echo '<span class="errors"></span>';
@@ -142,7 +142,7 @@ echo '<div id="nm-webcontact-box-'. $nmcontact->form_id .'" class="nm-webcontact
 					$defaul_checked = explode("\n", $meta['checked']);
 
 
-					echo '<label for="'.$name.'" class="col-sm-2 control-label">'. $field_label.' </label>';
+					echo '<label for="'.$name.'" class="col-sm-6 control-label">'. $field_label.' </label>';
 					foreach($opts as $opt)
 					{
 						if($defaul_checked){
@@ -173,7 +173,7 @@ echo '<div id="nm-webcontact-box-'. $nmcontact->form_id .'" class="nm-webcontact
 					$default_selected = $meta['selected'];
 
 
-					echo '<label for="'.$name.'" class="col-sm-2 control-label">'. $field_label.' </label>';
+					echo '<label for="'.$name.'" class="col-sm-6 control-label">'. $field_label.' </label>';
 					echo '<select id="'.$name.'" name="'.$name.'"';
 					echo 'data-req="'.$meta['required'].'"';
 					echo 'data-message="'.stripslashes( $meta['error_message'] ).'">';
@@ -202,7 +202,7 @@ echo '<div id="nm-webcontact-box-'. $nmcontact->form_id .'" class="nm-webcontact
 					$default_selected = $meta['selected'];
 
 
-					echo '<label for="'.$name.'" class="col-sm-2 control-label">'. $field_label.' </label>';
+					echo '<label for="'.$name.'" class="col-sm-6 control-label">'. $field_label.' </label>';
 
 					foreach($opts as $opt)
 					{
@@ -228,12 +228,12 @@ echo '<div id="nm-webcontact-box-'. $nmcontact->form_id .'" class="nm-webcontact
 				case 'textarea':
 
 					echo '<div class="form-group">';
-					echo '<div class="col-sm-10">';
+					echo '<div class="col-sm-6">';
 					echo '<textarea id="'.$name.'" style="width: 90%; height: 70px" class="form-control"';
 					echo 'name="'.$name.'" data-req="'.$meta['required'].'"';
 					echo 'data-message="'.stripslashes( $meta['error_message'] ).'" wrap="physical"></textarea>';
 					echo '</div>';
-					echo '<label for="'.$name.'" class="col-sm-2 control-label">'. $field_label.' </label>';
+					echo '<label for="'.$name.'" class="col-sm-6 control-label">'. $field_label.' </label>';
 					echo '</div>';
 
 					//for validation message
@@ -292,7 +292,7 @@ echo '<div id="nm-webcontact-box-'. $nmcontact->form_id .'" class="nm-webcontact
 							\''. get_editing_tools($meta['editing_tools']).'\')';
 						echo '</script>';
 
-					echo '<label for="'.$name.'" class="col-sm-2 control-label">'. $field_label.'</label>';
+					echo '<label for="'.$name.'" class="col-sm-6 control-label">'. $field_label.'</label>';
 
 						echo '</div>';
 					echo '</div>';

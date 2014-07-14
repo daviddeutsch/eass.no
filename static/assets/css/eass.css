@@ -6680,6 +6680,9 @@ div#main .sidenav li:hover {
 div#logo {
   padding: 20px 0;
 }
+div#logo img {
+  max-width: 100%;
+}
 .navbar {
   min-height: 24px;
 }

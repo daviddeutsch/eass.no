@@ -79,7 +79,7 @@
 
 		$form.wpcf7ClearResponseOutput();
 
-		$form.find('.wpcf7-form-control').removeClass('wpcf7-not-valid');
+		$form.find('.form-control').removeClass('wpcf7-not-valid');
 		$form.removeClass('invalid spam sent failed');
 
 		if (data.captcha)
@@ -91,7 +91,7 @@
 		if (data.invalids) {
 			$.each(data.invalids, function(i, n) {
 				$form.find(n.into).wpcf7NotValidTip(n.message);
-				$form.find(n.into).find('.wpcf7-form-control').addClass('wpcf7-not-valid');
+				$form.find(n.into).find('.form-control').addClass('wpcf7-not-valid');
 				$form.find(n.into).find('[aria-invalid]').attr('aria-invalid', 'true');
 			});
 
@@ -205,7 +205,7 @@
 
 	$.fn.wpcf7ToggleCheckboxFreetext = function() {
 		return this.each(function() {
-			var $wrap = $(this).closest('.wpcf7-form-control');
+			var $wrap = $(this).closest('.form-control');
 
 			if ($(this).find(':checkbox, :radio').is(':checked')) {
 				$(this).find(':input.wpcf7-free-text').prop('disabled', false);

@@ -229,7 +229,7 @@ class WPCF7_ContactForm {
 		$name_attr = apply_filters( 'wpcf7_form_name_attr',
 			preg_replace( '/[^A-Za-z0-9:._-]/', '', $atts['html_name'] ) );
 
-		$class = 'wpcf7-form';
+		$class = 'form-horizontal';
 
 		$result = self::get_submission_status( $this->id );
 
@@ -1066,7 +1066,7 @@ function wpcf7_form_controls_class( $type, $default = '' ) {
 	$type = trim( $type );
 	$default = array_filter( explode( ' ', $default ) );
 
-	$classes = array_merge( array( 'wpcf7-form-control' ), $default );
+	$classes = array_merge( array( 'form-control' ), $default );
 
 	$typebase = rtrim( $type, '*' );
 	$required = ( '*' == substr( $type, -1 ) );

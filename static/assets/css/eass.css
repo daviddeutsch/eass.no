@@ -6516,6 +6516,16 @@ div.panel-standalone .panel-body ul {
 div.panel-standalone .panel-body ul li {
   margin-bottom: 12px;
 }
+@media (max-width: 767px) {
+  div.panel-standalone .panel-body {
+    padding: 12px;
+  }
+}
+@media (max-width: 767px) {
+  div.panel-standalone {
+    margin-top: 0;
+  }
+}
 .kontakt-container {
   height: 200px;
   margin: -1px !important;
@@ -6647,6 +6657,11 @@ div#main .sidenav li.selected {
 }
 div#main .sidenav li:hover {
   background: #000;
+}
+@media (max-width: 767px) {
+  div#main .sidenav li {
+    float: left;
+  }
 }
 div#logo {
   padding: 20px 0;

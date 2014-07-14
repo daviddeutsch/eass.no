@@ -52,11 +52,11 @@
 				</form>-->
 				<nav class="navbar navbar-inverse" role="navigation">
 					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#eass-navbar-collapse">
 							<i class="fa fa-2x fa-bars"></i>
 							<span class="sr-only">Toggle navigation</span>
 					</div>
-					<div class="collapse navbar-collapse">
+					<div id="eass-navbar-collapse" class="collapse navbar-collapse">
 						<ul class="nav navbar-nav">
 							<li><a href="/wordpress/">Forside</a></li>
 							<li><a href="/wordpress/?page_id=8">Om oss</a></li>

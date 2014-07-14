@@ -155,7 +155,7 @@ div#main {
 }
 
 div#logo {
-	padding: 16px 0;
+	padding: 20px 0;
 }
 
 .navbar {
@@ -166,6 +166,18 @@ div#logo {
 	float: left;
 	background: #000;
 	border: none;
+	padding: none;
+	@media (max-width: @grid-float-breakpoint-max) {
+		float: none;
+	}
+}
+
+.navbar-header {
+	float: left;
+}
+
+.navbar-collapse {
+	float: left;
 }
 
 nav.navbar {

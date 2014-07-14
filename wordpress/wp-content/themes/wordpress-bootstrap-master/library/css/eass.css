@@ -6649,7 +6649,7 @@ div#main .sidenav li:hover {
   background: #000;
 }
 div#logo {
-  padding: 16px 0;
+  padding: 20px 0;
 }
 .navbar {
   min-height: 24px;
@@ -6658,6 +6658,18 @@ div#logo {
   float: left;
   background: #000;
   border: none;
+  padding: none;
+}
+@media (max-width: 767px) {
+  .navbar-inverse {
+    float: none;
+  }
+}
+.navbar-header {
+  float: left;
+}
+.navbar-collapse {
+  float: left;
 }
 nav.navbar {
   display: box;

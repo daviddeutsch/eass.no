@@ -191,6 +191,12 @@ div#logo {
   background: #000;
   border: none;
 }
+.navbar-header {
+  float: left;
+}
+.navbar-collapse {
+  float: left;
+}
 nav.navbar {
   display: box;
   background: #000;

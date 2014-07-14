@@ -41,10 +41,13 @@
 
 		<div id="header">
 			<div class="container">
-				<p id="home" class="pull-right">
+				<p id="home" class="pull-right hidden-sm">
 					<a href="#"><i class="fa fa-2x fa-home"></i></a>
 				</p>
-				<div id="logo"><img src="<?php echo get_template_directory_uri(); ?>/library/img/eass-logo.png" alt=""/></div>
+				<div id="logo">
+					<a href="/wordpress/"><img src="<?php echo get_template_directory_uri(); ?>/library/img/eass-logo.png" alt=""/>
+					</a>
+				</div>
 				<!--<form class="navbar-form navbar-right" role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
 					<div class="form-group">
 						<input name="s" id="s" type="text" class="search-query form-control" autocomplete="off" placeholder="<?php _e('Search','wpbootstrap'); ?>" data-provide="typeahead" data-items="4" data-source='<?php echo $typeahead_data; ?>'>

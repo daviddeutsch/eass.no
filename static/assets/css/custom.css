@@ -181,15 +181,20 @@ div#main .sidenav li:hover {
   background: #000;
 }
 div#logo {
-  padding: 24px 0;
+  padding: 16px 0;
+}
+.navbar {
+  min-height: 24px;
 }
 .navbar-inverse {
+  float: left;
   background: #000;
   border: none;
 }
 nav.navbar {
   display: box;
   background: #000;
+  margin-left: -12px;
   margin-bottom: -12px;
   font-size: 120%;
 }

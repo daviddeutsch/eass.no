@@ -35,7 +35,7 @@ function wpcf7_text_shortcode_handler( $tag ) {
 
 	$atts = array();
 
-	$atts['size'] = $tag->get_size_option( '40' );
+	//$atts['size'] = $tag->get_size_option( '40' );
 	$atts['maxlength'] = $tag->get_maxlength_option();
 	$atts['class'] = $tag->get_class_option( $class );
 	$atts['id'] = $tag->get_id_option();

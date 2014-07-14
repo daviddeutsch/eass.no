@@ -502,7 +502,7 @@ echo '<p><a class="button" href="'.$url_cancel.'">'.__('&laquo; Existing forms',
 			<tr>
 				<td class="headings"><?php _e('Receiver(s)', $nmcontact -> plugin_meta['shortname'])?></td>
 				<td><input type="text" name="receiver_emails"
-					value="<?php echo get_bloginfo ( 'admin_email' )?>" disabled="disabled"/> <?php echo nm_webcontact_pro()?><br />
+					value="<?php echo get_bloginfo ( 'admin_email' )?>" /> <?php echo nm_webcontact_pro()?><br />
 					<p class="s-font"><?php _e('Define the emails used (separeted by comma) to receive emails.', $nmcontact -> plugin_meta['shortname'])?></p></td>
 			</tr>
 			<tr>
@@ -566,7 +566,7 @@ echo '<p><a class="button" href="'.$url_cancel.'">'.__('&laquo; Existing forms',
 
 			<tr>
 				<td class="headings"><?php _e('Slide sections using jquery?', $nmcontact->plugin_meta['shortname'])?></td>
-				<td><input type="checkbox" disabled="disabled" id="section_slides" name="section_slides" <?php echo $section_slides?> /> <?php echo nm_webcontact_pro()?><br>
+				<td><input type="checkbox"  id="section_slides" name="section_slides" <?php echo $section_slides?> /> <?php echo nm_webcontact_pro()?><br>
 				<p class="s-font"><?php _e('Not all section will be shown at once, it add a nice sliding effect.', $nmcontact -> plugin_meta['shortname'])?></p>
 				</td>
 
@@ -580,7 +580,7 @@ echo '<p><a class="button" href="'.$url_cancel.'">'.__('&laquo; Existing forms',
 
 				<?php if ($nmcontact -> is_aviary_installed()) {?>
 				<input type="text" name="aviary_api_key"
-					value="<?php echo $aviary_api_key?>" disabled="disabled" /> <?php echo nm_webcontact_pro()?><br />
+					value="<?php echo $aviary_api_key?>"  /> <?php echo nm_webcontact_pro()?><br />
 					<p class="s-font"><?php _e('Enter Aviary API Key.', $nmcontact -> plugin_meta['shortname'])?>
 					<br><?php _e('You need to get your API key from Aviary to use this. It is free as long as you need paid features', $nmcontact -> plugin_meta['shortname'])?></p>
 				<?php }else{?>
@@ -596,7 +596,7 @@ echo '<p><a class="button" href="'.$url_cancel.'">'.__('&laquo; Existing forms',
 
 			<tr>
 				<td class="headings"><?php _e('Form styling/css', $nmcontact -> plugin_meta['shortname'])?> <?php echo nm_webcontact_pro()?></td>
-				<td><textarea disabled="disabled" rows="7" cols="25" name="form_style"></textarea><br />
+				<td><textarea  rows="7" cols="25" name="form_style"></textarea><br />
 					<p class="s-font"><?php _e('Form styling/css.', $nmcontact -> plugin_meta['shortname'])?></p></td>
 			</tr>
 		</table>

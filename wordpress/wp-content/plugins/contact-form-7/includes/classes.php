@@ -1066,7 +1066,12 @@ function wpcf7_form_controls_class( $type, $default = '' ) {
 	$type = trim( $type );
 	$default = array_filter( explode( ' ', $default ) );
 
-	$classes = array_merge( array( 'form-control' ), $default );
+	if ( $type == 'file' ) {
+		$classes = array_merge( array( 'wpcf7-form-control' ), $default );
+	} else {
+		$classes = array_merge( array( 'form-control' ), $default );
+	}
+
 
 	$typebase = rtrim( $type, '*' );
 	$required = ( '*' == substr( $type, -1 ) );

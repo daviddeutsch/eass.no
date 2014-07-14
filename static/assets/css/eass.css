@@ -6535,7 +6535,7 @@ div.panel-standalone .panel-body ul li {
 }
 @media (max-width: 767px) {
   div.panel-standalone {
-    margin-top: 0;
+    margin-top: 16px;
   }
 }
 .kontakt-container {
@@ -6627,6 +6627,13 @@ div.img-wrap {
   max-height: 453px;
   overflow: hidden;
 }
+@media (max-width: 767px) {
+  div.img-wrap {
+    margin-left: -24px;
+    margin-right: -24px;
+    margin-bottom: 24px;
+  }
+}
 img.placeholder {
   position: relative;
   width: 100%;
@@ -6678,8 +6685,14 @@ div#main .sidenav li:hover {
 @media (max-width: 767px) {
   div#main .sidenav li {
     float: left;
-    margin-right: 0;
     text-indent: 24px;
+  }
+}
+@media (max-width: 767px) {
+  div#main .sidenav {
+    margin-left: -24px;
+    margin-right: -24px;
+    margin-top: 24px;
   }
 }
 div#logo {

@@ -70,7 +70,7 @@ div.panel-standalone {
 	}
 
 	@media (max-width: @grid-float-breakpoint-max) {
-		margin-top: 0;
+		margin-top: 16px;
 	}
 }
 
@@ -123,6 +123,11 @@ h4 {
 div.img-wrap {
 	max-height: 453px;
 	overflow: hidden;
+	@media (max-width: @grid-float-breakpoint-max) {
+		margin-left: -24px;
+		margin-right: -24px;
+		margin-bottom: 24px;
+	}
 }
 
 img.placeholder {
@@ -172,9 +177,14 @@ div#main {
 			}
 			@media (max-width: @grid-float-breakpoint-max) {
 				float: left;
-				margin-right: 0;
 				text-indent: 24px;
 			}
+		}
+
+		@media (max-width: @grid-float-breakpoint-max) {
+			margin-left: -24px;
+			margin-right: -24px;
+			margin-top: 24px;
 		}
 	}
 }

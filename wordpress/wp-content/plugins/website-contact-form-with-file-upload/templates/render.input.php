@@ -26,7 +26,7 @@ echo stripslashes( strip_tags($single_form -> form_style));
 ?>
 </style>
 
-<?php 
+<?php
 
 echo '<form id="webcontact-'.$nmcontact -> form_id .'"';
 echo 'onsubmit = "return send_data(this)"';
@@ -81,9 +81,6 @@ echo '<div id="nm-webcontact-box-'. $nmcontact->form_id .'" class="nm-webcontact
 			$show_asterisk 		= ($meta['required']) ? '<span class="show_required"> *</span>' : '';
 			$show_description	= ($meta['description']) ? '<span class="show_description">'.stripslashes($meta['description']).'</span>' : '';
 
-			$the_width = intval( $meta['width'] ) - 1 .'%';
-			$the_margin = '1%';
-
 			$field_label = $meta['title'] . $show_asterisk . $show_description;
 
 			switch($type)
@@ -93,60 +90,60 @@ echo '<div id="nm-webcontact-box-'. $nmcontact->form_id .'" class="nm-webcontact
 					echo '<input type="hidden" name="'.$name.'" id="'.$name.'"';
 					echo 'value="'.$meta['field_value'].'" data-type="'.$type.'" />';
 		break;
-		
+
 		case 'text':
-			
-			echo '<p style="width: '. $the_width.'; margin-right: '. $the_margin.'">';
+
+
 			echo '<label for="'.$name.'">'. $field_label.' </label> <br />';
 			echo '<input type="text" name="'.$name.'" id="'.$name.'"';
 			echo 'value="'.$value.'" data-type="'.$type.'"';
 			echo 'data-req="'.$meta['required'].'"';
 			echo 'data-message="'.stripslashes( $meta['error_message'] ).'" />';
-				
+
 			//for validtion message
 			echo '<span class="errors"></span>';
-			echo '</p>';
 
-			
+
+
 		break;
 		case 'date':
-			
-			echo '<p style="width: '. $the_width.'; margin-right: '. $the_margin.'">';
+
+
 			echo '<label for="'.$name.'">'. $field_label.' </label> <br />';
 			echo '<input type="text" name="'.$name.'" id="'.$name.'"';
 			echo 'value="'.$value.'" data-type="'.$type.'"';
 			echo 'data-req="'.$meta['required'].'"';
 			echo 'data-message="'.stripslashes( $meta['error_message'] ).'"';
 			echo 'data-format="'.stripcslashes($meta['date_formats']).'" />';
-			
+
 			//for validtion message
 			echo '<span class="errors"></span>';
-			echo '</p>';
-	
+
+
 		break;
 		case 'email':
 
-			echo '<p style="width: '. $the_width.'; margin-right: '. $the_margin.'">';
+
 			echo '<label for="'.$name.'">'. $field_label.' </label> <br />';
 			echo '<input type="email" id="'.$name.'" name="'.$name.'"';
 			echo 'value="'.$value.'" data-type="'.$type.'"';
 			echo 'data-req="'.$meta['required'].'"';
 			echo 'data-sendemail="'.$meta['send_email'].'"';
 			echo 'data-message="'.stripslashes( $meta['error_message'] ).'" />';
-			
+
 			//for validtion message
 			echo '<span class="errors"></span>';
-			echo '</p>';
+
 
 
 		break;
 		case 'checkbox':
 
-	
+
 			$opts = explode("\n", $meta['options']);
 			$defaul_checked = explode("\n", $meta['checked']);
 
-			echo '<p style="width: '. $the_width.'; margin-right: '. $the_margin.'">';
+
 			echo '<label for="'.$name.'">'. $field_label.' </label> <br />';
 			foreach($opts as $opt)
 			{
@@ -156,35 +153,35 @@ echo '<div id="nm-webcontact-box-'. $nmcontact->form_id .'" class="nm-webcontact
 					else
 						$checked = '';
 				}
-					
+
 				$output = stripslashes(trim($opt));
 			echo '<label for="f-meta-'. $opt.'"> <input type="checkbox"';
 			echo 'value="'.$opt.'" id="f-meta-'. $opt.'"';
 			echo 'name="'.$name.'[]" '. $checked.'';
 			echo 'data-req="'.$meta['required'].'"';
 			echo 'data-message="'.stripslashes( $meta['error_message'] ).'">';
-			
+
 			echo $output;
 			echo '</label>';
-			
+
 			}
 			//for validtion message
 			echo '<span class="errors"></span>';
-			echo '</p>';
+
 
 		break;
 		case 'select':
 
 			$opts = explode("\n", $meta['options']);
 			$default_selected = $meta['selected'];
-	
-			echo '<p style="width: '. $the_width.'; margin-right: '. $the_margin.'">';
+
+
 			echo '<label for="'.$name.'">'. $field_label.' </label> <br />';
 			echo '<select id="'.$name.'" name="'.$name.'"';
 			echo 'data-req="'.$meta['required'].'"';
 			echo 'data-message="'.stripslashes( $meta['error_message'] ).'">';
 				echo '<option value="">'.__('Select option', $nmcontact -> plugin_meta['shortname']).'</option>';
-				
+
 				foreach($opts as $opt)
 				{
 
@@ -193,45 +190,45 @@ echo '<div id="nm-webcontact-box-'. $nmcontact->form_id .'" class="nm-webcontact
 					$output = stripslashes(trim($opt));
 
 					echo '<option value="'.$opt.'" '. $selected.'>';
-					echo $output;			
+					echo $output;
 					echo '</option>';
 				}
 				echo '</select>';
-				
+
 				//for validtion message
 				echo '<span class="errors"></span>';
-				echo '</p>';
+
 		break;
 		case 'radio':
 
 			$opts = explode("\n", $meta['options']);
 			$default_selected = $meta['selected'];
 
-		echo '<p style="width: '. $the_width.'; margin-right: '. $the_margin.'">';
+
 		echo '<label for="'.$name.'">'. $field_label.' </label> <br />';
 			foreach($opts as $opt)
 			{
 				$checked = ($opt == $default_selected) ? 'checked="checked"' : '';
-					
+
 				$output = stripslashes(trim($opt));
 				echo '<label for="f-meta-'. $opt.'"> <input type="radio"';
-				
+
 				echo 'value="'.$opt.'" id="f-meta-'. $opt.'"';
 				echo 'name="'.$name.'" '. $checked.'';
 				echo 'data-req="'.$meta['required'].'"';
 				echo 'data-message="'.stripslashes( $meta['error_message'] ).'">';
 				echo $output;
-				
+
 				echo '</label>';
 			}
-			
+
 			//for validtion message
 				echo '<span class="errors"></span>';
-				echo '</p>';
+
 		break;
 		case 'textarea':
 
-			echo '<p style="width: '. $the_width.'; margin-right: '. $the_margin.'">';
+
 			echo '<label for="'.$name.'">'. $field_label.' </label> <br />';
 			echo '<textarea id="'.$name.'" style="width: 90%; height: 70px"';
 			echo 'name="'.$name.'" data-req="'.$meta['required'].'"';
@@ -239,8 +236,8 @@ echo '<div id="nm-webcontact-box-'. $nmcontact->form_id .'" class="nm-webcontact
 
 			//for validtion message
 				echo '<span class="errors"></span>';
-				echo '</p>';
-				  
+
+
 		break;
 	case 'section':
 
@@ -248,7 +245,7 @@ echo '<div id="nm-webcontact-box-'. $nmcontact->form_id .'" class="nm-webcontact
 		echo '</section>';
 
 	$started_section = 'webcontact-section-'.$name;
-	
+
 		echo '<section id="'.$started_section.'">';
 		echo '<div style="clear: both"></div>';
 
@@ -259,11 +256,11 @@ echo '<div id="nm-webcontact-box-'. $nmcontact->form_id .'" class="nm-webcontact
 
 		echo '<div style="clear: both"></div>';
 
-		
+
 		break;
 		case 'file':
 
-		echo '<div style="float:left; width: '. $the_width.'; margin-right: '. $the_margin.'">';
+		echo '<div>';
 		echo '<label for="'.$name.'">'. $field_label.'</label> <br />';
 
 				echo '<div id="nm-uploader-area-'. $name.'" class="nm-uploader-area">';
@@ -284,17 +281,17 @@ echo '<div id="nm-webcontact-box-'. $nmcontact->form_id .'" class="nm-webcontact
 
 	echo '<script type="text/javascript">';
 
-	echo 'setup_uploader(\''.$name.'\', 
-			\''. stripslashes($meta['button_label']).'\', 
-			\''. stripslashes($meta['files_allowed']).'\', 
-			\''. stripslashes($meta['file_types']).'\', 
+	echo 'setup_uploader(\''.$name.'\',
+			\''. stripslashes($meta['button_label']).'\',
+			\''. stripslashes($meta['files_allowed']).'\',
+			\''. stripslashes($meta['file_types']).'\',
 			\''. stripslashes($meta['file_size']).'\',
 			\''. stripslashes($meta['button_width']).'\',
 			\''. stripslashes($meta['photo_editing']).'\',
 			\''. get_editing_tools($meta['editing_tools']).'\')';
 	echo '</script>';
-	
-	
+
+
 				echo '</div>';
 			echo '</div>';
 
@@ -302,13 +299,13 @@ echo '<div id="nm-webcontact-box-'. $nmcontact->form_id .'" class="nm-webcontact
 
 			}
 		}
-		
-		
+
+
 		echo '<div style="clear: both"></div>';
-	
+
 	echo '</div>';  //ends nm-webcontact-box
-	
-	
+
+
 	echo '<p class="webcontact-save-button"><input type="submit" class="'.$single_form -> button_class.'" value="'.$single_form -> button_label.'"></p>';
 	echo '<span id="nm-sending-form"></span>';
 	wp_nonce_field('doing_contact','nm_webcontact_nonce');
@@ -318,7 +315,7 @@ echo '<div id="nm-webcontact-box-'. $nmcontact->form_id .'" class="nm-webcontact
 	//	<!-- if section_slides = yes  -->
 
 	if($single_form -> section_slides == 'on'){
-		
+
 	echo '<table>';
 		echo '<tr>';
 			echo '<td style="text-align: left; width: 10%"><a href="#!" id="slide_back"><img';

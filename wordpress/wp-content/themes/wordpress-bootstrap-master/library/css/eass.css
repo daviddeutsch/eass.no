@@ -6683,6 +6683,11 @@ div#logo {
 div#logo img {
   max-width: 100%;
 }
+@media (max-width: 767px) {
+  div#logo img {
+    width: 100%;
+  }
+}
 .navbar {
   min-height: 24px;
 }

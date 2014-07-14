@@ -56,7 +56,7 @@
 				<nav class="navbar navbar-inverse" role="navigation">
 					<div class="navbar-header">
 						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#eass-navbar-collapse">
-							<i class="fa fa-2x fa-bars"></i>
+							<i class="fa fa-bars"></i>
 							<span class="sr-only">Toggle navigation</span>
 					</div>
 					<div id="eass-navbar-collapse" class="collapse navbar-collapse">

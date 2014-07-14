@@ -38,7 +38,7 @@ String.prototype.trunc =
 		var files_allowed 	= 1;
 		var button_width 	= (button_width == '') ? 100 : button_width;
 
-		jQuery('#'+input_file_name).uploadifive(
+		jQuery('#nm-uploader-area-'+input_file_name).uploadifive(
 				{
 					'uploadScript' : nm_webcontact_vars.ajaxurl,
 					'buttonText' : button_text,

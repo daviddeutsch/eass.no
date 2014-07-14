@@ -54,7 +54,7 @@ div.panel-standalone {
 		}
 
 		@media (max-width: @grid-float-breakpoint-max) {
-			padding: 12px;
+			padding: 24px;
 		}
 	}
 
@@ -152,13 +152,17 @@ div#main {
 			&.selected {
 				text-indent: 56px;
 				color: #e4131a;
+				@media (max-width: @grid-float-breakpoint-max) {
+					text-indent: 24px;
+				}
 			}
 			&:hover {
 				background: #000;
 			}
-
 			@media (max-width: @grid-float-breakpoint-max) {
 				float: left;
+				margin-right: 0;
+				text-indent: 24px;
 			}
 		}
 	}

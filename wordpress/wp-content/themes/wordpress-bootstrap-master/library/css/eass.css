@@ -6518,7 +6518,7 @@ div.panel-standalone .panel-body ul li {
 }
 @media (max-width: 767px) {
   div.panel-standalone .panel-body {
-    padding: 12px;
+    padding: 24px;
   }
 }
 @media (max-width: 767px) {
@@ -6655,12 +6655,19 @@ div#main .sidenav li.selected {
   text-indent: 56px;
   color: #e4131a;
 }
+@media (max-width: 767px) {
+  div#main .sidenav li.selected {
+    text-indent: 24px;
+  }
+}
 div#main .sidenav li:hover {
   background: #000;
 }
 @media (max-width: 767px) {
   div#main .sidenav li {
     float: left;
+    margin-right: 0;
+    text-indent: 24px;
   }
 }
 div#logo {

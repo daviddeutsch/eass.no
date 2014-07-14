@@ -45,8 +45,8 @@ class NM_WP_ContactForm extends NM_Framwork_V1 {
 				'jquery-ui-datepicker'
 		);
 
-		$is_html5 = 0;
-		
+		$is_html5 = 1;
+
 		/*
 		 * [3] TODO: update scripts array for custom scripts/styles
 		*/
@@ -97,14 +97,14 @@ class NM_WP_ContactForm extends NM_Framwork_V1 {
 			);
 		}else{
 			$this->plugin_scripts = array (
-						
+
 					array (
 							'script_name' => 'scripts',
 							'script_source' => '/js/script.js',
 							'localized' => true,
 							'type' => 'js'
 					),
-						
+
 					array (
 							'script_name' => 'upload_plugin',
 							'script_source' => '/js/upload.js',
@@ -121,7 +121,7 @@ class NM_WP_ContactForm extends NM_Framwork_V1 {
 							'localized'		=> false,
 							'type'			=> 'style'
 					),
-						
+
 					array (
 							'script_name' => 'styles',
 							'script_source' => '/plugin.styles.css',
@@ -647,13 +647,13 @@ class NM_WP_ContactForm extends NM_Framwork_V1 {
 		if (!file_exists($file_path)) {
 			die('Could not find file '.$file_path);
 		}
-		
+
 		if (!class_exists('NM_Aviary')) {
 			die('Class not found NM_Aviary');
 		}
-		
+
 		$aviary = new NM_Aviary();
-		
+
 		$aviary -> dir_path = $this -> get_file_dir_path();
 		$aviary -> posted_data = json_decode( stripslashes($_REQUEST['postdata']) );
 		$aviary -> image_data = file_get_contents($_REQUEST['url']);
@@ -841,15 +841,15 @@ class NM_WP_ContactForm extends NM_Framwork_V1 {
 		else
 			return true;
 	}
-	
-	
+
+
 	/*
 	 * checking if aviary addon is installed or not
 	 */
 	function is_aviary_installed(){
-		
+
 		$aviary_file = $this->plugin_meta ['path'] . '/lib/aviary.php';
-		
+
 		if (file_exists ( $aviary_file ))
 			return true;
 		else

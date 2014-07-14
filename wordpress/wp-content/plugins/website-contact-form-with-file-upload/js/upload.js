@@ -13,11 +13,6 @@ String.prototype.trunc =
 
  function setup_uploader(file_input, button_text, files_allowed, types_allowed, file_size_limit, button_width, photo_editing, editing_tools) {
 
-	 	if ( typeof nm_webcontact_vars.is_html5 == 'undefined' ) {
-			nm_webcontact_vars.is_html5 = "1";
-		}
-
-
 		if (nm_webcontact_vars.is_html5 == "1") {
 
 			setup_uploader_html5(file_input, button_text, files_allowed, types_allowed, file_size_limit, button_width, photo_editing, editing_tools);

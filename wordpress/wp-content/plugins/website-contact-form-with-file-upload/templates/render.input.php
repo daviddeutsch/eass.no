@@ -263,9 +263,10 @@ echo '<div id="nm-webcontact-box-'. $nmcontact->form_id .'" class="nm-webcontact
 
 				case 'file':
 
-					echo '<div>';
+					echo '<div class="form-group">';
+						echo '<div class="col-sm-6">';
 
-							echo '<div id="nm-uploader-area-'. $name.'" class="nm-uploader-area">';
+							echo '<div id="nm-uploader-area-'. $name.'" >';
 								echo '<div id="wrapper-uploadifive-button">';
 									echo '<input id="'.$name.'"';
 									echo 'name="'.$name.'" data-req="'.$meta['required'].'"';
@@ -281,19 +282,20 @@ echo '<div id="nm-webcontact-box-'. $nmcontact->form_id .'" class="nm-webcontact
 
 								echo '<span class="errors"></span>';
 
-						echo '<script type="text/javascript">';
+							echo '<script type="text/javascript">';
 
-						echo 'setup_uploader(\''.$name.'\',
-							\''. stripslashes($meta['button_label']).'\',
-							\''. stripslashes($meta['files_allowed']).'\',
-							\''. stripslashes($meta['file_types']).'\',
-							\''. stripslashes($meta['file_size']).'\',
-							\''. stripslashes($meta['button_width']).'\',
-							\''. stripslashes($meta['photo_editing']).'\',
-							\''. get_editing_tools($meta['editing_tools']).'\')';
-						echo '</script>';
+							echo 'setup_uploader(\''.$name.'\',
+								\''. stripslashes($meta['button_label']).'\',
+								\''. stripslashes($meta['files_allowed']).'\',
+								\''. stripslashes($meta['file_types']).'\',
+								\''. stripslashes($meta['file_size']).'\',
+								\''. stripslashes($meta['button_width']).'\',
+								\''. stripslashes($meta['photo_editing']).'\',
+								\''. get_editing_tools($meta['editing_tools']).'\')';
+							echo '</script>';
+						echo '</div>';
 
-					echo '<label for="'.$name.'" class="col-sm-6 control-label">'. $field_label.'</label>';
+						echo '<label for="'.$name.'" class="col-sm-6 control-label">'. $field_label.'</label>';
 
 						echo '</div>';
 					echo '</div>';

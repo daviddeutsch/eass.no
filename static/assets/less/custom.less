@@ -158,10 +158,14 @@ div#logo {
 	padding: 24px 0;
 }
 
+.navbar-inverse {
+	background: #000;
+	border: none;
+}
+
 nav.navbar {
 	display: box;
 	background: #000;
-	margin-left: -22px;
 	margin-bottom: -12px;
 	font-size: 120%;
 }
@@ -171,16 +175,21 @@ nav.navbar {
 }
 
 ul.navbar-nav {
-	li a {
-		font-family: 'Oswald', sans-serif;
-		border-bottom: 6px solid #000;
-		margin-left: 24px;
-		margin-right: 24px;
-		padding: 6px 1px;
-		color: #fff;
+	li {
 		&:hover {
 			background: #000;
-			border-bottom: 6px solid #e4131a;
+		}
+		a {
+			font-family: 'Oswald', sans-serif;
+			border-bottom: 6px solid #000;
+			margin-left: 24px;
+			margin-right: 24px;
+			padding: 6px 1px;
+			color: #fff;
+			&:hover {
+				background: #000 !important;
+				border-bottom: 6px solid #e4131a;
+			}
 		}
 	}
 }

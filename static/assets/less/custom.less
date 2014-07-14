@@ -5,6 +5,10 @@ body {
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 300;
 	color: #000;
+
+	@media (max-width: @grid-float-breakpoint-max) {
+		word-break: break-all;
+	}
 }
 
 div.panel {

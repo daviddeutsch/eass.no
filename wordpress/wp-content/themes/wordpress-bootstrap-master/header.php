@@ -41,7 +41,7 @@
 
 		<div id="header">
 			<div class="container">
-				<p id="home" class="pull-right hidden-sm">
+				<p id="home" class="pull-right hidden-xs">
 					<a href="#"><i class="fa fa-2x fa-home"></i></a>
 				</p>
 				<div id="logo">

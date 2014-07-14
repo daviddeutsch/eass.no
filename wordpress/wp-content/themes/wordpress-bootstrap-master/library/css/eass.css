@@ -6473,6 +6473,11 @@ body {
   font-weight: 300;
   color: #000;
 }
+@media (max-width: 767px) {
+  body {
+    word-break: break-all;
+  }
+}
 div.panel {
   position: relative;
   border-radius: 6px;

@@ -10,56 +10,56 @@ $section_settings = array (
 		'title' => array (
 				'type' => 'text',
 				'title' => __ ( 'Title', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'It will as section heading wrapped in h2', $nmcontact->plugin_meta ['shortname'] ) 
+				'desc' => __ ( 'It will as section heading wrapped in h2', $nmcontact->plugin_meta ['shortname'] )
 		),
 		'description' => array (
 				'type' => 'text',
 				'title' => __ ( 'Description', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'Type description, it will be diplay under section heading.', $nmcontact->plugin_meta ['shortname'] ) 
-		) 
+				'desc' => __ ( 'Type description, it will be diplay under section heading.', $nmcontact->plugin_meta ['shortname'] )
+		)
 );
 
 $text_settings = array (
 		'title' => array (
 				'type' => 'text',
 				'title' => __ ( 'Title', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'It will be shown as field label', $nmcontact->plugin_meta ['shortname'] ) 
+				'desc' => __ ( 'It will be shown as field label', $nmcontact->plugin_meta ['shortname'] )
 		),
 		'data_name' => array (
 				'type' => 'text',
 				'title' => __ ( 'Data name', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'REQUIRED: The identification name of this field, that you can insert into body email configuration. Note:Use only lowercase characters and underscores.', $nmcontact->plugin_meta ['shortname'] ) 
+				'desc' => __ ( 'REQUIRED: The identification name of this field, that you can insert into body email configuration. Note:Use only lowercase characters and underscores.', $nmcontact->plugin_meta ['shortname'] )
 		),
 		'description' => array (
 				'type' => 'text',
 				'title' => __ ( 'Description', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'Small description, it will be diplay near name title.', $nmcontact->plugin_meta ['shortname'] ) 
+				'desc' => __ ( 'Small description, it will be diplay near name title.', $nmcontact->plugin_meta ['shortname'] )
 		),
 		'error_message' => array (
 				'type' => 'text',
 				'title' => __ ( 'Error message', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'Insert the error message for validation.', $nmcontact->plugin_meta ['shortname'] ) 
+				'desc' => __ ( 'Insert the error message for validation.', $nmcontact->plugin_meta ['shortname'] )
 		),
-		
+
 		'required' => array (
 				'type' => 'checkbox',
 				'title' => __ ( 'Required', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'Select this if it must be required.', $nmcontact->plugin_meta ['shortname'] ) 
+				'desc' => __ ( 'Select this if it must be required.', $nmcontact->plugin_meta ['shortname'] )
 		),
 		'class' => array (
 				'type' => 'text',
 				'title' => __ ( 'Class', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'Insert an additional class(es) (separateb by comma) for more personalization.', $nmcontact->plugin_meta ['shortname'] ) 
+				'desc' => __ ( 'Insert an additional class(es) (separateb by comma) for more personalization.', $nmcontact->plugin_meta ['shortname'] )
 		),
 		'width' => array (
 				'type' => 'text',
 				'title' => __ ( 'Width', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'Type field width in % e.g: 50%', $nmcontact->plugin_meta ['shortname'] ) 
-		) 
+				'desc' => __ ( 'Type field width in % e.g: 50%', $nmcontact->plugin_meta ['shortname'] )
+		)
 );
 
 $hidden_settings = array (
-		
+
 		'data_name' => array (
 				'type' => 'text',
 				'title' => __ ( 'Data name', $nmcontact->plugin_meta ['shortname'] ),
@@ -76,38 +76,38 @@ $date_settings = array (
 		'title' => array (
 				'type' => 'text',
 				'title' => __ ( 'Title', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'It will be shown as field label', $nmcontact->plugin_meta ['shortname'] ) 
+				'desc' => __ ( 'It will be shown as field label', $nmcontact->plugin_meta ['shortname'] )
 		),
 		'data_name' => array (
 				'type' => 'text',
 				'title' => __ ( 'Data name', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'REQUIRED: The identification name of this field, that you can insert into body email configuration. Note:Use only lowercase characters and underscores.', $nmcontact->plugin_meta ['shortname'] ) 
+				'desc' => __ ( 'REQUIRED: The identification name of this field, that you can insert into body email configuration. Note:Use only lowercase characters and underscores.', $nmcontact->plugin_meta ['shortname'] )
 		),
 		'description' => array (
 				'type' => 'text',
 				'title' => __ ( 'Description', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'Small description, it will be diplay near name title.', $nmcontact->plugin_meta ['shortname'] ) 
+				'desc' => __ ( 'Small description, it will be diplay near name title.', $nmcontact->plugin_meta ['shortname'] )
 		),
 		'error_message' => array (
 				'type' => 'text',
 				'title' => __ ( 'Error message', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'Insert the error message for validation.', $nmcontact->plugin_meta ['shortname'] ) 
+				'desc' => __ ( 'Insert the error message for validation.', $nmcontact->plugin_meta ['shortname'] )
 		),
-		
+
 		'required' => array (
 				'type' => 'checkbox',
 				'title' => __ ( 'Required', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'Select this if it must be required.', $nmcontact->plugin_meta ['shortname'] ) 
+				'desc' => __ ( 'Select this if it must be required.', $nmcontact->plugin_meta ['shortname'] )
 		),
 		'class' => array (
 				'type' => 'text',
 				'title' => __ ( 'Class', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'Insert an additional class(es) (separateb by comma) for more personalization.', $nmcontact->plugin_meta ['shortname'] ) 
+				'desc' => __ ( 'Insert an additional class(es) (separateb by comma) for more personalization.', $nmcontact->plugin_meta ['shortname'] )
 		),
 		'width' => array (
 				'type' => 'text',
 				'title' => __ ( 'Width', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'Type field width in % e.g: 50%', $nmcontact->plugin_meta ['shortname'] ) 
+				'desc' => __ ( 'Type field width in % e.g: 50%', $nmcontact->plugin_meta ['shortname'] )
 		),
 		'date_formats' => array (
 				'type' => 'select',
@@ -119,49 +119,49 @@ $date_settings = array (
 						'd M, y' => 'Short - d M, y',
 						'd MM, y' => 'Medium - d MM, y',
 						'DD, d MM, yy' => 'Full - DD, d MM, yy',
-						'\'day\' d \'of\' MM \'in the year\' yy' => 'With text - \'day\' d \'of\' MM \'in the year\' yy' 
-				) 
-		) 
+						'\'day\' d \'of\' MM \'in the year\' yy' => 'With text - \'day\' d \'of\' MM \'in the year\' yy'
+				)
+		)
 );
 
 $email_settings = array (
 		'title' => array (
 				'type' => 'text',
 				'title' => __ ( 'Title', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'It will be shown as field label', $nmcontact->plugin_meta ['shortname'] ) 
+				'desc' => __ ( 'It will be shown as field label', $nmcontact->plugin_meta ['shortname'] )
 		),
 		'data_name' => array (
 				'type' => 'text',
 				'title' => __ ( 'Data name', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'REQUIRED: The identification name of this field, that you can insert into body email configuration. Note:Use only lowercase characters and underscores.', $nmcontact->plugin_meta ['shortname'] ) 
+				'desc' => __ ( 'REQUIRED: The identification name of this field, that you can insert into body email configuration. Note:Use only lowercase characters and underscores.', $nmcontact->plugin_meta ['shortname'] )
 		),
 		'description' => array (
 				'type' => 'text',
 				'title' => __ ( 'Description', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'Small description, it will be diplay near name title.', $nmcontact->plugin_meta ['shortname'] ) 
+				'desc' => __ ( 'Small description, it will be diplay near name title.', $nmcontact->plugin_meta ['shortname'] )
 		),
 		'error_message' => array (
 				'type' => 'text',
 				'title' => __ ( 'Error message', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'Insert the error message for validation.', $nmcontact->plugin_meta ['shortname'] ) 
+				'desc' => __ ( 'Insert the error message for validation.', $nmcontact->plugin_meta ['shortname'] )
 		),
-		
+
 		'required' => array (
 				'type' => 'checkbox',
 				'title' => __ ( 'Required', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'Select this if it must be required.', $nmcontact->plugin_meta ['shortname'] ) 
+				'desc' => __ ( 'Select this if it must be required.', $nmcontact->plugin_meta ['shortname'] )
 		),
 		'class' => array (
 				'type' => 'text',
 				'title' => __ ( 'Class', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'Insert an additional class(es) (separateb by comma) for more personalization.', $nmcontact->plugin_meta ['shortname'] ) 
+				'desc' => __ ( 'Insert an additional class(es) (separateb by comma) for more personalization.', $nmcontact->plugin_meta ['shortname'] )
 		),
 		'width' => array (
 				'type' => 'text',
 				'title' => __ ( 'Width', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'Type field width in % e.g: 50%', $nmcontact->plugin_meta ['shortname'] ) 
+				'desc' => __ ( 'Type field width in % e.g: 50%', $nmcontact->plugin_meta ['shortname'] )
 		),
-		
+
 		'send_email' => array (
 				'type' => 'checkbox',
 				'title' => __ ( 'Send email', $nmcontact->plugin_meta ['shortname'] ),
@@ -176,64 +176,64 @@ $check_settings = array (
 		'title' => array (
 				'type' => 'text',
 				'title' => __ ( 'Title', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'It will be shown as field label', $nmcontact->plugin_meta ['shortname'] ) 
+				'desc' => __ ( 'It will be shown as field label', $nmcontact->plugin_meta ['shortname'] )
 		),
 		'data_name' => array (
 				'type' => 'text',
 				'title' => __ ( 'Data name', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'REQUIRED: The identification name of this field, that you can insert into body email configuration. Note:Use only lowercase characters and underscores.', $nmcontact->plugin_meta ['shortname'] ) 
+				'desc' => __ ( 'REQUIRED: The identification name of this field, that you can insert into body email configuration. Note:Use only lowercase characters and underscores.', $nmcontact->plugin_meta ['shortname'] )
 		),
 		'description' => array (
 				'type' => 'text',
 				'title' => __ ( 'Description', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'Small description, it will be diplay near name title.', $nmcontact->plugin_meta ['shortname'] ) 
+				'desc' => __ ( 'Small description, it will be diplay near name title.', $nmcontact->plugin_meta ['shortname'] )
 		),
 		'error_message' => array (
 				'type' => 'text',
 				'title' => __ ( 'Error message', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'Insert the error message for validation.', $nmcontact->plugin_meta ['shortname'] ) 
+				'desc' => __ ( 'Insert the error message for validation.', $nmcontact->plugin_meta ['shortname'] )
 		),
 		'options' => array (
 				'type' => 'textarea',
 				'title' => __ ( 'Add options', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'Type each option per line', $nmcontact->plugin_meta ['shortname'] ) 
+				'desc' => __ ( 'Type each option per line', $nmcontact->plugin_meta ['shortname'] )
 		),
-		
+
 		'required' => array (
 				'type' => 'checkbox',
 				'title' => __ ( 'Required', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'Select this if it must be required.', $nmcontact->plugin_meta ['shortname'] ) 
+				'desc' => __ ( 'Select this if it must be required.', $nmcontact->plugin_meta ['shortname'] )
 		),
 		'class' => array (
 				'type' => 'text',
 				'title' => __ ( 'Class', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'Insert an additional class(es) (separateb by comma) for more personalization.', $nmcontact->plugin_meta ['shortname'] ) 
+				'desc' => __ ( 'Insert an additional class(es) (separateb by comma) for more personalization.', $nmcontact->plugin_meta ['shortname'] )
 		),
 		'width' => array (
 				'type' => 'text',
 				'title' => __ ( 'Width', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'Type field width in % e.g: 50%', $nmcontact->plugin_meta ['shortname'] ) 
+				'desc' => __ ( 'Type field width in % e.g: 50%', $nmcontact->plugin_meta ['shortname'] )
 		),
 		'checked' => array (
 				'type' => 'textarea',
 				'title' => __ ( 'Checked option(s)', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'Type option(s) name (given above) if you want already checked.', $nmcontact->plugin_meta ['shortname'] ) 
+				'desc' => __ ( 'Type option(s) name (given above) if you want already checked.', $nmcontact->plugin_meta ['shortname'] )
 		),
-		
+
 		'min_checked' => array (
 				'type' => 'text',
 				'title' => __ ( 'Min. Checked option(s)', $nmcontact->plugin_meta ['shortname'] ),
 				'desc' => __ ( 'How many options can be checked by user e.g: 2. Leave blank for default.', $nmcontact->plugin_meta ['shortname'] ),
 				'for'	=> 'pro',
 		),
-		
-		
+
+
 		'max_checked' => array (
 				'type' => 'text',
 				'title' => __ ( 'Max. Checked option(s)', $nmcontact->plugin_meta ['shortname'] ),
 				'desc' => __ ( 'How many options can be checked by user e.g: 3. Leave blank for default.', $nmcontact->plugin_meta ['shortname'] ),
 				'for'	=> 'pro',
-		) 
+		)
 );
 
 // select settings
@@ -241,51 +241,51 @@ $select_radio_settings = array (
 		'title' => array (
 				'type' => 'text',
 				'title' => __ ( 'Title', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'It will be shown as field label', $nmcontact->plugin_meta ['shortname'] ) 
+				'desc' => __ ( 'It will be shown as field label', $nmcontact->plugin_meta ['shortname'] )
 		),
 		'data_name' => array (
 				'type' => 'text',
 				'title' => __ ( 'Data name', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'REQUIRED: The identification name of this field, that you can insert into body email configuration. Note:Use only lowercase characters and underscores.', $nmcontact->plugin_meta ['shortname'] ) 
+				'desc' => __ ( 'REQUIRED: The identification name of this field, that you can insert into body email configuration. Note:Use only lowercase characters and underscores.', $nmcontact->plugin_meta ['shortname'] )
 		),
 		'description' => array (
 				'type' => 'text',
 				'title' => __ ( 'Description', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'Small description, it will be diplay near name title.', $nmcontact->plugin_meta ['shortname'] ) 
+				'desc' => __ ( 'Small description, it will be diplay near name title.', $nmcontact->plugin_meta ['shortname'] )
 		),
 		'error_message' => array (
 				'type' => 'text',
 				'title' => __ ( 'Error message', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'Insert the error message for validation.', $nmcontact->plugin_meta ['shortname'] ) 
+				'desc' => __ ( 'Insert the error message for validation.', $nmcontact->plugin_meta ['shortname'] )
 		),
-		
+
 		'options' => array (
 				'type' => 'textarea',
 				'title' => __ ( 'Add options', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'Type each option per line', $nmcontact->plugin_meta ['shortname'] ) 
+				'desc' => __ ( 'Type each option per line', $nmcontact->plugin_meta ['shortname'] )
 		),
 		'selected' => array (
 				'type' => 'text',
 				'title' => __ ( 'Selected option', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'Type option name (given above) if you want already selected.', $nmcontact->plugin_meta ['shortname'] ) 
+				'desc' => __ ( 'Type option name (given above) if you want already selected.', $nmcontact->plugin_meta ['shortname'] )
 		),
-		
+
 		'required' => array (
 				'type' => 'checkbox',
 				'title' => __ ( 'Required', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'Select this if it must be required.', $nmcontact->plugin_meta ['shortname'] ) 
+				'desc' => __ ( 'Select this if it must be required.', $nmcontact->plugin_meta ['shortname'] )
 		),
-		
+
 		'class' => array (
 				'type' => 'text',
 				'title' => __ ( 'Class', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'Insert an additional class(es) (separateb by comma) for more personalization.', $nmcontact->plugin_meta ['shortname'] ) 
+				'desc' => __ ( 'Insert an additional class(es) (separateb by comma) for more personalization.', $nmcontact->plugin_meta ['shortname'] )
 		),
 		'width' => array (
 				'type' => 'text',
 				'title' => __ ( 'Width', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'Type field width in % e.g: 50%', $nmcontact->plugin_meta ['shortname'] ) 
-		) 
+				'desc' => __ ( 'Type field width in % e.g: 50%', $nmcontact->plugin_meta ['shortname'] )
+		)
 );
 
 // checkbox settings
@@ -293,53 +293,53 @@ $file_settings = array (
 		'title' => array (
 				'type' => 'text',
 				'title' => __ ( 'Title', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'It will be shown as field label', $nmcontact->plugin_meta ['shortname'] ) 
+				'desc' => __ ( 'It will be shown as field label', $nmcontact->plugin_meta ['shortname'] )
 		),
 		'data_name' => array (
 				'type' => 'text',
 				'title' => __ ( 'Data name', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'REQUIRED: The identification name of this field, that you can insert into body email configuration. Note:Use only lowercase characters and underscores.', $nmcontact->plugin_meta ['shortname'] ) 
+				'desc' => __ ( 'REQUIRED: The identification name of this field, that you can insert into body email configuration. Note:Use only lowercase characters and underscores.', $nmcontact->plugin_meta ['shortname'] )
 		),
 		'description' => array (
 				'type' => 'text',
 				'title' => __ ( 'Description', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'Small description, it will be diplay near name title.', $nmcontact->plugin_meta ['shortname'] ) 
+				'desc' => __ ( 'Small description, it will be diplay near name title.', $nmcontact->plugin_meta ['shortname'] )
 		),
 		'error_message' => array (
 				'type' => 'text',
 				'title' => __ ( 'Error message', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'Insert the error message for validation.', $nmcontact->plugin_meta ['shortname'] ) 
+				'desc' => __ ( 'Insert the error message for validation.', $nmcontact->plugin_meta ['shortname'] )
 		),
-		
+
 		'required' => array (
 				'type' => 'checkbox',
 				'title' => __ ( 'Required', $nmcontact->plugin_meta ['shortname'] ),
 				'desc' => __ ( 'Select this if it must be required.', $nmcontact->plugin_meta ['shortname'] ),
 				'for'	=> 'pro',
 		),
-		
-		
+
+
 		'class' => array (
 				'type' => 'text',
 				'title' => __ ( 'Class', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'Insert an additional class(es) (separateb by comma) for more personalization.', $nmcontact->plugin_meta ['shortname'] ) 
+				'desc' => __ ( 'Insert an additional class(es) (separateb by comma) for more personalization.', $nmcontact->plugin_meta ['shortname'] )
 		),
-		
+
 		'width' => array (
 				'type' => 'text',
 				'title' => __ ( 'Width', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'Type field width in % e.g: 50%', $nmcontact->plugin_meta ['shortname'] ) 
+				'desc' => __ ( 'Type field width in % e.g: 50%', $nmcontact->plugin_meta ['shortname'] )
 		),
-		
+
 		'button_label' => array (
 				'type' => 'text',
 				'title' => __ ( 'Button label', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'Type button label e.g: Upload Photos', $nmcontact->plugin_meta ['shortname'] ) 
+				'desc' => __ ( 'Type button label e.g: Upload Photos', $nmcontact->plugin_meta ['shortname'] )
 		),
 		'button_width' => array (
 				'type' => 'text',
 				'title' => __ ( 'Button width', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'Type button width in px e.g: 150 (for 150px)', $nmcontact->plugin_meta ['shortname'] ) 
+				'desc' => __ ( 'Type button width in px e.g: 150 (for 150px)', $nmcontact->plugin_meta ['shortname'] )
 		),
 		'files_allowed' => array (
 				'type' => 'text',
@@ -350,22 +350,22 @@ $file_settings = array (
 		'file_types' => array (
 				'type' => 'text',
 				'title' => __ ( 'File types', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'File types allowed seperated by comma, e.g: jpg,pdf,zip', $nmcontact->plugin_meta ['shortname'] ) 
+				'desc' => __ ( 'File types allowed seperated by comma, e.g: jpg,pdf,zip', $nmcontact->plugin_meta ['shortname'] )
 		),
-		
+
 		'file_size' => array (
 				'type' => 'text',
 				'title' => __ ( 'File size', $nmcontact->plugin_meta ['shortname'] ),
-				'desc' => __ ( 'Type size in KB per file uploaded by user, e.g: 5000 (5 MB)', $nmcontact->plugin_meta ['shortname'] ) 
+				'desc' => __ ( 'Type size in KB per file uploaded by user, e.g: 5000 (5 MB)', $nmcontact->plugin_meta ['shortname'] )
 		),
-		
+
 		'photo_editing' => array (
 				'type' => 'checkbox',
 				'title' => __ ( 'Enable photo editing', $nmcontact->plugin_meta ['shortname'] ),
 				'desc' => __ ( 'Allow users to edit photos by Aviary API, make sure that Aviary API Key is set in previous tab.', $nmcontact->plugin_meta ['shortname'] ),
 				'for'	=> 'pro',
 		),
-		
+
 		'editing_tools' => array (
 				'type' => 'checkbox',
 				'title' => __ ( 'Editing Options', $nmcontact->plugin_meta ['shortname'] ),
@@ -389,57 +389,57 @@ $file_settings = array (
 						'text' => 'Text',
 						'redeye' => 'Red-Eye',
 						'whiten' => 'Whiten teeth',
-						'blemish' => 'Remove skin blemishes' 
+						'blemish' => 'Remove skin blemishes'
 				),
 				'for'	=> 'pro',
-		) 
+		)
 );
 
 $types = array (
 		'text' => array (
 				'title' => __ ( 'Text Input', $nmcontact->plugin_meta ['shortname'] ),
 				'desc' => __ ( 'regular text input', $nmcontact->plugin_meta ['shortname'] ),
-				'settings' => $text_settings 
+				'settings' => $text_settings
 		),
 		'email' => array (
 				'title' => __ ( 'Email Input', $nmcontact->plugin_meta ['shortname'] ),
 				'desc' => __ ( 'email input', $nmcontact->plugin_meta ['shortname'] ),
-				'settings' => $email_settings 
+				'settings' => $email_settings
 		),
 		'checkbox' => array (
 				'title' => __ ( 'Checkbox', $nmcontact->plugin_meta ['shortname'] ),
 				'desc' => __ ( 'checkbox options', $nmcontact->plugin_meta ['shortname'] ),
-				'settings' => $check_settings 
+				'settings' => $check_settings
 		),
 		'select' => array (
 				'title' => __ ( 'Select', $nmcontact->plugin_meta ['shortname'] ),
 				'desc' => __ ( 'select options', $nmcontact->plugin_meta ['shortname'] ),
-				'settings' => $select_radio_settings 
+				'settings' => $select_radio_settings
 		),
 		'textarea' => array (
 				'title' => __ ( 'Textarea', $nmcontact->plugin_meta ['shortname'] ),
 				'desc' => __ ( 'textrea for large input', $nmcontact->plugin_meta ['shortname'] ),
-				'settings' => $text_settings 
+				'settings' => $text_settings
 		),
 		'radio' => array (
 				'title' => __ ( 'Radio buttons', $nmcontact->plugin_meta ['shortname'] ),
 				'desc' => __ ( 'radio buttons', $nmcontact->plugin_meta ['shortname'] ),
-				'settings' => $select_radio_settings 
+				'settings' => $select_radio_settings
 		),
-		
+
 		'file' => array (
 				'title' => __ ( 'File upload', $nmcontact->plugin_meta ['shortname'] ),
 				'desc' => __ ( 'file uploader', $nmcontact->plugin_meta ['shortname'] ),
 				'settings' => $file_settings
 		),
-		
+
 		'date' => array (
 				'title' => __ ( 'Date', $nmcontact->plugin_meta ['shortname'] ),
 				'desc' => __ ( 'date', $nmcontact->plugin_meta ['shortname'] ),
 				'settings' => $date_settings,
 				'for'	=> 'pro',
 		),
-		
+
 		'section' => array (
 				'title' => __ ( 'Section (Heading)', $nmcontact->plugin_meta ['shortname'] ),
 				'desc' => __ ( 'file uploader', $nmcontact->plugin_meta ['shortname'] ),
@@ -449,10 +449,10 @@ $types = array (
 );
 
 if (isset ( $_REQUEST ['form_id'] ) && $_REQUEST ['form_id'] != '') {
-	
+
 	$single_form = $nmcontact->get_forms ( intval ( $_REQUEST ['form_id'] ) );
 	// $nmcontact -> pa($single_form);
-	
+
 	$form_name = $single_form->form_name;
 	$sender_email = $single_form->sender_email;
 	$sender_name = $single_form->sender_name;
@@ -464,12 +464,12 @@ if (isset ( $_REQUEST ['form_id'] ) && $_REQUEST ['form_id'] != '') {
 	$error_message = $single_form->error_message;
 	$aviary_api_key = $single_form->aviary_api_key;
 	$form_style = $single_form->form_style;
-	
+
 	$checked_file = ($single_form->send_file_as == 'file') ? 'checked="checked"' : '';
 	$checked_attachment = ($single_form->send_file_as == 'attachment') ? 'checked="checked"' : '';
 	$form_meta = json_decode ( $single_form->the_meta, true );
 	$section_slides = ($single_form -> section_slides == 'on') ? 'checked="checked"' : '';
-	
+
 	//$nmcontact->pa ( $form_meta );
 }
 
@@ -537,7 +537,7 @@ echo '<p><a class="button" href="'.$url_cancel.'">'.__('&laquo; Existing forms',
 					value="<?php echo $button_class?>" /> <br />
 					<p class="s-font"><?php _e('Define the class of submit button.', $nmcontact -> plugin_meta['shortname'])?></p></td>
 			</tr>
-			
+
 			<tr>
 				<td class="headings"><?php _e('Success Message', $nmcontact -> plugin_meta['shortname'])?></td>
 				<td><input type="text" name="success_message"
@@ -563,13 +563,13 @@ echo '<p><a class="button" href="'.$url_cancel.'">'.__('&laquo; Existing forms',
 					</label> <br />
 					<p class="s-font"><?php _e('Select whether file uploaded by user will be recieved to admin as attachment or link', $nmcontact -> plugin_meta['shortname'])?></p></td>
 			</tr>
-			
+
 			<tr>
 				<td class="headings"><?php _e('Slide sections using jquery?', $nmcontact->plugin_meta['shortname'])?></td>
 				<td><input type="checkbox" disabled="disabled" id="section_slides" name="section_slides" <?php echo $section_slides?> /> <?php echo nm_webcontact_pro()?><br>
 				<p class="s-font"><?php _e('Not all section will be shown at once, it add a nice sliding effect.', $nmcontact -> plugin_meta['shortname'])?></p>
 				</td>
-				
+
 			</tr>
 
 			<!-- Photo editing with Aviary -->
@@ -577,7 +577,7 @@ echo '<p><a class="button" href="'.$url_cancel.'">'.__('&laquo; Existing forms',
 				<td class="headings"><?php _e('Aviary API Key (Photo Editing)', $nmcontact -> plugin_meta['shortname'])?>
 				<a class="button" href="http://aviary.com/web" target="_blank"><?php _e('Learn about Aviary', $nmcontact -> plugin_meta['shortname'])?></a></td>
 				<td>
-				
+
 				<?php if ($nmcontact -> is_aviary_installed()) {?>
 				<input type="text" name="aviary_api_key"
 					value="<?php echo $aviary_api_key?>" disabled="disabled" /> <?php echo nm_webcontact_pro()?><br />
@@ -588,17 +588,17 @@ echo '<p><a class="button" href="'.$url_cancel.'">'.__('&laquo; Existing forms',
 						<a href="#" class="button-primary" target="_blank"><?php _e('See Demo', $nmcontact -> plugin_meta['shortname'])?></a>
 						<?php echo nm_webcontact_pro()?>
 					</p>
-					
+
 					<?php }?>
-						
+
 					</td>
 			</tr>
-			
+
 			<tr>
 				<td class="headings"><?php _e('Form styling/css', $nmcontact -> plugin_meta['shortname'])?> <?php echo nm_webcontact_pro()?></td>
 				<td><textarea disabled="disabled" rows="7" cols="25" name="form_style"></textarea><br />
 					<p class="s-font"><?php _e('Form styling/css.', $nmcontact -> plugin_meta['shortname'])?></p></td>
-			</tr> 
+			</tr>
 		</table>
 
 	</div>
@@ -613,17 +613,17 @@ echo '<p><a class="button" href="'.$url_cancel.'">'.__('&laquo; Existing forms',
 			<ul id="nm-input-types">
 		<?php
 		foreach ( $types as $type => $data ) {
-			
+
 			echo '<li class="input-type-item '.$data['for'].'" data-inputtype="' . $type . '" data-for="' . $data['for'] . '">';
 			echo '<div><h3><span class="top-heading-text">' . $data ['title'] . '</span>';
 			echo '<span class="top-heading-icons ui-icon ui-icon-arrow-4"></span>';
 			echo '<span class="top-heading-icons ui-icon-placehorder"></span>';
 			echo '<span style="clear:both;display:block"></span>';
 			echo '</h3>';
-			
+
 			// this function Defined below
 			echo render_input_settings ( $data ['settings'] );
-			
+
 			echo '</div></li>';
 			// echo '<div><p>'.$data['desc'].'</p></div>';
 		}
@@ -669,26 +669,26 @@ echo '<p><a class="button" href="'.$url_cancel.'">'.__('&laquo; Existing forms',
 function render_input_settings($settings, $values = '') {
 	$setting_html = '<table>';
 	foreach ( $settings as $meta_type => $data ) {
-		
+
 		$setting_html .= '<tr>';
 		$setting_html .= '<td class="table-column-title">' . $data ['title'] . '</td>';
-		
+
 		if ($values)
 			$setting_html .= '<td class="table-column-input" data-type="' . $data ['type'] . '" data-name="' . $meta_type . '">' . render_input_types ( $data ['type'], $meta_type, $values [$meta_type], $data ['options'], $data['for'] ) . '</td>';
 		else
 			$setting_html .= '<td class="table-column-input" data-type="' . $data ['type'] . '" data-name="' . $meta_type . '">' . render_input_types ( $data ['type'], $meta_type, null, $data ['options'], $data['for'] ) . '</td>';
-		
+
 		if ($data['for'] == 'pro') {
 			$setting_html .= '<td class="table-column-desc">' . $data ['desc'] . nm_webcontact_pro().'</td>';
 		}else{
 			$setting_html .= '<td class="table-column-desc">' . $data ['desc'] . '</td>';
 		}
-		
+
 		$setting_html .= '</tr>';
 	}
-	
+
 	$setting_html .= '</table>';
-	
+
 	return $setting_html;
 }
 
@@ -697,20 +697,20 @@ function render_input_settings($settings, $values = '') {
  */
 function render_input_types($type, $name, $value = '', $options = '', $for = 'free') {
 	$html_input = '';
-	
-	$disabled = ($for == 'pro') ? 'disabled="disabled"' : '';
+
+	$disabled = '';
 	stripslashes($value);
-	
+
 	switch ($type) {
-		
+
 		case 'text' :
 			$html_input .= '<input type="text" name="' . $name . '" value="' . $value . '" '.$disabled.'>';
 			break;
-		
+
 		case 'textarea' :
 			$html_input .= '<textarea name="' . $name . '" '.$disabled.'>' . $value . '</textarea>';
 			break;
-		
+
 		case 'select' :
 			$html_input .= '<select name="' . $name . '" '.$disabled.'>';
 			foreach ( $options as $key => $val ) {
@@ -719,12 +719,12 @@ function render_input_types($type, $name, $value = '', $options = '', $for = 'fr
 			}
 			$html_input .= '</select>';
 			break;
-		
+
 		case 'checkbox' :
-			
+
 			if ($options) {
 				foreach ( $options as $key => $val ) {
-					
+
 					parse_str ( $value, $saved_data );
 					if ($saved_data ['editing_tools']) {
 						if (in_array($key, $saved_data['editing_tools'])) {
@@ -743,7 +743,7 @@ function render_input_types($type, $name, $value = '', $options = '', $for = 'fr
 			}
 			break;
 	}
-	
+
 	return $html_input;
 }
 
@@ -753,21 +753,21 @@ function render_input_types($type, $name, $value = '', $options = '', $for = 'fr
 function render_existing_form_meta($form_meta, $types) {
 	if ($form_meta) {
 		foreach ( $form_meta as $key => $meta ) {
-			
+
 			$type = $meta ['type'];
-			
+
 			/*
 			 * echo '<pre>'; print_r($meta_data); echo '</pre>';
 			 */
-			
+
 			echo '<li data-inputtype="' . $type . '"><div class="postbox">';
 			echo '<h3><span class="top-heading-text">' . $meta ['title'] . ' (' . $type . ')</span>';
 			echo '<span class="top-heading-icons ui-icon ui-icon-carat-2-n-s"></span>';
 			echo '<span class="top-heading-icons ui-icon ui-icon-trash"></span>';
 			echo '<span style="clear:both;display:block"></span></h3>';
-			
+
 			echo render_input_settings ( $types [$type] ['settings'], $meta );
-			
+
 			echo '</div></li>';
 		}
 	}

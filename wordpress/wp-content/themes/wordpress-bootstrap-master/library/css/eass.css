@@ -6700,12 +6700,6 @@ div#main .sidenav li:hover {
     margin-top: -24px;
   }
 }
-@media (max-width: 992px) {
-  div#main {
-    margin-left: -15px;
-    margin-right: -14px;
-  }
-}
 div#logo {
   padding: 20px 0;
 }

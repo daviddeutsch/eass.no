@@ -6648,6 +6648,7 @@ div#header {
 div#main {
   position: relative;
   z-index: 200;
+  overflow: hidden;
 }
 div#main .sidenav {
   display: box;

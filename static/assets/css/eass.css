@@ -6690,9 +6690,15 @@ div#main .sidenav li:hover {
 }
 @media (max-width: 992px) {
   div#main .sidenav {
-    margin-left: -24px;
+    margin-left: -9px;
     margin-right: -24px;
     margin-top: -24px;
+  }
+}
+@media (max-width: 992px) {
+  div#main {
+    margin-left: -15px;
+    margin-right: -14px;
   }
 }
 div#logo {

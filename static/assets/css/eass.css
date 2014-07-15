@@ -6475,7 +6475,7 @@ body {
 }
 @media (max-width: 767px) {
   body {
-    word-break: break-all;
+    word-break: break-word;
   }
 }
 div.panel {

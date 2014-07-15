@@ -6528,12 +6528,12 @@ div.panel-standalone .panel-body ul {
 div.panel-standalone .panel-body ul li {
   margin-bottom: 12px;
 }
-@media (max-width: 767px) {
+@media (max-width: 992px) {
   div.panel-standalone .panel-body {
     padding: 24px;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 992px) {
   div.panel-standalone {
     margin-top: 16px;
   }

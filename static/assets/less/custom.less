@@ -76,6 +76,10 @@ div.panel-standalone {
 .kontakt-container {
 	height: 200px;
 	margin: -1px !important;
+
+	@media (max-width: @screen-md-min) {
+		height: 160px;
+	}
 }
 
 #home {
@@ -179,7 +183,7 @@ div#main {
 
 		@media (max-width: @screen-md-min) {
 			margin-left: -9px;
-			margin-right: -24px;
+			margin-right: -9px;
 			margin-top: -24px;
 		}
 	}

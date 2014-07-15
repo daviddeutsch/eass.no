@@ -6543,6 +6543,11 @@ div.panel-standalone .panel-body ul li {
   height: 200px;
   margin: -1px !important;
 }
+@media (max-width: 992px) {
+  .kontakt-container {
+    height: 160px;
+  }
+}
 #home {
   margin: 36px 12px 0;
 }
@@ -6691,7 +6696,7 @@ div#main .sidenav li:hover {
 @media (max-width: 992px) {
   div#main .sidenav {
     margin-left: -9px;
-    margin-right: -24px;
+    margin-right: -9px;
     margin-top: -24px;
   }
 }

@@ -6674,7 +6674,7 @@ div#main .sidenav li.selected {
   text-indent: 56px;
   color: #e4131a;
 }
-@media (max-width: 767px) {
+@media (max-width: 992px) {
   div#main .sidenav li.selected {
     text-indent: 24px;
   }
@@ -6682,13 +6682,13 @@ div#main .sidenav li.selected {
 div#main .sidenav li:hover {
   background: #000;
 }
-@media (max-width: 767px) {
+@media (max-width: 992px) {
   div#main .sidenav li {
     float: left;
     text-indent: 24px;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 992px) {
   div#main .sidenav {
     margin-left: -24px;
     margin-right: -24px;

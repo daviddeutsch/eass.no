@@ -6485,11 +6485,12 @@ div.panel {
   z-index: 400;
   margin-top: -14px;
   border-top: none;
-  -webkit-transition: 1000ms cubic-bezier(0.19, 1, 0.22, 1) all;
-  -moz-transition: 1000ms cubic-bezier(0.19, 1, 0.22, 1) all;
-  -ms-transition: 1000ms cubic-bezier(0.19, 1, 0.22, 1) all;
-  -o-transition: 1000ms cubic-bezier(0.19, 1, 0.22, 1) all;
-  transition: 1000ms cubic-bezier(0.19, 1, 0.22, 1) all;
+  -webkit-transition: all 1000ms cubic-bezier(0.19, 1, 0.22, 1);
+  -o-transition: all 1000ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 1000ms cubic-bezier(0.19, 1, 0.22, 1);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 div.raised {
   margin-top: -18px !important;
@@ -6663,11 +6664,9 @@ div#main .sidenav li {
   padding: 12px 1px;
   color: #fff;
   text-indent: 48px;
-  -webkit-transition: 1000ms cubic-bezier(0.19, 1, 0.22, 1) all;
-  -moz-transition: 1000ms cubic-bezier(0.19, 1, 0.22, 1) all;
-  -ms-transition: 1000ms cubic-bezier(0.19, 1, 0.22, 1) all;
-  -o-transition: 1000ms cubic-bezier(0.19, 1, 0.22, 1) all;
-  transition: 1000ms cubic-bezier(0.19, 1, 0.22, 1) all;
+  -webkit-transition: all 1000ms cubic-bezier(0.19, 1, 0.22, 1);
+  -o-transition: all 1000ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 1000ms cubic-bezier(0.19, 1, 0.22, 1);
   cursor: pointer;
 }
 div#main .sidenav li.selected {
@@ -6773,11 +6772,9 @@ footer #footer-omoss-small {
   text-align: center;
 }
 .am-slow {
-  -webkit-transition: 1000ms cubic-bezier(0.19, 1, 0.22, 1) all;
-  -moz-transition: 1000ms cubic-bezier(0.19, 1, 0.22, 1) all;
-  -ms-transition: 1000ms cubic-bezier(0.19, 1, 0.22, 1) all;
-  -o-transition: 1000ms cubic-bezier(0.19, 1, 0.22, 1) all;
-  transition: 1000ms cubic-bezier(0.19, 1, 0.22, 1) all;
+  -webkit-transition: all 1000ms cubic-bezier(0.19, 1, 0.22, 1);
+  -o-transition: all 1000ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 1000ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 .am-fade {
   -webkit-animation-duration: .3s;
@@ -6854,10 +6851,9 @@ footer #footer-omoss-small {
   max-height: 0;
   overflow-x: hidden;
   overflow-y: hidden;
-  -webkit-transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
-  -moz-transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
-  -o-transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
-  transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+  -webkit-transition: 0.8s cubic-bezier(0.19, 1, 0.22, 1) all;
+  -o-transition: 0.8s cubic-bezier(0.19, 1, 0.22, 1) all;
+  transition: 0.8s cubic-bezier(0.19, 1, 0.22, 1) all;
 }
 .am-slide-top.ng-animate {
   transition: 0s none;
@@ -6883,7 +6879,6 @@ am-slide-top.am-slide-top-add-active {
   max-height: 0;
   overflow-y: hidden;
   -webkit-transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
-  -moz-transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
   -o-transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
   transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }

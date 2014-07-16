@@ -164,16 +164,15 @@ div#main {
 		padding-top: 12px;
 		li {
 			font-family: 'Oswald', sans-serif;
-			padding: 12px 1px;
+			padding: 1px 12px 1px 36px;
 			color: #fff;
-			text-indent: 24px;
 			.transition(all 1000ms cubic-bezier(0.19, 1, 0.22, 1));
 			cursor: pointer;
 			&.selected {
-				text-indent: 56px;
+				padding: 1px 12px 1px 68px;
 				color: #e4131a;
 				@media (max-width: @screen-md-min) {
-					text-indent: 12px;
+					padding: 1px 12px;
 				}
 			}
 			&:hover {
@@ -181,7 +180,7 @@ div#main {
 			}
 			@media (max-width: @screen-md-min) {
 				float: left;
-				text-indent: 12px;
+				padding: 1px 12px;
 			}
 		}
 

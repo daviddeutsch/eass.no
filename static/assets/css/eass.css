@@ -6686,7 +6686,7 @@ div#main .sidenav li.selected {
 }
 @media (max-width: 992px) {
   div#main .sidenav li.selected {
-    padding: 1px 12px;
+    padding: 1px 12px 12px;
   }
 }
 div#main .sidenav li:hover {
@@ -6695,7 +6695,7 @@ div#main .sidenav li:hover {
 @media (max-width: 992px) {
   div#main .sidenav li {
     float: left;
-    padding: 1px 12px;
+    padding: 1px 12px 12px;
   }
 }
 @media (max-width: 992px) {

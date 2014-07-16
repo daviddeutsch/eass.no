@@ -6,6 +6,7 @@ Template Name: Full Width Page
 
 <?php get_header(); ?>
 
+		<div id="main">
 			<div class="col-md-12 img-wrap">
 				<img class="placeholder" src="<?php echo get_template_directory_uri(); ?>/library/img/vaktmesterservice.png" alt=""/>
 			</div>
@@ -48,5 +49,6 @@ Template Name: Full Width Page
 				<?php //get_sidebar(); // sidebar 1 ?>
 
 			</div> <!-- end #content -->
+		</div>
 
 <?php get_footer(); ?>

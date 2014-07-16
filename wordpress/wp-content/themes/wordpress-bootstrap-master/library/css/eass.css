@@ -6545,7 +6545,7 @@ div.panel-standalone .panel-body ul li {
 }
 @media (max-width: 992px) {
   .kontakt-container {
-    height: 160px;
+    height: auto;
   }
 }
 #home {

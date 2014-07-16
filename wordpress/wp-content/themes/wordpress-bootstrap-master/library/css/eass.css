@@ -6717,7 +6717,7 @@ div#logo {
 div#logo img {
   max-width: 100%;
 }
-@media (max-width: 767px) {
+@media (max-width: 992px) {
   div#logo img {
     width: 100%;
   }

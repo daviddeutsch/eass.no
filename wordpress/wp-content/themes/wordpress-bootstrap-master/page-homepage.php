@@ -6,7 +6,7 @@ Template Name: Homepage
 
 <?php get_header(); ?>
 
-			<div id="content" class="clearfix row">
+			<div id="content" class="clearfix">
 
 				<div id="main" class="col-sm-12 clearfix" role="main">
 					<div ng-controller="HomeImgCtrl">

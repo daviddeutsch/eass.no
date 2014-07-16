@@ -6528,6 +6528,11 @@ div.panel-standalone .panel-body h4 {
   margin-top: 48px;
   margin-bottom: 14px;
 }
+@media (max-width: 767px) {
+  div.panel-standalone .panel-body h4 {
+    margin-top: 24px;
+  }
+}
 div.panel-standalone .panel-body ul {
   margin-top: 48px;
 }

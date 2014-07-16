@@ -45,7 +45,7 @@
 					<a href="#"><i class="fa fa-2x fa-home"></i></a>
 				</p>
 				<div id="logo">
-					<a href="/wordpress/"><img src="<?php echo get_template_directory_uri(); ?>/library/img/eass-logo.png" alt=""/>
+					<a href="/"><img src="<?php echo get_template_directory_uri(); ?>/library/img/eass-logo.png" alt=""/>
 					</a>
 				</div>
 				<!--<form class="navbar-form navbar-right" role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
@@ -61,14 +61,14 @@
 					</div>
 					<div id="eass-navbar-collapse" class="collapse navbar-collapse">
 						<ul class="nav navbar-nav">
-							<li><a href="/wordpress/">Forside</a></li>
-							<li><a href="/wordpress/?page_id=8">Om oss</a></li>
-							<li><a href="/wordpress/?page_id=14">Kvalitet/HMS/Miljø</a></li>
-							<li><a href="/wordpress/?page_id=18">Tjenester</a></li>
-							<li><a href="/wordpress/?page_id=30">Aktuelt</a></li>
-							<li><a href="/wordpress/?page_id=32">Befaring</a></li>
-							<li><a href="/wordpress/?page_id=34">Jobb hos oss</a></li>
-							<li><a href="/wordpress/?page_id=20">Kontakt</a></li>
+							<li><a href="/">Forside</a></li>
+							<li><a href="?page_id=8">Om oss</a></li>
+							<li><a href="?page_id=14">Kvalitet/HMS/Miljø</a></li>
+							<li><a href="?page_id=18">Tjenester</a></li>
+							<li><a href="?page_id=30">Aktuelt</a></li>
+							<li><a href="?page_id=32">Befaring</a></li>
+							<li><a href="?page_id=34">Jobb hos oss</a></li>
+							<li><a href="?page_id=20">Kontakt</a></li>
 						</ul>
 					</div>
 				</nav>

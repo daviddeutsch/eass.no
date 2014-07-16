@@ -6516,6 +6516,11 @@ div.panel-standalone .panel-body h3 {
   margin-top: 0px;
   margin-bottom: 40px;
 }
+@media (max-width: 767px) {
+  div.panel-standalone .panel-body h3 {
+    margin-bottom: 24px;
+  }
+}
 div.panel-standalone .panel-body h4 {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 200%;

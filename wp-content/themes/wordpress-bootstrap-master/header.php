@@ -62,13 +62,13 @@
 					<div id="eass-navbar-collapse" class="collapse navbar-collapse">
 						<ul class="nav navbar-nav">
 							<li><a href="/">Forside</a></li>
-							<li><a href="?page_id=8">Om oss</a></li>
-							<li><a href="?page_id=14">Kvalitet/HMS/Miljø</a></li>
-							<li><a href="?page_id=18">Tjenester</a></li>
-							<li><a href="?page_id=30">Aktuelt</a></li>
-							<li><a href="?page_id=32">Befaring</a></li>
-							<li><a href="?page_id=34">Jobb hos oss</a></li>
-							<li><a href="?page_id=20">Kontakt</a></li>
+							<li><a href="/om-oss/">Om oss</a></li>
+							<li><a href="/kvalitethmsmiljo/">Kvalitet/HMS/Miljø</a></li>
+							<li><a href="/tjenester/">Tjenester</a></li>
+							<li><a href="/aktuelt/">Aktuelt</a></li>
+							<li><a href="/befaring/">Befaring</a></li>
+							<li><a href="/job-hos-oss/">Jobb hos oss</a></li>
+							<li><a href="/kontakt-oss/">Kontakt</a></li>
 						</ul>
 					</div>
 				</nav>

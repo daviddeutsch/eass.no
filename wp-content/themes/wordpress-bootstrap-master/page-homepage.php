@@ -55,3 +55,6 @@ Template Name: Homepage
 			</div> <!-- end #content -->
 
 <?php get_footer(); ?>
+<div id="imedias">
+	<a href="http://imedias.no/">Produsert av I Media</a>
+</div>

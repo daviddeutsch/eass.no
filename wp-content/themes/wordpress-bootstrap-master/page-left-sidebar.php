@@ -41,3 +41,6 @@ Template Name: Left Sidebar Page
 			<?php endif; ?>
 		</div>
 <?php get_footer(); ?>
+<div id="imedias">
+	<a href="http://imedias.no/">Produsert av I Media</a>
+</div>

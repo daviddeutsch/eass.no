@@ -6923,3 +6923,11 @@ am-slide-top-fast.am-slide-top-fast-add-active {
   opacity: 1;
   max-height: 200px;
 }
+#imedias {
+  padding: 24px;
+  text-align: center;
+  color: #555;
+}
+#imedias a {
+  color: #555;
+}

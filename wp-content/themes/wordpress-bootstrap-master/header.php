@@ -58,6 +58,7 @@
 						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#eass-navbar-collapse">
 							<i class="fa fa-bars"></i>
 							<span class="sr-only">Toggle navigation</span>
+						</button>
 					</div>
 					<div id="eass-navbar-collapse" class="collapse navbar-collapse">
 						<ul class="nav navbar-nav">

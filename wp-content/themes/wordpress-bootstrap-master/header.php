@@ -25,6 +25,10 @@
 			<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 		<![endif]-->
 
+		<!--[if lte IE 7]>
+		<script src="<?php echo get_template_directory_uri(); ?>/library/js/json3.min.js"></script>
+		<![endif]-->
+
 		<!-- html5.js -->
 		<!--[if lt IE 9]>
 			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -37,7 +41,7 @@
 
 	</head>
 
-	<body <?php body_class(); ?> ng-app="eassApp">
+	<body <?php body_class(); ?> ng-app="eassApp" id="ng-app">
 
 		<div id="header">
 			<div class="container">

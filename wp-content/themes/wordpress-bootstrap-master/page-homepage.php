@@ -25,23 +25,20 @@ Template Name: Homepage
 								</div>
 							</div>
 						</div>
-						<a href="/tjenester/##kantine">
-							<div class="col-md-4" ng-mouseover="change(1)" ng-mouseleave="reset()">
-								<div class="panel panel-default" ng-class="{raised:isCurrent(1)}">
-									<div class="panel-body">
-										<h3>Kantine</h3>
-										<p>Vår renholdsavdeling er bygget opp av de mest erfarne fagfolk i vårt distrikt. Vår ren- holdsavdeling er bygget opp av de mest erfarne fagfolk i vårt distrikt. Vår ren- holdsavdeling er bygget opp av de mest erfarne fagfolk i vårt distrikt.</p>
-										<hr/>
-										<h4 class="pull-right">
-											<a id="kantine" href="/tjenester/##kantine">Les mer <i class="fa fa-chevron-right"></i></a>
-										</h4>
-									</div>
+						<div class="col-md-4" ng-mouseover="change(1)" ng-mouseleave="reset()" ng-click="go('kantine')">
+							<div class="panel panel-default" ng-class="{raised:isCurrent(1)}">
+								<div class="panel-body">
+									<h3>Kantine</h3>
+									<p>Vår renholdsavdeling er bygget opp av de mest erfarne fagfolk i vårt distrikt. Vår ren- holdsavdeling er bygget opp av de mest erfarne fagfolk i vårt distrikt. Vår ren- holdsavdeling er bygget opp av de mest erfarne fagfolk i vårt distrikt.</p>
+									<hr/>
+									<h4 class="pull-right">
+										<a id="kantine" href="/tjenester/##kantine">Les mer <i class="fa fa-chevron-right"></i></a>
+									</h4>
 								</div>
 							</div>
-						</a>
-						<a href="/tjenester/##vaktmester">
+						</div>
 						<div class="col-md-4" ng-mouseover="change(2)" ng-mouseleave="reset()">
-							<div class="panel panel-default" ng-class="{raised:isCurrent(2)}">
+							<div class="panel panel-default" ng-class="{raised:isCurrent(2)}"> ng-click="go('vaktmester')"
 								<div class="panel-body">
 									<h3>Vaktmesterservice</h3>
 									<p>Vår renholdsavdeling er bygget opp av de mest erfarne fagfolk i vårt distrikt. Vår ren- holdsavdeling er bygget opp av de mest erfarne fagfolk i vårt distrikt. Vår ren- holdsavdeling er bygget opp av de mest erfarne fagfolk i vårt distrikt.</p>
@@ -52,7 +49,6 @@ Template Name: Homepage
 								</div>
 							</div>
 						</div>
-						</a>
 					</div>
 				</div>
 

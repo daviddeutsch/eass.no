@@ -6593,6 +6593,10 @@ p.signal {
   margin-top: 12px;
   margin-bottom: 20px;
 }
+a .panel-body p,
+a:hover .panel-body p {
+  color: #000;
+}
 h4 {
   font-family: 'Oswald', sans-serif;
   font-weight: 400;

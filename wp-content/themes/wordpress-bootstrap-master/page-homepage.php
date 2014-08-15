@@ -13,6 +13,7 @@ Template Name: Homepage
 						<div class="col-md-12 img-wrap">
 							<img ng-repeat="slide in slides" class="placeholder am-fade" ng-src="{{ '<?php echo get_template_directory_uri(); ?>/library/img/'+slide.name+'.png' }}" alt="" ng-hide="!isCurrent($index)"/>
 						</div>
+						<a href="/tjenester/##renhold">
 						<div class="col-md-4" ng-mouseover="change(0)" ng-mouseleave="reset()">
 							<div class="panel panel-default" ng-class="{raised:isCurrent(0)}">
 								<div class="panel-body">
@@ -25,6 +26,7 @@ Template Name: Homepage
 								</div>
 							</div>
 						</div>
+						</a>
 						<a href="/tjenester/##kantine">
 							<div class="col-md-4" ng-mouseover="change(1)" ng-mouseleave="reset()">
 								<div class="panel panel-default" ng-class="{raised:isCurrent(1)}">
@@ -39,6 +41,7 @@ Template Name: Homepage
 								</div>
 							</div>
 						</a>
+						<a href="/tjenester/##vaktmester">
 						<div class="col-md-4" ng-mouseover="change(2)" ng-mouseleave="reset()">
 							<div class="panel panel-default" ng-class="{raised:isCurrent(2)}">
 								<div class="panel-body">
@@ -51,6 +54,7 @@ Template Name: Homepage
 								</div>
 							</div>
 						</div>
+						</a>
 					</div>
 				</div>
 

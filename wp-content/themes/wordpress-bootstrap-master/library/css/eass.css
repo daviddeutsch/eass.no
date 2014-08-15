@@ -6558,6 +6558,15 @@ div.panel-standalone .panel-body ul li {
     height: auto;
   }
 }
+.kontakt-container h4 {
+  margin-top: 6px;
+}
+hr.fullwidth {
+  clear: both;
+}
+hr.am-slide-top {
+  display: none;
+}
 #home {
   margin: 36px 12px 0;
 }

@@ -6723,7 +6723,7 @@ div#main .sidenav li:hover {
     margin-top: -24px;
   }
 }
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   div#main {
     margin-left: -15px;
     margin-right: -15px;
@@ -6799,8 +6799,11 @@ footer #footer-omoss {
 }
 footer #footer-omoss img {
   margin-top: -24px;
-  margin-right: -18px;
+  margin-right: 26px;
   padding: 24px;
+}
+footer #footer-omoss div {
+  margin-bottom: 24px;
 }
 footer #footer-omoss-small {
   padding: 48px 0;

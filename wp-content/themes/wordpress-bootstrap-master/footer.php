@@ -12,7 +12,7 @@
 									Eiendomsassistanse AS er en del av Toma Gruppen og er en totalleverandør av servicetjenester innenfor renhold, vaktmester, kantine, gartner, vakt og sikkerhet og eiendomsforvaltning.
 								</p>
 							</div>
-							<div class="col-md-2 col-md-offset-2">
+							<div class="col-md-2 col-md-offset-1">
 								<h4>KONTAKT</h4>
 								<p>
 									Eiendomsassistanse AS<br/>

@@ -119,6 +119,12 @@ h3 {
 	font-size: 240%;
 	font-weight: 400;
 	color: #db2611;
+	@media (max-width: @screen-md-min) {
+		font-size: 200%;
+	}
+	@media (max-width: @screen-sm-min) {
+		font-size: 160%;
+	}
 }
 
 p.signal {
@@ -520,5 +526,11 @@ am-slide-top-fast.am-slide-top-fast-add-active {
 	a {
 		color: #555;
 
+	}
+	@media (max-width: @screen-md-min) {
+		padding: 18px;
+	}
+	@media (max-width: @screen-sm-min) {
+		padding: 12px;
 	}
 }

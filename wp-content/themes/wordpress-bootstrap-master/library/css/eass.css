@@ -6550,8 +6550,7 @@ div.panel-standalone .panel-body ul li {
   }
 }
 div.panel-standalone .panel-body .kontakt-container {
-  height: 200px;
-  margin: -1px !important;
+  margin: -1px -1px 12px -1px !important;
 }
 @media (max-width: 992px) {
   div.panel-standalone .panel-body .kontakt-container {

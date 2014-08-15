@@ -254,11 +254,13 @@ function($scope, $location, $compile, $timeout)
 	});
 
 	$scope.lines = function () {
-		angular.element(".kontakt-container:visible:nth-child(2n)").next("hr" ).removeClass('am-slide-top');
+		var test = angular.element('.kontakt-container:visible:nth-child(2n)').next('hr');
+
+		test.removeClass('am-slide-top');
 	};
 
 	$scope.change = function( name ) {
-		angular.element("hr.fullwidth").addClass("am-slide-top");
+		angular.element('hr.fullwidth').addClass('am-slide-top');
 
 		if ( $scope.id === name ) {
 			$scope.id = '';

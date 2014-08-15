@@ -244,23 +244,24 @@ function($scope, $location, $compile, $timeout)
 					+ '>'
 					+ newhtml
 					+ '</div>'
-				+ '<hr'
-					/*+ ' ng-class="{\'am-slide-top\': isDeselected(\''
-					+ name
-					+ '\')}"'*/
-					+ ' class="fullwidth"/>'
+				+ '<hr class="fullwidth am-fade"/>'
 			)($scope)
 		);
 	});
 
 	$scope.lines = function () {
-		var test = angular.element('.kontakt-container:not(.am-slide-top):odd').next('hr');
+		var el = angular.element('.kontakt-container:not(.am-slide-top):odd')
+			.next('hr');
 
-		test.removeClass('am-slide-top');
+		el.addClass('ng-enter');
+
+		$timeout(function(){
+			el.addClass('ng-enter-active');
+		}, 100);
 	};
 
 	$scope.change = function( name ) {
-		angular.element('hr.fullwidth').addClass('am-slide-top');
+		angular.element('hr.fullwidth' ).removeClass('ng-enter ng-enter-active').addClass('ng-leave');
 
 		if ( $scope.id === name ) {
 			$scope.id = '';
@@ -270,13 +271,7 @@ function($scope, $location, $compile, $timeout)
 
 		$location.hash($scope.id);
 
-		$timeout(
-			function() {
-				$scope.lines();
-			},
-			500
-		);
-
+		$timeout($scope.lines, 100);
 	};
 
 	$scope.isDeselected = function ( name ) {
@@ -288,6 +283,8 @@ function($scope, $location, $compile, $timeout)
 	};
 
 	$scope.id = $location.hash();
+
+	$timeout($scope.lines, 100);
 }
 ]
 );

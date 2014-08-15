@@ -246,7 +246,7 @@ function($scope, $location, $compile, $timeout)
 					+ ' ng-class="{\'am-slide-top\': isDeselected(\''
 					+ name
 					+ '\')}"'
-					+ ' class="col-xs-6 kontakt-container"'
+					+ ' class="col-sm-6 col-xxs-break kontakt-container"'
 					+ '>'
 					+ newhtml
 					+ '</div>'

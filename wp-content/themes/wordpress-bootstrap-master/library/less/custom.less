@@ -299,6 +299,88 @@ footer {
 	}
 }
 
+@-webkit-keyframes fadeInFull {
+	from { opacity: 0 }
+	to { opacity: 1 }
+}
+
+@keyframes fadeInFull {
+	from { opacity: 0 }
+	to { opacity: 1 }
+}
+
+@-webkit-keyframes fadeOutFull {
+	from { opacity: 1 }
+	to { opacity: 0 }
+}
+
+@keyframes fadeOutFull {
+	from { opacity: 1 }
+	to { opacity: 0 }
+}
+
+.am-fade-full {
+	-webkit-animation-duration: .3s;
+	animation-duration: .3s;
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear;
+	-webkit-animation-fill-mode: backwards;
+	animation-fill-mode: backwards;
+	opacity: 1
+}
+
+.am-fade-full.am-fade-full-add,
+.am-fade-full.ng-hide-remove,
+.am-fade-full.ng-move {
+	-webkit-animation-name: fadeInFull;
+	animation-name: fadeInFull;
+}
+
+.am-fade-full.am-fade-full-remove,
+.am-fade-full.ng-hide {
+	-webkit-animation-name: fadeOutFull;
+	animation-name: fadeOutFull;
+}
+
+.am-fade-full.ng-hide-add {
+	display: box !important;
+}
+
+.am-fade-full.ng-enter {
+	visibility: hidden;
+	-webkit-animation-name: fadeInFull;
+	animation-name: fadeInFull;
+}
+
+.am-fade-full.ng-enter.ng-enter-active {
+	visibility: visible;
+}
+
+.am-fade-full.ng-leave {
+	-webkit-animation-name: fadeOutFull;
+	animation-name: fadeOutFull;
+}
+
+@-webkit-keyframes fadeIn {
+	from { opacity: 0.5 }
+	to { opacity: 1 }
+}
+
+@keyframes fadeIn {
+	from { opacity: 0.5 }
+	to { opacity: 1 }
+}
+
+@-webkit-keyframes fadeOut {
+	from { opacity: 1 }
+	to { opacity: 0.5 }
+}
+
+@keyframes fadeOut {
+	from { opacity: 1 }
+	to { opacity: 0.5 }
+}
+
 .am-slow {
 	.transition(all 1000ms cubic-bezier(0.19, 1, 0.22, 1));
 }
@@ -343,26 +425,6 @@ footer {
 .am-fade.ng-leave {
 	-webkit-animation-name: fadeOut;
 	animation-name: fadeOut;
-}
-
-@-webkit-keyframes fadeIn {
-	from { opacity: 0.5 }
-	to { opacity: 1 }
-}
-
-@keyframes fadeIn {
-	from { opacity: 0.5 }
-	to { opacity: 1 }
-}
-
-@-webkit-keyframes fadeOut {
-	from { opacity: 1 }
-	to { opacity: 0.5 }
-}
-
-@keyframes fadeOut {
-	from { opacity: 1 }
-	to { opacity: 0.5 }
 }
 
 .am-slide-top {

@@ -244,7 +244,7 @@ function($scope, $location, $compile, $timeout)
 					+ '>'
 					+ newhtml
 					+ '</div>'
-				+ '<hr class="fullwidth am-fade"/>'
+				+ '<hr class="fullwidth am-fade-full"/>'
 			)($scope)
 		);
 	});

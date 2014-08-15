@@ -46,9 +46,9 @@ function($scope, $timeout)
 	};
 
 	$scope.go = function( path ) {
-		$scope.$apply(function() {
+		$timeout(function() {
 			angular.element('#'+path).click();
-		});
+		}, 0, false);
 	};
 
 	$scope.tick();

@@ -8,8 +8,8 @@ var eassApp = angular.module(
 eassApp
 .controller('HomeImgCtrl',
 [
-'$scope', '$timeout',
-function($scope, $timeout)
+'$scope', '$timeout', '$location',
+function($scope, $timeout, $location)
 {
 	$scope.slides = [
 		{name: 'renhold'},
@@ -43,6 +43,10 @@ function($scope, $timeout)
 		}
 
 		$scope.to = $timeout($scope.tick, 2000);
+	};
+
+	$scope.go = function( path ) {
+		$location.path( path );
 	};
 
 	$scope.tick();

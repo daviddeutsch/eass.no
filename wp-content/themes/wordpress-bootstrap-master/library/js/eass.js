@@ -250,18 +250,20 @@ function($scope, $location, $compile, $timeout)
 	});
 
 	$scope.lines = function () {
+		angular.element('hr.fullwidth').removeClass('ng-enter ng-enter-active').addClass('ng-leave-active');
+
 		var el = angular.element('.kontakt-container:not(.am-slide-top):odd')
 			.next('hr');
 
-		el.addClass('ng-enter');
+		el.removeClass('ng-leave ng-leave-active').addClass('ng-enter');
 
 		$timeout(function(){
 			el.addClass('ng-enter-active');
-		}, 100);
+		}, 300);
 	};
 
 	$scope.change = function( name ) {
-		angular.element('hr.fullwidth' ).removeClass('ng-enter ng-enter-active').addClass('ng-leave');
+		angular.element('hr.fullwidth').removeClass('ng-enter ng-enter-active').addClass('ng-leave');
 
 		if ( $scope.id === name ) {
 			$scope.id = '';
@@ -271,7 +273,7 @@ function($scope, $location, $compile, $timeout)
 
 		$location.hash($scope.id);
 
-		$timeout($scope.lines, 100);
+		$timeout($scope.lines, 300);
 	};
 
 	$scope.isDeselected = function ( name ) {
@@ -284,7 +286,7 @@ function($scope, $location, $compile, $timeout)
 
 	$scope.id = $location.hash();
 
-	$timeout($scope.lines, 100);
+	$timeout($scope.lines, 300);
 }
 ]
 );

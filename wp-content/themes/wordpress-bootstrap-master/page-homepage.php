@@ -37,8 +37,8 @@ Template Name: Homepage
 								</div>
 							</div>
 						</div>
-						<div class="col-md-4" ng-mouseover="change(2)" ng-mouseleave="reset()">
-							<div class="panel panel-default" ng-class="{raised:isCurrent(2)}"> ng-click="go('vaktmester')"
+						<div class="col-md-4" ng-mouseover="change(2)" ng-mouseleave="reset()" ng-click="go('vaktmester')">
+							<div class="panel panel-default" ng-class="{raised:isCurrent(2)}">
 								<div class="panel-body">
 									<h3>Vaktmesterservice</h3>
 									<p>Vår renholdsavdeling er bygget opp av de mest erfarne fagfolk i vårt distrikt. Vår ren- holdsavdeling er bygget opp av de mest erfarne fagfolk i vårt distrikt. Vår ren- holdsavdeling er bygget opp av de mest erfarne fagfolk i vårt distrikt.</p>

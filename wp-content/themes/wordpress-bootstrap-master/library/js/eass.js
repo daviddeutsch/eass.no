@@ -46,7 +46,7 @@ function($scope, $timeout, $window)
 	};
 
 	$scope.go = function( path ) {
-		$window.location.href = $window.location.href + path;
+		angular.element('#'+path).click();
 	};
 
 	$scope.tick();

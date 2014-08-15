@@ -130,7 +130,13 @@ eassApp
 function($scope) {
 	$scope.id = '';
 
-	$scope.change = function( name ) {
+	$scope.lines = function () {
+		angular.element("hr.am-fade").hide();
+
+		angular.element(".kontakt-container:visible:nth-child(2n)").next("hr" ).show();
+	};
+
+	$scope.change = function ( name ) {
 		if ( $scope.id === name ) {
 			$scope.id = '';
 		} else {
@@ -145,6 +151,8 @@ function($scope) {
 	$scope.isSelected = function ( name ) {
 		return $scope.id === name;
 	};
+
+	angular.element(".kontakt-container").after("<hr class=\"am-fade\"/>");
 }
 ]
 );

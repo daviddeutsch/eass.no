@@ -151,8 +151,8 @@ function($scope, $location, $compile)
 eassApp
 .controller('SidebarPageListCtrl',
 [
-'$scope', '$location', '$compile',
-function($scope, $location, $compile)
+'$scope', '$location', '$compile', '$timeout',
+function($scope, $location, $compile, $timeout)
 {
 	var list = angular.element(".panel-body ul li");
 
@@ -244,16 +244,22 @@ function($scope, $location, $compile)
 					+ '>'
 					+ newhtml
 					+ '</div>'
-				+ '<hr '
-					+ ' ng-class="{\'am-slide-top\': isDeselected(\''
+				+ '<hr'
+					/*+ ' ng-class="{\'am-slide-top\': isDeselected(\''
 					+ name
-					+ '\')}"'
+					+ '\')}"'*/
 					+ ' class="fullwidth"/>'
 			)($scope)
 		);
 	});
 
+	$scope.lines = function () {
+		angular.element(".kontakt-container:visible:nth-child(2n)").next("hr" ).removeClass('am-slide-top');
+	};
+
 	$scope.change = function( name ) {
+		angular.element("hr.fullwidth").class("am-slide-top");
+
 		if ( $scope.id === name ) {
 			$scope.id = '';
 		} else {
@@ -261,6 +267,14 @@ function($scope, $location, $compile)
 		}
 
 		$location.hash($scope.id);
+
+		$timeout(
+			function() {
+				$scope.lines();
+			},
+			500
+		);
+
 	};
 
 	$scope.isDeselected = function ( name ) {

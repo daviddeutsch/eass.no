@@ -46,7 +46,7 @@ function($scope, $timeout, $window)
 	};
 
 	$scope.go = function( path ) {
-		$window.location.path( path );
+		$window.location.href = $window.location.href + path;
 	};
 
 	$scope.tick();

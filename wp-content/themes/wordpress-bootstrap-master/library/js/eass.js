@@ -243,10 +243,16 @@ function($scope, $location, $compile)
 					+ ' class="col-md-6 kontakt-container"'
 					+ '>'
 					+ newhtml
-					+ '</div>'
+					+ '</div><hr class="am-fade"/>'
 			)($scope)
 		);
 	});
+
+	$scope.lines = function () {
+		angular.element("hr.am-fade").hide();
+
+		angular.element(".kontakt-container:visible:nth-child(2n)").next("hr" ).show();
+	};
 
 	$scope.change = function( name ) {
 		if ( $scope.id === name ) {
@@ -256,6 +262,8 @@ function($scope, $location, $compile)
 		}
 
 		$location.hash($scope.id);
+
+		$scope.lines();
 	};
 
 	$scope.isDeselected = function ( name ) {

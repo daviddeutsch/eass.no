@@ -254,7 +254,7 @@ function($scope, $location, $compile, $timeout)
 	});
 
 	$scope.lines = function () {
-		var test = angular.element('.kontakt-container:visible:nth-child(2n)').next('hr');
+		var test = angular.element('.kontakt-container:not(.am-slide-top):odd').next('hr');
 
 		test.removeClass('am-slide-top');
 	};

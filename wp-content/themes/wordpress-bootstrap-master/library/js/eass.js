@@ -258,7 +258,7 @@ function($scope, $location, $compile, $timeout)
 	};
 
 	$scope.change = function( name ) {
-		angular.element("hr.fullwidth").class("am-slide-top");
+		angular.element("hr.fullwidth").addClass("am-slide-top");
 
 		if ( $scope.id === name ) {
 			$scope.id = '';

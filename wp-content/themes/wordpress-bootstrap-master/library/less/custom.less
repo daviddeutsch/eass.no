@@ -74,6 +74,17 @@ div.panel-standalone {
 		}
 	}
 
+	.col-xxs-break {
+		@media (max-width: @screen-xs-min) {
+			float: left;
+			width: 50%;
+		}
+		@media (max-width: 440px) {
+			float: none;
+			width: 100%;
+		}
+	}
+
 	@media (max-width: @screen-md-min) {
 		margin-top: 16px;
 	}

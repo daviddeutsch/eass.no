@@ -6544,6 +6544,18 @@ div.panel-standalone .panel-body ul li {
     padding: 24px;
   }
 }
+@media (max-width: 480px) {
+  div.panel-standalone .col-xxs-break {
+    float: left;
+    width: 50%;
+  }
+}
+@media (max-width: 440px) {
+  div.panel-standalone .col-xxs-break {
+    float: none;
+    width: 100%;
+  }
+}
 @media (max-width: 992px) {
   div.panel-standalone {
     margin-top: 16px;

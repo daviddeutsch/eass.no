@@ -46,10 +46,8 @@ function($scope, $timeout)
 	};
 
 	$scope.go = function( path ) {
-		angular.element('#'+path).on('mouseup', function() {
-			$scope.$apply(function() {
-				angular.element('#'+path).click();
-			});
+		$scope.$apply(function() {
+			angular.element('#'+path).click();
 		});
 	};
 

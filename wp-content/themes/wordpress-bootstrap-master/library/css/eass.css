@@ -6619,6 +6619,9 @@ a .panel-body p,
 a:hover .panel-body p {
   color: #000;
 }
+.hoverable:hover {
+  cursor: pointer;
+}
 h4 {
   font-family: 'Oswald', sans-serif;
   font-weight: 400;

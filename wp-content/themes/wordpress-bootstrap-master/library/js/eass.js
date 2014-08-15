@@ -8,8 +8,8 @@ var eassApp = angular.module(
 eassApp
 .controller('HomeImgCtrl',
 [
-'$scope', '$timeout',
-function($scope, $timeout)
+'$scope', '$timeout', '$window',
+function($scope, $timeout, $window)
 {
 	$scope.slides = [
 		{name: 'renhold'},
@@ -47,7 +47,9 @@ function($scope, $timeout)
 
 	$scope.go = function( path ) {
 		$timeout(function() {
-			angular.element('#'+path).click();
+			//angular.element('#'+path).click();
+
+			$window.location.href = '/tjenester/##' + path;
 		}, 100);
 	};
 

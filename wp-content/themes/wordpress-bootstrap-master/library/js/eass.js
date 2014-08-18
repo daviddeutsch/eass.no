@@ -159,8 +159,8 @@ function($scope, $location, $compile)
 eassApp
 .controller('SidebarPageListCtrl',
 [
-'$scope', '$location', '$compile', '$timeout',
-function($scope, $location, $compile, $timeout)
+'$scope', '$location', '$compile', '$timeout', '$window',
+function($scope, $location, $compile, $timeout, $window)
 {
 	var list = angular.element(".panel-body ul li");
 
@@ -260,8 +260,13 @@ function($scope, $location, $compile, $timeout)
 	$scope.lines = function () {
 		angular.element('hr.fullwidth').removeClass('ng-enter ng-enter-active').addClass('ng-leave-active');
 
-		var el = angular.element('.kontakt-container:not(.am-slide-top):odd')
-			.next('hr');
+		var sel = '.kontakt-container:not(.am-slide-top)';
+
+		if ( $window.innerWidth > 440 ) {
+			sel += ':odd'
+		}
+
+		var el = angular.element(sel).next('hr');
 
 		el.removeClass('ng-leave ng-leave-active').addClass('ng-enter');
 

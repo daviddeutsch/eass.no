@@ -6818,12 +6818,13 @@ ul.navbar-nav li a:hover {
 }
 footer {
   color: #333;
+  line-height: 120%;
 }
 footer #footer-omoss {
   margin-left: 0px;
 }
 footer #footer-omoss img {
-  margin-top: -24px;
+  margin-top: -28px;
   margin-right: 26px;
   padding: 24px;
 }
